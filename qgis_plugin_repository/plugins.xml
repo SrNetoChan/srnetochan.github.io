@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<?xml-stylesheet type = "text/xsl" href = "plugins.xsl" ?>
+<plugins>
+  <pyqgis_plugin name = "Ferramentas PGHP" version = "0.1">
+    <description> Ferramentas para Plano de Gestão de Habitat e Paisagem</ description>
+    <homepage></ homepage>
+    <qgis_minimum_version> 2.2 </ qgis_minimum_version>
+    <file_name> pghptools.zip </ file_name>
+    <author_name> Alexandre Neto (Cascais Ambiente) </ author_name>
+    <download_url> https://srnetochan.github.io/qgis_plugin_repository/pghptools.zip </ download_url>
+  </ Pyqgis_plugin>
+</ Plugins> 
