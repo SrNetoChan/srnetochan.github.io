@@ -54,9 +54,8 @@ div.download, div.author{
 </head>
 <body>
 
-<h1>QGIS.pt</h1>
-<h2>Portugal QGIS User Group</h2>
-<h3>QGIS plugins repository</h3>
+<h1>Alexandre Neto</h1>
+<h2>QGIS plugins repository</h2>
 <xsl:for-each select="/plugins/pyqgis_plugin">
 <div class="plugin">
 <div class="head">
