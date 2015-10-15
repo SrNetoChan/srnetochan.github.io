@@ -14,7 +14,7 @@
     <update_date>None</update_date>
     <experimental>True</experimental>
   </pyqgis_plugin>
-  <pyqgis_plugin name='gison3dmap' version='0.2.1'>
+  <pyqgis_plugin name='gison3dmap' version='0.2.2'>
     <description>QGIS Client for gison3dmap system. Allows the projection of QGIS layers into a physical terrain model.</description>
     <version>0.2.0</version>
     <qgis_minimum_version>2.10.1</qgis_minimum_version>
