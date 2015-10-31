@@ -14,9 +14,9 @@
     <update_date>None</update_date>
     <experimental>True</experimental>
   </pyqgis_plugin>
-  <pyqgis_plugin name='gison3dmap' version='0.2.4'>
+  <pyqgis_plugin name='gison3dmap' version='0.2.5'>
     <description>QGIS Client for gison3dmap system. Allows the projection of QGIS layers into a physical terrain model.</description>
-    <version>0.2.0</version>
+    <version>0.2.5</version>
     <qgis_minimum_version>2.10.1</qgis_minimum_version>
     <homepage></homepage>
     <file_name>gison3dmap.zip</file_name>
@@ -24,7 +24,7 @@
     <download_url>https://srnetochan.github.io/qgis_plugin_repository/gison3dmap.zip</download_url>
     <uploaded_by>SrNetoChan</uploaded_by>
     <create_date>2015-09-21</create_date>
-    <update_date>None</update_date>
+    <update_date>2015-10-31</update_date>
     <experimental>True</experimental>
   </pyqgis_plugin>
 </plugins>
