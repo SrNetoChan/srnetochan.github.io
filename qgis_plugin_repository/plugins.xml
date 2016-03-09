@@ -1,19 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <?xml-stylesheet type='text/xsl' href='plugins.xsl' ?>
 <plugins>
-  <pyqgis_plugin name='Ferramentas PGHP' version='0.1.2'>
-    <description>Ferramentas para Plano de Gestão de Habitat e Paisagem.</description>
-    <version>0.1.2</version>
-    <qgis_minimum_version>2.2.0</qgis_minimum_version>
-    <homepage></homepage>
-    <file_name>pghptools.zip</file_name>
-    <author_name>Alexandre Neto (para a Cascais Ambiente)</author_name>
-    <download_url>https://srnetochan.github.io/qgis_plugin_repository/pghptools.zip</download_url>
-    <uploaded_by>SrNetoChan</uploaded_by>
-    <create_date>2014-08-25</create_date>
-    <update_date>None</update_date>
-    <experimental>True</experimental>
-  </pyqgis_plugin>
   <pyqgis_plugin name='gison3dmap' version='0.2.5'>
     <description>QGIS Client for gison3dmap system. Allows the projection of QGIS layers into a physical terrain model.</description>
     <version>0.2.5</version>
