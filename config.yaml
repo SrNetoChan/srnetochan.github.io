@@ -2,6 +2,7 @@ baseURL: http://srnetochan.github.io/
 languageCode: en-us
 title: Alexandre Neto
 theme: "toha"
+background: "images/great_meteor_seamounts.png"
 
 # Manage languages
 # For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
