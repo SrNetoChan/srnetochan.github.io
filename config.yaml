@@ -24,6 +24,9 @@ markup:
 # Enable global emoji support
 enableEmoji: true
 
+# Enable discuss comments
+disqusShortname: disqus_b1gNACbssq
+
 params:
   # Customized background for homepage
   background: "images/great_meteor_seamounts.png"
