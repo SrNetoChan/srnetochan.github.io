@@ -25,7 +25,7 @@ markup:
 enableEmoji: true
 
 # Enable discuss comments
-disqusShortname: disqus_b1gNACbssq
+disqusShortname: AlexandreNeto
 
 params:
   # Customized background for homepage
