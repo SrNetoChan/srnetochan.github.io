@@ -15,8 +15,8 @@ Usando o comando [gdalbuildvrt](http://www.gdal.org/gdalbuildvrt.html) para cr
     gdalbuildvrt mosaico1.vrt --optfile listadeimagens.txt
 
 
-[![mosaico1_fundo](images/2013/04/mosaico1_fundo.jpg?w=584)
-](images/2013/04/mosaico1_fundo.jpg)
+[![mosaico1_fundo](/images/2013/04/mosaico1_fundo.jpg?w=584)
+](/images/2013/04/mosaico1_fundo.jpg)
 
 No entanto, através dos parâmetros **-hidenodata** e **-srcnonata,** é possível definir outros valores para os pixeis sem valor. Por exemplo, no comando seguinte escolhi os valores RGB [255, 255, 255] (branco). E o resultado foi uma imagem com o "fundo" branco.
 
@@ -24,8 +24,8 @@ No entanto, através dos parâmetros **-hidenodata** e **-srcnonata,** é possí
     gdalbuildvrt mosaico2.vrt -hidenodata -srcnodata "255 255 255" --optfile listadeimagens.txt
 
 
-[![mosaico2_fundo](images/2013/04/mosaico2_fundo.jpg?w=584)
-](images/2013/04/mosaico2_fundo.jpg)
+[![mosaico2_fundo](/images/2013/04/mosaico2_fundo.jpg?w=584)
+](/images/2013/04/mosaico2_fundo.jpg)
 
 Se pretendermos que pixeis sem valor não sejam representados, podemos usar o parâmetro **-addalpha**,  tornando-os transparentes.
 
@@ -33,5 +33,5 @@ Se pretendermos que pixeis sem valor não sejam representados, podemos usar o pa
     gdalbuildvrt mosaico3.vrt -hidenodata -addalpha --optfile listadeimagens.txt
 
 
-[![mosaico3](images/2013/04/mosaico3.jpg?w=584)
-](images/2013/04/mosaico3.jpg)
+[![mosaico3](/images/2013/04/mosaico3.jpg?w=584)
+](/images/2013/04/mosaico3.jpg)

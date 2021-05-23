@@ -38,8 +38,8 @@ Starting by the map item size, the expressions to use in width and height were n
     ((bounds_height( $atlasgeometry ) / 2000000.0) * 1000.0) * 1.1
 
 
-[![Screenshot from 2014-11-16 23:07:43](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-16-230743.png?w=584)
-](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-16-230743.png)
+[![Screenshot from 2014-11-16 23:07:43](/images/2014/11/screenshot-from-2014-11-16-230743.png?w=584)
+](/images/2014/11/screenshot-from-2014-11-16-230743.png)
 
 To position the items correctly, all was needed was to replace the "CASE WHEN ... THEN ... END" statement by the expressions defined before. For instance, the expressions used in the X and Y options for the legend position:
 
@@ -63,23 +63,23 @@ Became, respectively:
     (((bounds_height( $atlasgeometry ) / 2000000.0) * 1000.0) * 1.1 + 30) - 12
 
 
-[![Screenshot from 2014-11-16 23:22:40](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-16-232240.png?w=584)
-](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-16-232240.png)
+[![Screenshot from 2014-11-16 23:22:40](/images/2014/11/screenshot-from-2014-11-16-232240.png?w=584)
+](/images/2014/11/screenshot-from-2014-11-16-232240.png)
 
 Changing the expressions of the X and Y position options for the remaining composer's items I have reached the final layout.
 
-[![alaska_region_Kenai Peninsula](images/2014/11/alaska_region_kenai-peninsula.png?w=584)
-](images/2014/11/alaska_region_kenai-peninsula.png)
+[![alaska_region_Kenai Peninsula](/images/2014/11/alaska_region_kenai-peninsula.png?w=584)
+](/images/2014/11/alaska_region_kenai-peninsula.png)
 
 Once again, printing/exporting all (25) maps was only one click away.
 
-[![mosaico_regioes_fixed](http://gisunchained.files.wordpress.com/2014/11/mosaico_regioes_fixed.png)
-](http://gisunchained.files.wordpress.com/2014/11/mosaico_regioes_fixed.png)
+[![mosaico_regioes_fixed](/images/2014/11/mosaico_regioes_fixed.png)
+](/images/2014/11/mosaico_regioes_fixed.png)
 
 Since QGIS allows exporting the composer as georeferenced images, opening all maps in QGIS I got this interesting result.
 
-[![Screenshot from 2014-11-17 00:02:38](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-17-000238.png?w=584)
-](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-17-000238.png)
+[![Screenshot from 2014-11-17 00:02:38](/images/2014/11/screenshot-from-2014-11-17-000238.png?w=584)
+](/images/2014/11/screenshot-from-2014-11-17-000238.png)
 
 As one can see by the results, using this method, we can get some quite strange formats. That is why in the 3rd and last post of this article, I will try to show how to create a fixed scale map series using standard paper formats (A4, A3, A2, A1 e A0).
 

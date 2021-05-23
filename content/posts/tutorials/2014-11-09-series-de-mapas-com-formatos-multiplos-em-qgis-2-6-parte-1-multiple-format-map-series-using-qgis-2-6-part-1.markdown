@@ -15,8 +15,8 @@ In this first post, the goal is that, keeping the page size, the map is created 
 
 I have started by creating the layout in one of the formats, putting the items in the desired positions.
 
-[![mapa_base_atlas](http://gisunchained.files.wordpress.com/2014/11/mapa_base_atlas.png?w=584)
-](http://gisunchained.files.wordpress.com/2014/11/mapa_base_atlas.png)
+[![mapa_base_atlas](/images/2014/11/mapa_base_atlas.png?w=584)
+](/images/2014/11/mapa_base_atlas.png)
 
 To control the page orientation with the atlas feature, in the composition tab, I used the following expression in the orientation data defined properties:
 
@@ -26,8 +26,8 @@ To control the page orientation with the atlas feature, in the composition tab,
 
 Using the atlas preview, I could verify that the page's orientation changed according to the form of the atlas feature. However, the composition's items did not follow this change and some got even outside the printing area
 
-[![Screenshot from 2014-11-08 23:29:49](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-08-232949.png?w=584)
-](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-08-232949.png)
+[![Screenshot from 2014-11-08 23:29:49](/images/2014/11/screenshot-from-2014-11-08-232949.png?w=584)
+](/images/2014/11/screenshot-from-2014-11-08-232949.png)
 
 To control both size and position of the composition's items I had in consideration the A4 page size (297 x 210 mm), the map margins ( 20 mm, 5 mm, 10 mm, 5 mm) and the item's reference points.
 
@@ -43,20 +43,20 @@ Likewise, the expression to use in the width was:
     (CASE WHEN  bounds_width(  $atlasgeometry ) >=  bounds_height( $atlasgeometry) THEN 210 ELSE 297 END) - 10
 
 
-[![Screenshot from 2014-11-09 00:02:15](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-09-000215.png?w=584)
-](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-09-000215.png)
+[![Screenshot from 2014-11-09 00:02:15](/images/2014/11/screenshot-from-2014-11-09-000215.png?w=584)
+](/images/2014/11/screenshot-from-2014-11-09-000215.png)
 
 The rest of the items were always at a relative position of the page without the need to change their size and therefore only needed to control their position. For example, the title was centered at the page's top, and therefore, using the top-center as reference point, all that was needed was the following expression for the X position:
 
-[![Screenshot from 2014-11-09 00:13:17](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-09-001317.png)
-](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-09-001317.png)
+[![Screenshot from 2014-11-09 00:13:17](/images/2014/11/screenshot-from-2014-11-09-001317.png)
+](/images/2014/11/screenshot-from-2014-11-09-001317.png)
 
 
     (CASE WHEN  bounds_width(  $atlasgeometry ) >=  bounds_height( $atlasgeometry)  THEN 297 ELSE 210 END)  / 2.0
 
 
-[![Screenshot from 2014-11-09 00:30:57](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-09-003057.png?w=584)
-](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-09-003057.png)
+[![Screenshot from 2014-11-09 00:30:57](/images/2014/11/screenshot-from-2014-11-09-003057.png?w=584)
+](/images/2014/11/screenshot-from-2014-11-09-003057.png)
 
 On the other hand, the legend needed to change the position in both X and Y. Using the bottom-right-corner as reference point, the X position expression was:
 
@@ -70,17 +70,17 @@ And for the Y position:
     (CASE WHEN  bounds_width(  $atlasgeometry ) >=  bounds_height( $atlasgeometry) THEN 210 ELSE 297 END) - 12
 
 
-[![Screenshot from 2014-11-09 00:47:28](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-09-004728.png?w=584)
-](http://gisunchained.files.wordpress.com/2014/11/screenshot-from-2014-11-09-004728.png)
+[![Screenshot from 2014-11-09 00:47:28](/images/2014/11/screenshot-from-2014-11-09-004728.png?w=584)
+](/images/2014/11/screenshot-from-2014-11-09-004728.png)
 
 For the remaining items (North arrow, scalebar, and bottom left text), the expression were similar to the ones already mentioned, and, after setting them for each item, I got a layout that would adapt to both page orientation.
 
-[![output_9](http://gisunchained.files.wordpress.com/2014/11/output_9.png?w=212)
-](http://gisunchained.files.wordpress.com/2014/11/output_9.png)
+[![output_9](/images/2014/11/output_9.png?w=212)
+](/images/2014/11/output_9.png)
 
 From that point, printing/exporting all (25) maps was one click away.
 
-[![mosaico_regioes](http://gisunchained.files.wordpress.com/2014/11/mosaico_regioes.png)
-](http://gisunchained.files.wordpress.com/2014/11/mosaico_regioes.png)
+[![mosaico_regioes](/images/2014/11/mosaico_regioes.png)
+](/images/2014/11/mosaico_regioes.png)
 
 In the [next post](https://gisunchained.wordpress.com/2014/11/18/multiple-format-map-series-using-qgis-2-6-part-2/) of the series, I will try to explain how to create map series where it's the size of the page that change to keep the scale's value of the scale constant.

@@ -8,8 +8,8 @@ tags:
 
 Hoje precisei criar uma _view_ em [PostGIS](http://postgis.net/) que me devolvesse os vértices de uma camada de multipolígonos. Para além disso, precisava que os mesmos viessem ordenados numericamente começando em 1, e com as respectivas coordenadas XY.
 
-[![Screenshot from 2015-11-05 23:58:19](images/2015/11/screenshot-from-2015-11-05-235819.png)
-](images/2015/11/screenshot-from-2015-11-05-235819.png)
+[![Screenshot from 2015-11-05 23:58:19](/images/2015/11/screenshot-from-2015-11-05-235819.png)
+](/images/2015/11/screenshot-from-2015-11-05-235819.png)
 
 A tarefa parecia-me trivial – bastaria usar a função [ST_DumpPoints()](http://postgis.net/docs/ST_DumpPoints.html) para obter os vértices – não fosse o facto dos polígonos em postGIS terem um vértice repetido (obrigatoriamente o último vértice tem de ser igual primeiro) que não me interessava mostrar.
 
@@ -49,7 +49,7 @@ A parte interessante ocorre na cláusula WHERE, basicamente, da listagem total d
 
 Eis o resultado:
 
-[![Screenshot from 2015-11-05 23:58:40](images/2015/11/screenshot-from-2015-11-05-235840.png)
-](images/2015/11/screenshot-from-2015-11-05-235840.png)
+[![Screenshot from 2015-11-05 23:58:40](/images/2015/11/screenshot-from-2015-11-05-235840.png)
+](/images/2015/11/screenshot-from-2015-11-05-235840.png)
 
 A vantagem desta abordagem (via PostGIS) em vez de usar a ferramenta "Polígonos  para linhas", seguida de "Linhas para Ponto" é que basta alterar a minha camada de polígonos, e gravá-la, para ver os vértices a serem actualizados automaticamente. É nestas coisas que adoro o [Postgis](http://postgis.net/).

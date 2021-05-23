@@ -14,17 +14,17 @@ Note-se a diferença entre a transparência e blending mode da camada (que é ap
 
 Esta opções estão disponíveis em Propriedades da camada > Estilo.
 
-[![testes_opacidade_opcoes](images/2014/01/testes_opacidade_opcoes.png?w=584)
-](images/2014/01/testes_opacidade_opcoes.png)
+[![testes_opacidade_opcoes](/images/2014/01/testes_opacidade_opcoes.png?w=584)
+](/images/2014/01/testes_opacidade_opcoes.png)
 
 Com um valor de transparência do símbolo de 95%, a cor do elemento tornar-se à totalmente opaca quando pelo menos 20 elementos de sobrepuserem. Este número é limitado à sobreposição de 100 elementos(tranparencia 99%).
 
 Usando diferentes modos de blending (como a multiplicação ou a adição) consegues-se obter outros efeitos.
 
-[![Testes_com_opacidade_2](images/2014/01/testes_com_opacidade_2.png?w=584)
-](images/2014/01/testes_com_opacidade_2.png)
+[![Testes_com_opacidade_2](/images/2014/01/testes_com_opacidade_2.png?w=584)
+](/images/2014/01/testes_com_opacidade_2.png)
 
 Duplicando a camada, usando diferentes cores (no exemplo abaixo o verde para uma camada e o vermelho para a imediatamente baixo) e usando blending mode dogde,consegue-se obter efeitos ainda mais interessantes.
 
-[![opacity dodge](images/2014/01/opacity-dodge.png?w=584)
-](images/2014/01/opacity-dodge.png)
+[![opacity dodge](/images/2014/01/opacity-dodge.png?w=584)
+](/images/2014/01/opacity-dodge.png)

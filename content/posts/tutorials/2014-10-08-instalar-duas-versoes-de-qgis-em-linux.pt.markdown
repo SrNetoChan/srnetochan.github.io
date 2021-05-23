@@ -8,8 +8,8 @@ tags:
 - QGIS
 ---
 
-[![QGIS24_QGISmaster](images/2014/10/qgis24_qgismaster.png?w=584)
-](images/2014/10/qgis24_qgismaster.png)
+[![QGIS24_QGISmaster](/images/2014/10/qgis24_qgismaster.png?w=584)
+](/images/2014/10/qgis24_qgismaster.png)
 
 Em altura de testes à versão em desenvolvimento do QGIS (versão master), dá jeito  ter também instalada a última versão estável do QGIS. Em windows isso não representa um problema, uma vez que se podem instalar várias versões do QGIS em paralelo (tanto via Osgeo4w como standalone). Em linux, o processo não é tão directo pelo facto da instalação se realizar por obtenção de diversos pacotes disponíveis nos repositórios, não sendo por isso possível instalar mais do que uma versão sem que se originem quebras de dependências. Assim, instalando a versão estável através dos repositórios, as alternativas para instalação da versão em desenvolvimento são:
 
@@ -99,8 +99,8 @@ Já na pasta build-master damos início ao processo de compilação. O primeiro
 
 Na configuração é necessário alterar o valor do CMAKE_INSTALL_PREFIX que define onde vai ser feita a instalação, no meu caso usei a pasta já criada 'home/alexandre/apps' . Para editar o valor há que mover o cursor até à linha em causa e carregar em [enter], depois de editar, volta-se a carregar em [enter]. Depois há que carregar em [c] para refazer a configuração e depois em 'g' para gerar a configuração.
 
-[![Screenshot from 2014-10-08 23:33:39](images/2014/10/screenshot-from-2014-10-08-233339.png?w=584)
-](images/2014/10/screenshot-from-2014-10-08-233339.png)
+[![Screenshot from 2014-10-08 23:33:39](/images/2014/10/screenshot-from-2014-10-08-233339.png?w=584)
+](/images/2014/10/screenshot-from-2014-10-08-233339.png)
 
 
 #  Compilação e instalação
@@ -126,7 +126,7 @@ Depois de instalado podemos correr o QGIS master a partir da pasta de instalaç�
 
 Para se tornar mais cómodo, podemos colocar os últimos 3 comandos num ficheiro .sh e gravá-lo num local acessível (desktop ou home) para executarmos o qgis sempre que necessário.
 
-![Screenshot from 2014-10-09 00:36:52](images/2014/10/screenshot-from-2014-10-09-003652.png?w=584)
+![Screenshot from 2014-10-09 00:36:52](/images/2014/10/screenshot-from-2014-10-09-003652.png?w=584)
 
 
 

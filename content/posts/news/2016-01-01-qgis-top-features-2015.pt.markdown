@@ -61,7 +61,7 @@ Ao longo de 2015 foram feitas algumas melhorias à legenda do QGIS. A versão 2
 Alguma vez desejou, no QGIS, desenhar linhas paralelas ou com ângulos rectos,  trancar as linhas a determinados ângulos ou distâncias e por aí a fora? Então as suas preces foram ouvidas. As ferramentas avançadas de edição começaram como módulo CADinput e foram integradas no QGIS na versão 2.8, adicionando-lhe mais um painel. O painel fica activo quando se procede ao desenho de geometrias.
 
 
-![Untitled](https://gisunchained.files.wordpress.com/2016/01/untitled.png)
+![Untitled](/images/2016/01/untitled.png)
 
 
 

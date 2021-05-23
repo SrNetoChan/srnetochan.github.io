@@ -9,8 +9,8 @@ Finalmente "terminei" o meu novo plugin. Coloquei o termo entre aspas porque cre
 
 
 
-[![icon_large](images/2014/03/icon_large.png?w=150)
-](images/2014/03/icon_large.png)
+[![icon_large](/images/2014/03/icon_large.png?w=150)
+](/images/2014/03/icon_large.png)
 
 
 
@@ -30,8 +30,8 @@ O plugin pode também ser usado para preparar uma rede ([grafo](https://pt.wikip
 
 
 
-[![Captura de tela 2014-03-24 12.12.17-01](images/2014/03/captura-de-tela-2014-03-24-12-12-17-01.png)
-](images/2014/03/captura-de-tela-2014-03-24-12-12-17-01.png)
+[![Captura de tela 2014-03-24 12.12.17-01](/images/2014/03/captura-de-tela-2014-03-24-12-12-17-01.png)
+](/images/2014/03/captura-de-tela-2014-03-24-12-12-17-01.png)
 
 
 Repositório QGIS: [http://plugins.qgis.org/plugins/walkingtime/](http://plugins.qgis.org/plugins/walkingtime/)

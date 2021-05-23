@@ -63,7 +63,7 @@ There were introduced a few nice improvements to QGIS legend. Version 2.8 brough
 If you ever wished you could digitize lines exactly parallel or at right angles, lock lines to specific angles and so on in QGIS? Since QGIS 2.8 you can! The advanced digitizing tools are a port of the CADinput plugin and adds a new panel to QGIS. The panel becomes active when capturing new geometries or geometry parts.
 
 
-![Untitled](https://gisunchained.files.wordpress.com/2016/01/untitled.png)
+![Untitled](/images/2016/01/untitled.png)
 
 
 

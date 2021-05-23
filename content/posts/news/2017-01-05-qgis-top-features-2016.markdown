@@ -18,7 +18,7 @@ As a balance, I have [asked](https://senhorneto.typeform.com/to/iEeJye) users t
 
 This is a productivity functionaly that I just realized that existed now, with so many people voting on it. If copy/paste styles was, in my opinion, a killer feature, being able to use it in multiple layers or even a group is just great.
 
-![screenshot-from-2017-01-05-00-25-39](https://gisunchained.files.wordpress.com/2017/01/screenshot-from-2017-01-05-00-25-39.png)
+![screenshot-from-2017-01-05-00-25-39](/images/2017/01/screenshot-from-2017-01-05-00-25-39.png)
 
 
 
@@ -30,7 +30,7 @@ This is a productivity functionaly that I just realized that existed now, with s
 
 While checking the Vector Menu, the tools seem the same as previous version, but it's when you open them that you understand the difference. All vector tools, provided until now by the fTools core plugin, were replaced by equivalent processing Algoritms. For the users it means easier access to more functionality, like running the tools in batch mode, or getting outputs as temporary layers. Besides some of the tools have been improved.
 
-![screenshot-from-2017-01-05-00-54-17](https://gisunchained.files.wordpress.com/2017/01/screenshot-from-2017-01-05-00-54-17.png)
+![screenshot-from-2017-01-05-00-54-17](/images/2017/01/screenshot-from-2017-01-05-00-54-17.png)
 
 
 
@@ -41,7 +41,7 @@ While checking the Vector Menu, the tools seem the same as previous version, but
 
 This is definitly one of my favourite new features, and it seems I'm not alone. With virtual layers you can run SQL queries using the layers loaded in the project, even when the layers are not stored in a relational database. We are not talking about WHERE statments to filter data, with this you can do real SQL queries, with spatial analysis, aggregations, and so on. Besides, virtual layers will act as VIEWs and any changes to any of the input layers will automatically update the layer.
 
-![Screenshot from 2017-01-05 01-12-10.png](https://gisunchained.files.wordpress.com/2017/01/screenshot-from-2017-01-05-01-12-10.png)
+![Screenshot from 2017-01-05 01-12-10.png](/images/2017/01/screenshot-from-2017-01-05-01-12-10.png)
 
 
 
@@ -56,7 +56,7 @@ It's no surprise that speed and memory improvements we one of the most voted fea
 
 If you do lots of digitising, you better look into this new feaure that landed on QGIS 2.14. It allows you to digitize new feature by using other layers boundaries. Besides the quality improvement of layers topology, this can make digitizing almost feel pleasing and fast! Just click the first point, move your mouse around other features edged to pick up more vertex.
 
-![screenshot-from-2017-01-05-01-42-33](https://gisunchained.files.wordpress.com/2017/01/screenshot-from-2017-01-05-01-42-33.png)
+![screenshot-from-2017-01-05-01-42-33](/images/2017/01/screenshot-from-2017-01-05-01-42-33.png)
 
 
 

@@ -16,7 +16,7 @@ A more practical and pretty way of doing this is by using the **IN** operator in
 [code language="SQL"]"field" IN ('value1','value2','value3'[,...])[/code]
 
 This operator is available in almost every GIS software I know. In [QGIS](http://www.qgis.org/en/site/), it can be used even if there isn't a small little button to click.
-![Captura de tela 2014-04-23 16.50.40](images/2014/04/captura-de-tela-2014-04-23-16-50-40.png)
+![Captura de tela 2014-04-23 16.50.40](/images/2014/04/captura-de-tela-2014-04-23-16-50-40.png)
 
 
 In fact, this is an abbreviation of what is used in SQL, where the operator is used in the WHERE statement:

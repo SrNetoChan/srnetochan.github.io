@@ -34,7 +34,7 @@ Então, comecei a pensar como poderia fazer esta configuração de forma mais si
 
 O campo identificador é gerado automaticamente pela base de dados, pelo que o utilizador não só não precisa de o editar, como não deve. Por essa razão, convém tornar o campo não editável.
 
-![Layer Properties - cabo_electrico | Attributes Form_103](images/2019/09/layer-properties-cabo_electrico-attributes-form_103.png)
+![Layer Properties - cabo_electrico | Attributes Form_103](/images/2019/09/layer-properties-cabo_electrico-attributes-form_103.png)
 
 
 Para o fazer programaticamente recorri ao seguinte código.
@@ -161,7 +161,7 @@ A funçao abaixo começa por identificar para determinada camada todos os campos
 
 Assim, de forma relativamente rápida, consegui configurar todas as camadas do projecto com os widgets que queria.
 
-![Peek 2019-09-30 16-06](images/2019/09/peek-2019-09-30-16-06.gif)
+![Peek 2019-09-30 16-06](/images/2019/09/peek-2019-09-30-16-06.gif)
 
 
 Esta é a ponta do iceberg. Havendo necessidade, com um pouco de paciência e pesquisa, outras configurações podem ser alteradas usando PyQGIS. Por isso, pense nisso antes de começar a configurar camada a camada, campo a campo.

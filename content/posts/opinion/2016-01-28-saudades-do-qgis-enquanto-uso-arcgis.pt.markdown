@@ -37,14 +37,14 @@ Sim, é verdade, mas... apenas é possível configurar transparência ao nível 
 
 No QGIS, é possível determinar a transparência ao nível da camada, ao nível do  elemento/símbolo, e ao nível da cor. Podem achar que estou a sobrevalorizar o assunto, mas vejam a diferença nas imagens abaixo.
 
-![Transparencia_camada](images/2016/01/transparencia_camada.png)
-![Transparencia_elemento](images/2016/01/transparencia_elemento1.png)
-![Transparencia_cor](images/2016/01/transparencia_cor.png)
+![Transparencia_camada](/images/2016/01/transparencia_camada.png)
+![Transparencia_elemento](/images/2016/01/transparencia_elemento1.png)
+![Transparencia_cor](/images/2016/01/transparencia_cor.png)
 
 
 Reparem que no QGIS é possível controlar a transparência sempre (ou quase sempre) que se define uma cor. Isto inclui em anotações (como as usadas nas imagens acima), em etiquetas, e em itens do compositor de impressão. É até possível determinar a transparência de uma cor usando a função RGBA() numa expressão! Que mais se pode pedir? :-)
 
-![Screenshot from 2016-01-27 14:12:34](https://gisunchained.files.wordpress.com/2016/01/screenshot-from-2016-01-27-141234.png)
+![Screenshot from 2016-01-27 14:12:34](/images/2016/01/screenshot-from-2016-01-27-141234.png)
 
 
 
@@ -55,21 +55,21 @@ Esta funcionalidade é uma das preciosidades do QGIS, a possibilidade de combina
 
 Sem se experimentar um pouco, não é fácil perceber em que é que esta funcionalidade nos pode ser útil à produção cartográfica. Eu tive a oportunidade de o fazer enquanto tentava responder a [esta pergunta](http://gis.stackexchange.com/a/82815/6191).
 
-![2wph4](https://gisunchained.files.wordpress.com/2016/01/2wph4.jpg)
+![2wph4](/images/2016/01/2wph4.jpg)
 
 
 Uma das mais comuns utilizações para o _blending_ é quando queremos realçar ou simular o relevo adicionando um _hillshade_ por cima das restantes camadas. Em ArcGIS, apenas é possível controlar a transparência da camada, e o resultado final fica sempre um pouco esbatido em relação ao original. Mas no QGIS, é possível manter a força das cores originais usando o modo _multiply_ na camada do _hillshade_.
 
-[caption id="attachment_1809" align="alignnone" width="1269"]![Screenshot from 2016-01-27 15:24:38](https://gisunchained.files.wordpress.com/2016/01/screenshot-from-2016-01-27-152438.png)
+[caption id="attachment_1809" align="alignnone" width="1269"]![Screenshot from 2016-01-27 15:24:38](/images/2016/01/screenshot-from-2016-01-27-152438.png)
 Hipsometria com as cores originais[/caption]
 
-[caption id="attachment_1806" align="alignnone" width="1269"]![Screenshot from 2016-01-27 15:25:45](https://gisunchained.files.wordpress.com/2016/01/screenshot-from-2016-01-27-152545.png)
+[caption id="attachment_1806" align="alignnone" width="1269"]![Screenshot from 2016-01-27 15:25:45](/images/2016/01/screenshot-from-2016-01-27-152545.png)
 Cores da hipsometria esbatidas pelo _hillshade_ transparente[/caption]
 
-[caption id="attachment_1805" align="alignnone" width="1269"]![Screenshot from 2016-01-27 15:24:45](https://gisunchained.files.wordpress.com/2016/01/screenshot-from-2016-01-27-152445.png)
+[caption id="attachment_1805" align="alignnone" width="1269"]![Screenshot from 2016-01-27 15:24:45](/images/2016/01/screenshot-from-2016-01-27-152445.png)
 Cores originais da hipsometria com o _hillshade_ usando o _multiply_ do QGIS[/caption]
 
-É também possível usar os modos de _blending_ em elementos do compositor de mapas, permitindo combiná-los com outros elementos e texturas. Isto dá-nos a oportunidade de obter resultados [mais "artísticos"](https://sigsemgrilhetas.wordpress.com/2014/04/14/mapa-envelhecido-aged-map/) sem a necessidade de pós-processamento num software de edição de imagem.
+É também possível usar os modos de _blending_ em elementos do compositor de mapas, permitindo combiná-los com outros elementos e texturas. Isto dá-nos a oportunidade de obter resultados [mais "artísticos"](/images/2014/04/14/mapa-envelhecido-aged-map/) sem a necessidade de pós-processamento num software de edição de imagem.
 
 
 ## Configuração de cores
@@ -81,7 +81,7 @@ O eficiente controlo das cores é algo essencial para um cartógrafo, e o QGIS p
 
 O meu favorito é o _color picker_. Ora vejam, usando o _color picker_, é possível recolhermos cores de qualquer sítio do nosso ecrã, fora ou dentro do QGIS. Algo muito útil e produtivo quando queremos usar uma cor já existente no nosso mapa, da legenda, de uma palete do  [COLOURlovers](http://www.colourlovers.com/) ou do logo de uma empresa.
 
-[caption id="attachment_1571" align="alignnone" width="862"]![anim](https://gisunchained.files.wordpress.com/2016/01/anim.gif)
+[caption id="attachment_1571" align="alignnone" width="862"]![anim](/images/2016/01/anim.gif)
 Recollhendo uma cor fora do QGIS[/caption]
 
 Também podemos fazer _copy/paste_ de cores entre menus, gravar e importar paletes de cores e até dar nome a uma cor e [usá-la numa variável](http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/). Com tudo isto disponível, é-me difícil engolir o menu de selecção de cores do Windows. :(
@@ -100,17 +100,17 @@ No ArcGIS, existem várias maneiras de simbolizar as camadas de vectores. Temos 
 
 Para começar, pode-se usar tanto 'campos' como 'expressões' em qualquer um dos modos de simbologia, enquanto que no ArcGIS apenas é possível usar 'campos'. Alimentado por centenas de funções e com a possibilidade de criarmos as nossas próprias funções usando Python, o que é possível conseguir-se com expressões não tem limites. Torna-se possível seleccionar, recalcular, normalizar (etc...) um número infinito de campos para criar os nossos próprios "valores" (sem falar de que é possível aprimorar as etiquetas associadas aos valores para criar a legenda ideal).
 
-[caption id="attachment_1580" align="alignnone" width="825"]![Screenshot from 2016-01-20 22:34:54](https://gisunchained.files.wordpress.com/2016/01/screenshot-from-2016-01-20-223454.png)
+[caption id="attachment_1580" align="alignnone" width="825"]![Screenshot from 2016-01-20 22:34:54](/images/2016/01/screenshot-from-2016-01-20-223454.png)
 Símbolos graduados no QGIS usando uma expressão para calcular a densidade populacional[/caption]
 
 E depois, no QGIS existem alguns modos "especiais" (e de certa forma bastante específicos) de simbologia, que nos fazem exclamar "wooooh". Como, por exemplo, os **polígonos invertidos**, que permitem preencher o exterior dos polígonos (bom para mascarar outros elementos, os **pontos desfasados**, para mostrar pontos fisicamente demasiado próximos para serem representados, e o **_Heatmap_** que transforma qualquer camada de pontos num _heatmap_ sem necessidade de conversão para _raster_ e que é automaticamente actualizado sempre que editamos a camada de pontos.
 
-[caption id="attachment_1583" align="alignnone" width="777"]![Screenshot from 2016-01-20 22:58:44](https://gisunchained.files.wordpress.com/2016/01/screenshot-from-2016-01-20-225844.png)
+[caption id="attachment_1583" align="alignnone" width="777"]![Screenshot from 2016-01-20 22:58:44](/images/2016/01/screenshot-from-2016-01-20-225844.png)
 Polígonos invertidos a mascarar o exterior de uma área de interesse[/caption]
 
 Mas deixei o melhor para o fim. O "_One Renderer to rule them all_", a simbologia **baseada em regras**. Com este modo, é possível adicionar várias regras, agrupá-las numa estrutura de árvore, e atribuir-lhes um símbolo distinto. Cada elemento irá ser representado consoante cumpre ou não cada uma das regras. Isto dá aos utilizadores de QGIS controlo absoluto sobre a simbologia das suas camadas e que, em conjunto com o editor de expressões e as _data-defined properties_, abre a porta às mais diversas aplicações (veja alguns exemplos na secção abaixo).
 
-[caption id="attachment_1589" align="alignnone" width="869"]![rulesymbol_ng_line](https://gisunchained.files.wordpress.com/2016/01/rulesymbol_ng_line.png)
+[caption id="attachment_1589" align="alignnone" width="869"]![rulesymbol_ng_line](/images/2016/01/rulesymbol_ng_line.png)
 Simbologia por regras[/caption]
 
 
@@ -125,9 +125,9 @@ Penso que conhecem o funcionamento básico destas ferramentas em ambos os _softw
 
 Basicamente, podemos usar os atributos e geometria dos elementos da camada onde quer que seja possível usar uma expressão e, **no QGIS, as expressões estão por todo o lado**. Desta forma, a maioria das propriedades tanto de camadas, como dos elementos do mapa podem ser controlados pela camada usada no atlas.
 
-Com a devida configuração, iterando por todos os elementos da camada de atlas, é possível [escolher os elementos de outras camadas a mostrar ou a esconder](http://nathanw.net/2013/12/02/waiting-for-qgis-2-2-highlighting-current-atlas-feature/), [alterar a cor de base do seu mapa](http://nathanw.net/2014/09/23/qgis-atlas-on-non-geometry-tables/), [rodar e redimensionar as páginas de acordo com as dimensões do elemento](https://sigsemgrilhetas.wordpress.com/2014/11/09/series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/), [escolher um logo específico para acompanhar cada mapa](http://nyalldawson.net/2013/04/a-neat-trick-in-qgis-2-0-images-in-atlas-prints/), e por aí fora. Mais uma vez, o céu é o limite.
+Com a devida configuração, iterando por todos os elementos da camada de atlas, é possível [escolher os elementos de outras camadas a mostrar ou a esconder](http://nathanw.net/2013/12/02/waiting-for-qgis-2-2-highlighting-current-atlas-feature/), [alterar a cor de base do seu mapa](http://nathanw.net/2014/09/23/qgis-atlas-on-non-geometry-tables/), [rodar e redimensionar as páginas de acordo com as dimensões do elemento](/images/2014/11/09/series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/), [escolher um logo específico para acompanhar cada mapa](http://nyalldawson.net/2013/04/a-neat-trick-in-qgis-2-0-images-in-atlas-prints/), e por aí fora. Mais uma vez, o céu é o limite.
 
-[caption id="attachment_535" align="aligncenter" width="506"]![mosaico_regioes_fixed](https://gisunchained.files.wordpress.com/2014/11/mosaico_regioes_fixed.png)
+[caption id="attachment_535" align="aligncenter" width="506"]![mosaico_regioes_fixed](/images/2014/11/mosaico_regioes_fixed.png)
 Série de mapas cuja dimensão foi automaticamente alterada para cobrir os elementos a uma escala fixa[/caption]
 
 Por isso, se se aliar a funcionalidade de **Atlas** com as **_data-defined properties_**, a **simbologia por regras** e as **expressões**, não me parece que o _Data Driven Pages_ do ArcGIS seja um rival à altura. Discordam? Então tentem responder a [esta questão](http://gis.stackexchange.com/questions/174817/feature-label-visibility-based-on-spatial-relationship-to-index-feature-using-da?atw=1).
@@ -142,12 +142,12 @@ Este é um caso mais de experiência do utilizador (UX) do que propriamente uma 
 
 Quando uso as opções de simbologia do ArcGIS parece que estou no filme "[A origem (Inception)](http://www.imdb.com/title/tt1375666/)", às tantas, já nem sei onde estou! Por exemplo, para adicionar um rebordo tracejado a um símbolo de uma camda de polígonos, é preciso abrir 5 janelas diferentes, e depois voltar para trás a clicar OK, OK, OK...
 
-[caption id="attachment_1244" align="aligncenter" width="1499"]![Capture](https://gisunchained.files.wordpress.com/2016/01/capture.jpg)
+[caption id="attachment_1244" align="aligncenter" width="1499"]![Capture](/images/2016/01/capture.jpg)
 Opções de símbolos do ArcGIS[/caption]
 
 No QGIS, uma vez aberta a janela de propriedades da camada, todas as opções estão a um clique de distância (ou quase). E basta carregar em OK ou Aplicar uma vez para visualizar o resultado!
 
-[caption id="attachment_1561" align="alignnone" width="907"]![Screenshot from 2016-01-20 21:51:33](https://gisunchained.files.wordpress.com/2016/01/screenshot-from-2016-01-20-215133.png)
+[caption id="attachment_1561" align="alignnone" width="907"]![Screenshot from 2016-01-20 21:51:33](/images/2016/01/screenshot-from-2016-01-20-215133.png)
 Opções de estilos do QGIS[/caption]
 
 Como bónus, é possível fazer _copy/paste_ de uma camada para a outra, tornando a configuração do estilo de várias camadas muito mais rápida. Ao que me respondem:
@@ -175,7 +175,7 @@ Com o universo SIG (e não só) a evoluir cada vez mais para Dados Abertos, Norm
 
 No QGIS, como tudo o resto, o uso do WFS é livre. Tudo o que é preciso é adicionar um URL para o servidor WFS, e podemos começar a adicionar as camadas disponibilizadas, com a certeza de que estarão devidamente actualizadas pela entidade responsável pelo serviço.
 
-![Screenshot from 2016-01-20 21:58:54](https://gisunchained.files.wordpress.com/2016/01/screenshot-from-2016-01-20-215854.png)
+![Screenshot from 2016-01-20 21:58:54](/images/2016/01/screenshot-from-2016-01-20-215854.png)
 
 
 
@@ -209,19 +209,19 @@ Já fiz menção às expressões várias vezes, mas para aqueles que desconhecem
 Não conheço o suficiente do editor de expressões do ArcGIS para o poder criticar. Tanto quando percebo, podemos usá-lo para criar _labels_ e para preencher um campo usando o _field calculator_. Sei que existem certamente muitas funções que podemos usar (apenas utilizei algumas) mas não são visíveis ao utilizador comum. Provavelmente é preciso consultar a documentação de ajuda para conhecê-las todas. É ainda possível criar funções em VBScript, Python e JsScript.
 
 
-![Capture](https://gisunchained.files.wordpress.com/2016/01/capture2.jpg)
+![Capture](/images/2016/01/capture2.jpg)
 
 
 
 No QGIS, como já referi, podem-se usar expressões praticamente em todo o lado, o que é bastante conveniente para muitas aplicações. No que toca a funções, existem centenas disponíveis directamente na janela do editor de expressões, todas devidamente acompanhadas por informação sobre a sua sintaxe e alguns exemplos ilustrativos. Também se podem usar campos e valores como no ArcGIS, e até existe uma secção de "expressões recentes" para quando precisamos de reutilizar uma expressão.
 
 
-![Capture](https://gisunchained.files.wordpress.com/2016/01/capture3.jpg)
+![Capture](/images/2016/01/capture3.jpg)
 
 
 Para além disso, também é possível criar as nossas próprias funções em Python (nada de VBScript ou JsScript), mas desta feita num editor próprio, num outro separador. Um editor equipado com _autocomplete_ e _code highlight_ para nos facilitar a vida, e que permite gravar as funções no ambiente do utilizador para serem usadas posteriormente (inclusive noutras sessões de QGIS).
 
-![Capture](https://gisunchained.files.wordpress.com/2016/01/capture4.jpg)
+![Capture](/images/2016/01/capture4.jpg)
 
 
 

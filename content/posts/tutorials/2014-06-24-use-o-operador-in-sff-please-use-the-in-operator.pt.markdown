@@ -17,7 +17,7 @@ Uma forma mais prática e bonita de o fazer é usar o operador** IN**.
 
 Este operador existe em quase todos os softwares SIG que conheço. No [QGIS](http://www.qgis.org/pt_PT/site/), pode ser usado mesmo quando não existe um botãozinho para clicar.
 
-![Captura de tela 2014-04-23 16.50.40](images/2014/04/captura-de-tela-2014-04-23-16-50-40.png)
+![Captura de tela 2014-04-23 16.50.40](/images/2014/04/captura-de-tela-2014-04-23-16-50-40.png)
 
 
 Na verdade, trata-se de uma abreviatura do que é usado em SQL, onde o operador é usado na expressão WHERE.
