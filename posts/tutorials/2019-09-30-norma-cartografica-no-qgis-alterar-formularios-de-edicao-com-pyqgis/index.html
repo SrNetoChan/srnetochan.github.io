@@ -1,0 +1,90 @@
+<!doctype html><html><head><title>Configure editing form widgets using PyQGIS</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=icon type=image/png href=/images/favicon_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png><link rel=stylesheet href=/css/style.css><meta name=description content="Configure editing form widgets using PyQGIS"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png alt=Logo>Alexandre Neto</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img class=flag src=https://www.countryflags.io/gb/flat/16.png alt=gb>
+English</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis><img class=flag src=https://www.countryflags.io/pt/flat/24.png alt=pt>
+Português</a></div></li></ul></div></div><img src=/images/main-logo_hu864bbe108f1be1ae04b57f7f2fd9d631_5637_42x0_resize_box_2.png class=d-none id=main-logo alt=Logo>
+<img src=/images/inverted-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_42x0_resize_box_2.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=https://srnetochan.github.io/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts data-filter=all>Posts</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/posts/opinion/>Opinion articles</a><ul><li><a href=/posts/opinion/2013-03-26-nota-de-abertura/>Welcome note</a></li><li><a href=/posts/opinion/2013-03-31-porque-o-open-source/>Open Source, why?</a></li></ul></li><li><a href=/posts/news/>News</a></li><li><a href=/posts/tutorials/>Tutorials</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://srnetochan.github.io/images/default-hero.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/aneto2.jpg alt="Author Image"><h5 class=author-name>Alexandre Neto</h5><p>September 30, 2019</p></div><div class=title><h1>Configure editing form widgets using PyQGIS</h1></div><div class=post-content id=post-content><p>As I was preparing a QGIS Project to read a database structured according to the new <a href=http://www.dgterritorio.pt/cartografia_e_geodesia/cartografia/normas_e_especificacoes_tecnicas_de_cartografia/>rules and technical specifications for the Portuguese Cartography</a>, I started to configure the editing forms for several layers, so that:</p><pre><code>  1. Make some fields read-only, like for example an identifier field.
+  2. Configure widgets better suited for each field, to help the user and avoid errors. For example, date-time files with a pop-up calendar, and value lists with dropdown selectors.
+</code></pre><p>Basically, I wanted something like this:</p><p><img src=images/2019/09/peek-2019-09-30-15-04_2.gif alt="Peek 2019-09-30 15-04_2"></p><p>Let me say that, in PostGIS layers, QGIS does a great job in figuring out the best widget to use for each field, as well as the constraints to apply. Which is a great help. Nevertheless, some need some extra configuration.</p><p>If I had only a few layers and fields, I would have done them all by hand, but after the 5th layer my personal mantra started to chime in:</p><p>So, I began to think how could I configure the layers and fields more systematically. After some research and trial and error, I came up with the following PyQGIS functions.</p><h2 id=make-a-field-read-only>Make a field Read-only</h2><p>The identifier field (&ldquo;identificador&rdquo;) is automatically generated by the database. Therefore, the user shouldn&rsquo;t edit it. So I had better make it read only</p><p><img src=images/2019/09/layer-properties-cabo_electrico-attributes-form_103.png alt="Layer Properties - cabo_electrico | Attributes Form_103"></p><p>To make all the identifier fields read-only, I used the following code.</p><pre><code>def field_readonly(layer, fieldname, option = True):
+    fields = layer.fields()
+    field_idx = fields.indexOf(fieldname)
+    if field_idx &gt;= 0:
+        form_config = layer.editFormConfig()
+        form_config.setReadOnly(field_idx, option)
+        layer.setEditFormConfig(form_config)
+
+# Example for the field &quot;identificador&quot;
+
+project = QgsProject.instance()
+layers = project.mapLayers()
+
+for layer in layers.values():
+    field_readonly(layer,'identificador')
+</code></pre><h2 id=set-fields-with-datetime-widget>Set fields with DateTime widget</h2><p>The date fields are configured automatically, but the default widget setting only outputs the date, and not date-time, as the rules required.</p><p>I started by setting a field in a layer exactly how I wanted, then I tried to figure out how those setting were saved in PyQGIS using the Python console:</p><pre><code>&gt;&gt;&gt;layer = iface.mapCanvas().currentLayer()
+&gt;&gt;&gt;layer.fields().indexOf('inicio_objeto')
+1
+&gt;&gt;&gt;field = layer.fields()[1]
+&gt;&gt;&gt;field.editorWidgetSetup().type()
+'DateTime'
+&gt;&gt;&gt;field.editorWidgetSetup().config()
+{'allow_null': True, 'calendar_popup': True, 'display_format': 'yyyy-MM-dd HH:mm:ss', 'field_format': 'yyyy-MM-dd HH:mm:ss', 'field_iso_format': False}
+</code></pre><p>Knowing this, I was able to create a function that allows configuring a field in a layer using the exact same settings, and apply it to all layers.</p><pre><code>def field_to_datetime(layer, fieldname):
+    config = {'allow_null': True,
+              'calendar_popup': True,
+              'display_format': 'yyyy-MM-dd HH:mm:ss',
+              'field_format': 'yyyy-MM-dd HH:mm:ss',
+              'field_iso_format': False}
+    type = 'Datetime'
+    fields = layer.fields()
+    field_idx = fields.indexOf(fieldname)
+    if field_idx &gt;= 0:
+        widget_setup = QgsEditorWidgetSetup(type,config)
+        layer.setEditorWidgetSetup(field_idx, widget_setup)
+
+# Example applied to &quot;inicio_objeto&quot; e &quot;fim_objeto&quot;
+
+for layer in layers.values():
+    field_to_datetime(layer,'inicio_objeto')
+    field_to_datetime(layer,'fim_objeto')
+</code></pre><h2 id=setting-a-field-with-the-value-relation-widget>Setting a field with the Value Relation widget</h2><p>In the data model, many tables have fields that only allow a limited number of values. Those values are referenced to other tables, the <em>Foreign keys</em>.</p><p>In these cases, it&rsquo;s quite helpful to use a Value Relation widget. To configure fields with it in a programmatic way, it&rsquo;s quite similar to the earlier example, where we first neet to set an example and see how it&rsquo;s stored, but in this case, each field has a slightly different settings</p><p>Luckily, whoever designed the data model, did a favor to us all by giving the same name to the fields and the related tables, making it possible to automatically adapt the settings for each case.</p><p>The function stars by gathering all fields in which the name starts with &lsquo;valor_&rsquo; (value). Then, iterating over those fields, adapts the configuration to use the reference layer that as the same name as the field.</p><pre><code>def field_to_value_relation(layer):
+    fields = layer.fields()
+    pattern = re.compile(r'^valor_')
+    fields_valor = [field for field in fields if pattern.match(field.name())]
+    if len(fields_valor) &gt; 0:
+        config = {'AllowMulti': False,
+                  'AllowNull': True,
+                  'FilterExpression': '',
+                  'Key': 'identificador',
+                  'Layer': '',
+                  'NofColumns': 1,
+                  'OrderByValue': False,
+                  'UseCompleter': False,
+                   'Value': 'descricao'}
+        for field in fields_valor:
+            field_idx = fields.indexOf(field.name())
+            if field_idx &gt;= 0:
+                print(field)
+                try:
+                    target_layer = QgsProject.instance().mapLayersByName(field.name())[0]
+                    config['Layer'] = target_layer.id()
+                    widget_setup = QgsEditorWidgetSetup('ValueRelation',config)
+                    layer.setEditorWidgetSetup(field_idx, widget_setup)
+                except:
+                    pass
+            else:
+                return False
+    else:
+        return False
+    return True
+
+# Correr função em todas as camadas
+for layer in layers.values():
+    field_to_value_relation(layer)
+</code></pre><h2 id=conclusion><strong>Conclusion</strong></h2><p>In a relatively quick way, I was able to set all the project&rsquo;s layers with the widgets I needed.<img src=images/2019/09/peek-2019-09-30-16-06.gif alt="Peek 2019-09-30 16-06"></p><p>This seems to me like the tip of the iceberg. If one has the need, with some search and patience, other configurations can be changed using PyQGIS. Therefore, think twice before embarking in configuring a big project, layer by layer, field by fields.</p></div><div class=btn-improve-page><a href=https://github.com/SrNetoChan/SrNetoChan.github.io/edit//content/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis.markdown target=_blank><i class="fas fa-code-branch"></i>Improve this page</a></div><hr><div class="row next-prev-navigator"><div class="col-md-6 previous-article"><a href=/search/ class="btn btn-outline-info"><div><i class="fas fa-chevron-circle-left"></i>Prev</div><div class=next-prev-text>Search Results</div></a></div><div class="col-md-6 next-article"><a href=/posts/tutorials/2019-05-29-using-qgis-from-conda/ class="btn btn-outline-info"><div>Next <i class="fas fa-chevron-circle-right"></i></div><div class=next-prev-text>Using QGIS from Conda</div></a></div></div><hr><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname=="localhost")return;var dsq=document.createElement("script");dsq.type="text/javascript";dsq.async=true;var disqus_shortname="AlexandreNeto";dsq.src="//"+disqus_shortname+".disqus.com/embed.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the
+<a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com/ class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a><div class="dropdown languageSelector"><a class="btn dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img class=flag src=https://www.countryflags.io/gb/flat/16.png alt=gb>
+English</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis><img class=flag src=https://www.countryflags.io/pt/flat/24.png alt=pt>
+Português</a></div></div></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><a href=#make-a-field-read-only>Make a field Read-only</a></li><li><a href=#set-fields-with-datetime-widget>Set fields with DateTime widget</a></li><li><a href=#setting-a-field-with-the-value-relation-widget>Setting a field with the Value Relation widget</a></li><li><a href=#conclusion><strong>Conclusion</strong></a></li></ul></nav></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=/#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=/#recent-posts>Recent Posts</a></li><li class=nav-item><a class=smooth-scroll href=/#achievements>Map Gallery</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>alex.f.neto@gmail.com</span></li><li><span>Phone:</span> <span>+0123456789</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=_blank><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2021 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/single.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>
