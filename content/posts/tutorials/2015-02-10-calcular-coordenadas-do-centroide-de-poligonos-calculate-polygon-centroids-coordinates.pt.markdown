@@ -4,8 +4,6 @@ date: 2015-02-10 23:34:49+00:00
 title: Calcular coordenadas do centroide de polígonos
 ---
 
-[EN](https://gisunchained.wordpress.com/2015/02/10/calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/) | PT
-
 Tive necessidade de, numa camada de polígonos, adicionar colunas à tabela de atributos com as coordenadas dos centroides das geometria. Cheguei às seguintes expressões para calcular as coordenadas X e Y, respectivamente:
 
 [code]

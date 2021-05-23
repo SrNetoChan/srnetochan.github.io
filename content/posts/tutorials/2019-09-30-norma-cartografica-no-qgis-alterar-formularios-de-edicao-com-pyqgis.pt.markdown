@@ -6,8 +6,6 @@ tags:
 - QGIS
 ---
 
-PT | [EN](https://gisunchained.wordpress.com/2019/09/30/configure-editing-form-widgets-using-pyqgis/)
-
 Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados descrita nas novas [Normas e Especificações Técnicas de Cartografia ](http://www.dgterritorio.pt/cartografia_e_geodesia/cartografia/normas_e_especificacoes_tecnicas_de_cartografia/), comecei a configurar os formulários de edição das várias camadas de forma a:
 
 
@@ -17,7 +15,7 @@ Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados d
 
 No fundo, o que procurava era qualquer coisa deste género:
 
-![Peek 2019-09-30 15-04_2](https://sigsemgrilhetas.files.wordpress.com/2019/09/peek-2019-09-30-15-04_2.gif)
+![Peek 2019-09-30 15-04_2](/images/2019/09/peek-2019-09-30-15-04_2.gif)
 
 
 Antes de mais, é preciso dizer que o QGIS, quando lê uma tabela PostGreSQL/PostGIS, já faz um excelente trabalho a adivinhar, para cada campo, o tipo de widget a usar, assim  como as constraints a aplicar. O que é uma enorme ajuda. No entanto, alguns campos precisam de uma configuração extra.
@@ -36,7 +34,7 @@ Então, comecei a pensar como poderia fazer esta configuração de forma mais si
 
 O campo identificador é gerado automaticamente pela base de dados, pelo que o utilizador não só não precisa de o editar, como não deve. Por essa razão, convém tornar o campo não editável.
 
-![Layer Properties - cabo_electrico | Attributes Form_103](https://sigsemgrilhetas.files.wordpress.com/2019/09/layer-properties-cabo_electrico-attributes-form_103.png)
+![Layer Properties - cabo_electrico | Attributes Form_103](images/2019/09/layer-properties-cabo_electrico-attributes-form_103.png)
 
 
 Para o fazer programaticamente recorri ao seguinte código.
@@ -163,7 +161,7 @@ A funçao abaixo começa por identificar para determinada camada todos os campos
 
 Assim, de forma relativamente rápida, consegui configurar todas as camadas do projecto com os widgets que queria.
 
-![Peek 2019-09-30 16-06](https://sigsemgrilhetas.files.wordpress.com/2019/09/peek-2019-09-30-16-06.gif)
+![Peek 2019-09-30 16-06](images/2019/09/peek-2019-09-30-16-06.gif)
 
 
 Esta é a ponta do iceberg. Havendo necessidade, com um pouco de paciência e pesquisa, outras configurações podem ser alteradas usando PyQGIS. Por isso, pense nisso antes de começar a configurar camada a camada, campo a campo.

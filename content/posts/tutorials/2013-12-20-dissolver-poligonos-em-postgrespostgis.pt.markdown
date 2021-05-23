@@ -24,11 +24,11 @@ CREATE TABLE tabela_1
      geom geometry(MultiPolygon,27493);
 [/code]
 
-[![tabela1_original_tabela](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_original_tabela.png)
-](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_original_tabela.png)
+[![tabela1_original_tabela](images/2013/12/tabela1_original_tabela.png)
+](images/2013/12/tabela1_original_tabela.png)
 
-[![tabela1_original](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_original.png?w=584)
-](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_original.png)
+[![tabela1_original](images/2013/12/tabela1_original.png?w=584)
+](images/2013/12/tabela1_original.png)
 
 
 
@@ -44,8 +44,8 @@ FROM
     tabela_1 as t;
 [/code]
 
-[![tabela1_union](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_union.png?w=584)
-](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_union.png)
+[![tabela1_union](images/2013/12/tabela1_union.png?w=584)
+](images/2013/12/tabela1_union.png)
 
 
 
@@ -61,8 +61,8 @@ FROM
     tabela_1 as t;
 [/code]
 
-[![tabela1_union_dump](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_union_dump.png?w=584)
-](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_union_dump.png)
+[![tabela1_union_dump](images/2013/12/tabela1_union_dump.png?w=584)
+](images/2013/12/tabela1_union_dump.png)
 
 
 
@@ -83,8 +83,8 @@ GROUP BY
     campo2;
 [/code]
 
-[![tabela1_union_by_value](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_union_by_value.png?w=584)
-](http://sigsemgrilhetas.files.wordpress.com/2013/12/tabela1_union_by_value.png)
+[![tabela1_union_by_value](images/2013/12/tabela1_union_by_value.png?w=584)
+](images/2013/12/tabela1_union_by_value.png)
 
 **Nota 1:** Para quem prefere usar interfaces gráficos, preencher formulários e clicar em botões, o uso de SQL para fazer este tipo de operações pode parecer demasiado complicado e até um pouco retrógrado. Mas uma coisa garanto, com alguma prática as dificuldades iniciais são ultrapassadas e os benefícios que se retiram deste tipo de abordagem são muito recompensadores.
 

@@ -10,8 +10,6 @@ menu:
     weight: 30
 ---
 
-EN | [PT](https://sigsemgrilhetas.wordpress.com/2013/03/31/porque-o-open-source/)
-
 During my professional and personal life, I have worked with much different software, with all kinds of licenses. Most of them would be proprietary, closed and / or commercial code. So why devote my time and learning "exclusively" to Open Source?
 
 Without going into detail about the [differences](https://en.wikipedia.org/wiki/Free_and_open-source_software) between open source software and free software, there are several reasons why FOSS (Free and Open Source Software) interest me.

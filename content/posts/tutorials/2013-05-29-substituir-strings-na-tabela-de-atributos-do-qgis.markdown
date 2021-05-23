@@ -10,8 +10,8 @@ Hoje, ao rever uma camada vectorial de distribuição de fauna com interesse par
 
 Devido à opção tomada na organização dos dados, cada polígono continha uma listagem de espécies que nele ocorrem, e o nome a corrigir encontrava-se no meio da mesma. A correcção teria de ser feita sem alterar os restantes nomes.
 
-[![Screenshot from 2013-05-29 19:44:20](http://sigsemgrilhetas.files.wordpress.com/2013/05/screenshot-from-2013-05-29-1944201.png)
-](http://sigsemgrilhetas.files.wordpress.com/2013/05/screenshot-from-2013-05-29-1944201.png)
+[![Screenshot from 2013-05-29 19:44:20](images/2013/05/screenshot-from-2013-05-29-1944201.png)
+](images/2013/05/screenshot-from-2013-05-29-1944201.png)
 
 Tratavam-se de cerca de 80 linhas, e na verdade o termo "Aquila fasciatus" parecia uma meia dúzia de vezes, podendo ser facilmente substituído manualmente. No entanto, a minha honra geek não me permitia efectuar tal processo repetitivo e interrogava-se: "E se fossem mais?".
 
@@ -19,8 +19,8 @@ Tinha portanto de encontrar uma forma de o fazer automaticamente. Precisava de u
 
 Depois de alguma pesquisa, a solução foi encontrada na calculadora de campo, usando a função **replace()**.
 
-[![Screenshot from 2013-05-29 22:08:41](http://sigsemgrilhetas.files.wordpress.com/2013/05/screenshot-from-2013-05-29-220841.png?w=584)
-](http://sigsemgrilhetas.files.wordpress.com/2013/05/screenshot-from-2013-05-29-220841.png)
+[![Screenshot from 2013-05-29 22:08:41](images/2013/05/screenshot-from-2013-05-29-220841.png?w=584)
+](images/2013/05/screenshot-from-2013-05-29-220841.png)
 
 A expressão é:
 
@@ -30,5 +30,5 @@ A expressão é:
 
 E o resultado foi o esperado.
 
-[![Screenshot from 2013-05-29 22:14:37](http://sigsemgrilhetas.files.wordpress.com/2013/05/screenshot-from-2013-05-29-221437.png)
-](http://sigsemgrilhetas.files.wordpress.com/2013/05/screenshot-from-2013-05-29-221437.png)
+[![Screenshot from 2013-05-29 22:14:37](images/2013/05/screenshot-from-2013-05-29-221437.png)
+](images/2013/05/screenshot-from-2013-05-29-221437.png)

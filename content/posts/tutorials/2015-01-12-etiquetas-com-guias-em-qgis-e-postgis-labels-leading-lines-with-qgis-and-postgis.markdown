@@ -9,9 +9,6 @@ tags:
 - QGIS
 ---
 
-EN | [PT](https://sigsemgrilhetas.wordpress.com/2015/01/12/etiquetas-com-guias-em-qgis-e-postgis-labels-leading-lines-with-qgis-and-postgis/)
-
-
 Recently I had the need to add labels to features with very close geometries, resulting in their collision.
 
 ![Capturar_3](http://gisunchained.files.wordpress.com/2015/01/capturar_3-e1420735767497.png?w=584)

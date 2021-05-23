@@ -9,9 +9,6 @@ tags:
 - tutorial
 ---
 
-EN | [PT](https://sigsemgrilhetas.wordpress.com/2014/09/09/coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/)
-
-
 Some time ago in the [qgis-pt mailing list](http://osgeo-org.1560.x6.nabble.com/QGIS-pt-f5128248.html), someone asked [how to show the coordinates of a map corners using QGIS](http://osgeo-org.1560.x6.nabble.com/QGIS-Layout-coordenadas-nos-4-cantos-do-mapa-tt5140019.html). Since this features wasn't available (yet), I have tried to reach a automatic solution, but without success,  After some thought about it and after reading a [blog post](http://nathanw.net/2012/11/10/user-defined-expression-functions-for-qgis/) by [Nathan Woodrow](http://nathanw.net/aboutme.html), it came to me that the solution could be creating a user defined function for the expression builder to be used in labels in the map.
 
 Closely following the blog post instructions, I have created a file called **userfunctions.py** in the  **.qgis2/python** folder and, with [a help](http://osgeo-org.1560.x6.nabble.com/How-to-get-Composer-s-name-title-using-Python-td5160691.html) from [Nyall Dawson](http://nyalldawson.net/) I wrote the following code.
@@ -44,7 +41,7 @@ def map_x_min(values, feature, parent):
 
 After running the command **import userfunctions** in the python console  (Plugins > Python Console), it was already possible to use the  **map_x_min()** function (from the python category) in an expression to get the minimum X value of the map.
 
-![Screenshot from 2014-09-09 16^%29^%29](http://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-162929.png?w=584)
+![Screenshot from 2014-09-09 16^%29^%29](images/2014/09/screenshot-from-2014-09-09-162929.png?w=584)
 
 
 All I needed now was to create the other three functions,  **map_x_max()**, **map_y_min()** and** map_y_max()**.  Since part of the code would be repeated, I have decided to put it in a function called **map_bound()**, that would use the print composer title and map id as arguments, and return the map extent (in the form of a QgsRectangle).
@@ -174,17 +171,17 @@ map_y_max('my pretty map', 0) -> 12345.679
 
 The functions became available to the expression builder in the "Python" category (could have been any other name) and the functions descriptions are formatted as help texts to provide the user all the information needed to use them.
 
-![Screenshot from 2014-09-09 15^%39^%19](http://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-153919.png?w=584)
+![Screenshot from 2014-09-09 15^%39^%19](images/2014/09/screenshot-from-2014-09-09-153919.png?w=584)
 
 
 Using the created functions, it was now easy to put the corner coordinates in labels near the map corners. Any change to the map extents is reflected in the label, therefore quite useful to use with the atlas mode.
 
-[![Screenshot from 2014-09-09 15^%40^%27](http://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-154027.png?w=584)
-](https://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-154027.png)
+[![Screenshot from 2014-09-09 15^%40^%27](images/2014/09/screenshot-from-2014-09-09-154027.png?w=584)
+](images/2014/09/screenshot-from-2014-09-09-154027.png)
 
 The functions result can be used with other functions. In the following image, there is an expression to show the coordinates in a more compact way.
 
-[![Screenshot from 2014-09-09 15^%43^%55](http://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-154355.png?w=584)
+[![Screenshot from 2014-09-09 15^%43^%55](images/2014/09/screenshot-from-2014-09-09-154355.png?w=584)
 ](http://gisunchained.files.wordpress.com/2014/09/screenshot-from-2014-09-09-154355.png)
 
 There was a setback... For the functions to become available, it was necessary to manually import them in each QGIS session. Not very practical. Again with Nathan's [help](http://osgeo-org.1560.x6.nabble.com/How-to-import-a-user-defined-expression-functions-on-QGIS-start-up-td5159062.html), I found out that it's possible to import python modules at QGIS startup by putting a **startup.py** file with the import statements in the **.qgis2/python** folder. In my case, this was enough.
@@ -195,8 +192,8 @@ import userfunctions
 
 I was pretty satisfied with the end result. The ability to create your own functions in expressions demonstrates once more how easy it is to customize QGIS and create your own tools. I'm already thinking in more applications for this amazing functionality.
 
-[![UT 9 - Qta da Peninha - Vegetação potencial](http://sigsemgrilhetas.files.wordpress.com/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg?w=584)
-](http://sigsemgrilhetas.files.wordpress.com/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg)
+[![UT 9 - Qta da Peninha - Vegetação potencial](images/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg?w=584)
+](images/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg)
 
 You can download the Python files with the functions [HERE](https://www.dropbox.com/s/b0ejc7216eboach/user_functions.zip?dl=0). Just unzip both files to the .qgis2/python folder, and restart QGIS, and the functions should become available.
 

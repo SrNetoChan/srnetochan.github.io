@@ -24,9 +24,9 @@ FROM r;
 
 Copiando toda para a expressão na janela SQL do DB Manager (Base de dados > Gestor BD > Janela SQL), é possível usar o campo id como identificador único.
 
-[![QGIS_Janela_SQL](http://sigsemgrilhetas.files.wordpress.com/2013/12/qgis_janela_sql1.png?w=584)
-](http://sigsemgrilhetas.files.wordpress.com/2013/12/qgis_janela_sql1.png)
+[![QGIS_Janela_SQL](images/2013/12/qgis_janela_sql1.png?w=584)
+](images/2013/12/qgis_janela_sql1.png)
 
-[![AgregacaoSQL_Qgis](http://sigsemgrilhetas.files.wordpress.com/2013/12/agregacaosql_qgis.png?w=584)
-](http://sigsemgrilhetas.files.wordpress.com/2013/12/agregacaosql_qgis.png)
+[![AgregacaoSQL_Qgis](images/2013/12/agregacaosql_qgis.png?w=584)
+](images/2013/12/agregacaosql_qgis.png)
 

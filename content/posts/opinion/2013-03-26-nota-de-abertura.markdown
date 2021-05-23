@@ -9,10 +9,6 @@ menu:
     weight: 20
 ---
 
-EN | [PT](https://sigsemgrilhetas.wordpress.com/2013/03/26/nota-de-abertura/)
-
-
-
 The blog "GIS Unchained" have borne devoid of any grandiose aspirations. The main objective will be to register my experiences with Open Source software while addressing challenges related to geographic information systems (GIS), spatial analysis, cartography and everything else that it might entail.
 
 Following the same principle of openness and sharing of the open source, I hope that these records can help others who, like me, "venture" into this world.

@@ -9,9 +9,6 @@ tags:
 - QGIS
 ---
 
-EN | [PT](https://sigsemgrilhetas.wordpress.com/2014/11/09/series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/)
-
-
 As always, the new [QGIS](http://qgis.org) version (QGIS 2.6 Brigthon) brings a vast new [set of features](http://changelog.linfiniti.com/qgis/version/2.6.0/#170) that will allow the user to do more, better and faster than with the earlier version. One of this features is the ability to control some of the composer's items properties with data (for instance, size and position). Something that will allow lots of new interesting usages. In the next posts, I propose to show how to create map series with multiple formats.
 
 In this first post, the goal is that, keeping the page size, the map is created with the most suitable orientation (landscape or portrait) to fit the atlas feature. To exemplify, I will be using the [Alaska's sample dataset](http://docs.qgis.org/2.2/en/docs/user_manual/introduction/getting_started.html#sample-data) to create a map for each of Alaska's regions.

@@ -7,9 +7,6 @@ tags:
 - QGIS
 ---
 
-EN | [PT](https://sigsemgrilhetas.wordpress.com/2015/02/10/calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/)
-
-
 I had the need to add columns with the coordinates of polygons centroids. I came up with the following expressions to calculate X e Y, respectively:
 
 [code]

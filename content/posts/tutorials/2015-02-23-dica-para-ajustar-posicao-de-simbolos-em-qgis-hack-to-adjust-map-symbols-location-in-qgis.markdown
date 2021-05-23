@@ -8,10 +8,6 @@ tags:
 - QGIS
 ---
 
-EN | [PT](https://sigsemgrilhetas.wordpress.com/2015/02/23/dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/)
-
-
-
 Now and then I get too many map symbols (points) in the same place, and I thought how nice it would be if we could drag n' drop them around without messing with their geometries position, just like we do with labels. That thought gave me an idea for a cool hack.
 
 Choose your point layer and start by creating two new fields called symbX and symbY (Type: Decimal number; Size: 20; Precision: 5). Now go the layer properties and in the Style tab edit your symbol. **For each level of your symbol** select "map units" as the offset units, and set the following expression in the offset data define properties option:

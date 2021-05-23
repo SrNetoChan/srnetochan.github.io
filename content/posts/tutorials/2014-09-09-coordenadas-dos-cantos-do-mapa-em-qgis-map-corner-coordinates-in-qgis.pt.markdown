@@ -9,9 +9,6 @@ tags:
 - tutorial
 ---
 
-[EN](https://gisunchained.wordpress.com/2014/09/09/coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/) | PT
-
-
 ## O desafio
 
 
@@ -51,7 +48,7 @@ def map_x_min(values, feature, parent):
 
 Depois de correr o comando **import userfunctions** na consola python (Módulos > Consola python), já conseguia usar a função **map_x_min()** (disponível na categoria python) numa expressão para obter o valor mínimo em X.
 
-![Screenshot from 2014-09-09 16^%29^%29](http://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-162929.png?w=584)
+![Screenshot from 2014-09-09 16^%29^%29](images/2014/09/screenshot-from-2014-09-09-162929.png?w=584)
 
 Bastava então criar as restantes funções **map_x_max()**, **map_y_min()** e** map_y_max()**. Como parte do código seria repetida, decidi encapsulá-lo na função **map_bound()** que recebesse como argumentos o título do compositor de impressão e o id do mapa e me devolvesse a extensão do mesmo (sob a forma de um QgsRectangle).
 
@@ -180,18 +177,18 @@ map_y_max('my pretty map', 0) -> 12345.679
 
 As funções ficaram disponíveis no construtor de expressões na categoria "Python" (podia ter-lhe dado outro nome qualquer) e as descrições das funções são transformadas em textos de ajuda para fornecer ao utilizador informação de como utilizar as funções.
 
-![Screenshot from 2014-09-09 15^%39^%19](http://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-153919.png?w=584)
+![Screenshot from 2014-09-09 15^%39^%19](images/2014/09/screenshot-from-2014-09-09-153919.png?w=584)
 
 
 Usando as funções recentemente criadas, foi fácil posicionar etiquetas  junto dos cantos do mapa com as coordenadas dos mesmos. Qualquer alteração à extensão do mapa, reflecte-se nas etiquetas, podendo por isso ser usadas convenientemente com a funcionalidade de atlas.
 
-[![Screenshot from 2014-09-09 15^%40^%27](http://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-154027.png?w=584)
-](https://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-154027.png)
+[![Screenshot from 2014-09-09 15^%40^%27](images/2014/09/screenshot-from-2014-09-09-154027.png?w=584)
+](images/2014/09/screenshot-from-2014-09-09-154027.png)
 
 O resultado destas funções pode ser usado com outras. Na imagem seguinte apresenta-se uma expressão para apresentar as coordenadas de forma mais compacta.
 
-[![Screenshot from 2014-09-09 15^%43^%55](http://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-154355.png?w=584)
-](https://sigsemgrilhetas.files.wordpress.com/2014/09/screenshot-from-2014-09-09-154355.png)
+[![Screenshot from 2014-09-09 15^%43^%55](images/2014/09/screenshot-from-2014-09-09-154355.png?w=584)
+](images/2014/09/screenshot-from-2014-09-09-154355.png)
 
 Havia um senão... Para as funções ficarem disponíveis, seria necessário importá-las manualmente em cada utilização do QGIS. Algo que não era prático. Novamente com a [ajuda](http://osgeo-org.1560.x6.nabble.com/How-to-import-a-user-defined-expression-functions-on-QGIS-start-up-td5159062.html) do Nathan, fiquei a saber que podemos importar módulos Python no arranque do QGIS colocando na pasta **.qgis2/python** um ficheiro com o nome **startup.py** com os comandos de importação. Para o meu caso bastou o seguinte.
 
@@ -205,7 +202,7 @@ import userfunctions
 
 Fiquei bastante satisfeito com o resultado. A possibilidade do utilizador criar as usas próprias funções para usar em expressões vem mais uma vez demonstrar como é fácil personalizar e criar as minhas próprias ferramentas para QGIS. Já estou a matutar em mais aplicações para estar fantástica funcionalidade.
 
-[![UT 9 - Qta da Peninha - Vegetação potencial](http://sigsemgrilhetas.files.wordpress.com/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg?w=584)
-](http://sigsemgrilhetas.files.wordpress.com/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg)
+[![UT 9 - Qta da Peninha - Vegetação potencial](images/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg?w=584)
+](images/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg)
 
 Os ficheiros Python com as funções criadas podem ser descarregados [AQUI](https://www.dropbox.com/s/b0ejc7216eboach/user_functions.zip?dl=0). Basta descompactar os dois ficheiros para a pasta **.qgis2/python** e reiniciar o QGIS, e as funções devem ficar disponíveis.

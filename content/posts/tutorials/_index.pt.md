@@ -6,5 +6,5 @@ menu:
   sidebar:
     name: Tutoriais
     identifier: tutorials
-    weight: 10
+    weight: 40
 ---
