@@ -1,6 +1,6 @@
 # section information
 section:
-  name: Skills
+  name: Services
   id: skills
   enable: true
   weight: 2
@@ -11,24 +11,28 @@ section:
 # Your Skills.
 # Give a summary of you each skill in the summary section.
 skills:
-- name: QGIS
+- name: Spatial Analysis
   icon: "/images/sections/skills/kubernetes.png"
   summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
   url: "https://kubernetes.io/"
 
-- name: PostgreSQL
+- name: Enterprise Database Management
   icon: "/images/sections/skills/go.png"
   summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
   url: "https://golang.org/"
 
-- name: PostGIS
+- name: QGIS Plugins Development
   icon: "/images/sections/skills/cloud.png"
   summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
 
-- name: Git
+- name: Training
   icon: "/images/sections/skills/cloud.png"
   summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
 
-- name: Python
+- name: Cartography
+  icon: "/images/sections/skills/cloud.png"
+  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+
+- name: Documentation and Technical Writing
   icon: "/images/sections/skills/cloud.png"
   summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
