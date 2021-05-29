@@ -6,8 +6,8 @@ greeting: "Hi, I'm"
 image: "images/author/aneto2.jpg"
 # give your some contact information. they will be used in the footer
 contactInfo:
-  email: info[at]alexandreneto[dot]eu"
-  twitter: @alexnetogeo
+  email: "info[at]alexandreneto[dot]eu"
+  twitter: "@alexnetogeo"
 
 # some summary about what you do
 summary:
