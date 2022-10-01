@@ -42,24 +42,24 @@ socialLinks:
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
-softSkills:
-
-- name: Communication
-  percentage: 95
-  color: green
-- name: Team Work
-  percentage: 90
-  color: yellow
-- name: Adaptability
-  percentage: 85
-  color: blue
-- name: Problem solving
-  percentage: 90
-  color: orange
-- name: Critical Thinking
-  percentage: 75
-  color: sky
-- name: Work Ethic
-  percentage: 100
-  color: pink
+#softSkills:
+#
+#- name: Communication
+#  percentage: 95
+#  color: green
+#- name: Team Work
+#  percentage: 90
+#  color: yellow
+#- name: Adaptability
+#  percentage: 85
+#  color: blue
+#- name: Problem solving
+#  percentage: 90
+#  color: orange
+#- name: Critical Thinking
+#  percentage: 75
+#  color: sky
+#- name: Work Ethic
+#  percentage: 100
+#  color: pink
 
