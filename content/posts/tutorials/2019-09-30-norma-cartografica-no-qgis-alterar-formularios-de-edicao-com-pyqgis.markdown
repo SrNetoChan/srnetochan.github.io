@@ -14,8 +14,8 @@ As I was preparing a QGIS Project to read a database structured according to the
 
 
 
-	  1. Make some fields read-only, like for example an identifier field.
-	  2. Configure widgets better suited for each field, to help the user and avoid errors. For example, date-time files with a pop-up calendar, and value lists with dropdown selectors.
+1. Make some fields read-only, like for example an identifier field.
+2. Configure widgets better suited for each field, to help the user and avoid errors.  For example, date-time files with a pop-up calendar, and value lists with dropdown selectors.
 
 Basically, I wanted something like this:
 

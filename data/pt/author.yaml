@@ -2,17 +2,18 @@
 name: "Alexandre Neto"
 nickname: "Alexandre Neto"
 # greeting message before your name. it will default to "Hi! I am" if not provided
-greeting: "Hi, I'm"
+greeting: "Olá, chamo-me"
 image: "images/author/aneto2.jpg"
 # give your some contact information. they will be used in the footer
 contactInfo:
-  email: "alex.f.neto@gmail.com"
-  phone: "+0123456789"
+  email: "info[at]alexandreneto[dot]eu"
+  github: srnetochan
+  linkedin: alexandre-neto-geo
+  twitter: "@alexnetogeo"
 
 # some summary about what you do
 summary:
-  - I work as a freelancer geospatial consultant
-  - I use open-source solutions
-  - I love to solve spatial problems
-  - I love QGIS and PostGIS
-  - I love to work with some fun projects
+  - Trabalho como consultor geoespacial
+  - Ajudo pessoas e empresas com os seus desafios SIG
+  - Uso soluções livres e de código aberto
+  - Adoro partilhar os meus conhecimentos com os outros

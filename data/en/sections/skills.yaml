@@ -9,21 +9,21 @@ section:
   # hideTitle: true
 
 # Your Skills.
-# Give a summary of you each skill in the summary section.
+ Give a summary of you each skill in the summary section.
 skills:
 - name: Spatial Analysis
   icon: "/images/sections/skills/kubernetes.png"
-  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
+  summary: "Capable of performing spatial analysis from different data sources, either raster or vector. Able to write scripts, using Python, PyQGIS, SQL or QGIS processing Modeller to automate analysis"
   url: "https://kubernetes.io/"
 
-- name: Enterprise Database Management
+- name: Spatial Database Management
   icon: "/images/sections/skills/go.png"
-  summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
+  summary: "Able to design, deploy and manage PostgreSQL/Postgis spatial databases, including the creation of triggers and other mechanisms to ensure database consistency."
   url: "https://golang.org/"
 
 - name: QGIS Plugins Development
   icon: "/images/sections/skills/cloud.png"
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+  summary: "Development of QGIS plugins on demand. Creation of processing toolbars plugins"
 
 - name: Training
   icon: "/images/sections/skills/cloud.png"

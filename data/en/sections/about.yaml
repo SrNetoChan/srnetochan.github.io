@@ -8,7 +8,7 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Geospatial Consultant (Freelancer)
+designation: Geospatial Consultant
 # your company information
 #company:
 #  name: Example Co.
@@ -18,7 +18,10 @@ designation: Geospatial Consultant (Freelancer)
 resume: "files/CV-Europass-Alexandre-Neto-EN.pdf"
 
 # a summary about you
-summary: 'I am a passionate software engineer with x years of working experience. I built OSS tools for [Kubernetes](https://kubernetes.io/) using GO. My tools help people to deploy their workloads in Kubernetes. Sometimes, I work on some fun projects such as writing a theme, etc.'
+summary: 'I work as geospatial consultant freelancer. I have more than 20 years of experience in the field. In my daily work, I help others with their GIS/Geospatial challenges and workflows, mostly using QGIS, GDAL, PostgreSQL/PostGIS, Python and other free and open source solutions. 
+
+
+I also run several regular trainings, including: "Cartography and Datavis with QGIS", "Relational Spatial Databases with QGIS and PostGIS", and "Introduction to PyQGIS"'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
