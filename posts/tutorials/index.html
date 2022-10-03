@@ -1,36 +1,420 @@
-<!doctype html><html><head><title>Tutorials</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600"><link rel=stylesheet href=/fontawesome/css/all.min.css><meta property="og:title" content="Tutorials"><meta property="og:description" content="Tutorials"><meta property="og:type" content="website"><meta property="og:url" content="https://srnetochan.github.io/posts/tutorials/"><meta property="og:updated_time" content="2020-06-08T08:06:25+06:00"><link rel=stylesheet href=/css/layouts/list.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span></button>
-<a class=navbar-brand href=/>Alexandre Neto</a>
+<!doctype html><html>
+<head>
+<title>Tutorials</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link rel=stylesheet href=/css/plyr.css>
+<link rel=stylesheet href=/css/flag-icon.min.css>
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel=stylesheet href=/fontawesome/css/all.min.css>
+<link rel=stylesheet href=/css/colortheme/colortheme.css>
+<link rel=icon type=image/png href=/images/site/favicon_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png>
+<meta property="og:title" content="Tutorials">
+<meta property="og:description" content="Tutorials">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://srnetochan.github.io/posts/tutorials/">
+<link rel=stylesheet href=/css/layouts/list.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png alt=Logo>
+Alexandre Neto</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><span class="flag-icon flag-icon-gb"></span>English</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/pt/posts/tutorials><span class="flag-icon flag-icon-pt"></span>Português</a></div></li></ul></div></div></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts data-filter=all>Posts</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/posts/opinion/>Opinion articles</a><ul><li><a href=/posts/opinion/2013-03-26-nota-de-abertura/ title="Welcome note">Welcome note</a></li><li><a href=/posts/opinion/2013-03-31-porque-o-open-source/ title="Open Source, why?">Open Source, why?</a></li></ul></li><li><a href=/posts/news/ title=News>News</a></li><li><a class=active href=/posts/tutorials/ title=Tutorials>Tutorials</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid post-card-holder" id=post-card-holder><div class=post-card><a href=/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Configure editing form widgets using PyQGIS</h5><p class="card-text post-summary">As I was preparing a QGIS Project to read a database structured according to the new rules and technical specifications for the Portuguese Cartography, I started to configure the editing forms for several layers, so that:
-1. Make some fields read-only, like for example an identifier field. 2. Configure widgets better suited for each field, to help the user and avoid errors. For example, date-time files with a pop-up calendar, and value lists with dropdown selectors.</p></div><div class=card-footer><span class=float-left>September 30, 2019</span>
-<a href=/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2019-05-29-using-qgis-from-conda/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Using QGIS from Conda</h5><p class="card-text post-summary">QGIS recipes have been available on Conda for a while, but now, that they work for the three main operating systems, getting QGIS from Conda is s starting to become a reliable alternative to other QGIS distributions. Anyway, let&rsquo;s rewind a bit&mldr;
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+<div class=dropdown-menu aria-labelledby=languageSelector>
+<a class="dropdown-item nav-link languages-item" href=/pt/posts/tutorials>
+<span class="flag-icon flag-icon-pt"></span>
+Português
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<div id=theme-initialization style=display:none default-theme=system></div>
+<a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector>
+<a class="dropdown-item nav-link" href=# onclick=enableLightTheme()>
+<img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()>
+<img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()>
+<img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<form class=mx-auto method=get action=/search>
+<input type=text name=keyword placeholder=Search data-search id=search-box>
+</form>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/posts data-filter=all>Posts</a></li>
+<div class=subtree>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/posts/opinion/>Opinion articles</a>
+<ul>
+<li><a href=/posts/opinion/2013-03-26-nota-de-abertura/ title="Welcome note">Welcome note</a></li>
+<li><a href=/posts/opinion/2013-03-31-porque-o-open-source/ title="Open Source, why?">Open Source, why?</a></li>
+</ul>
+</li>
+<li><a href=/posts/news/ title=News>News</a></li>
+<li><a href=/posts/plugins/ title=Plugins>Plugins</a></li>
+<li><a class=active href=/posts/tutorials/ title=Tutorials>Tutorials</a></li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class="content container-fluid" id=content>
+<div class="container-fluid post-card-holder" id=post-card-holder>
+<div class=post-card>
+<a href=/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Configure editing form widgets using PyQGIS</h5>
+<p class="card-text post-summary">As I was preparing a QGIS Project to read a database structured according to the new rules and technical specifications for the Portuguese Cartography, I started to configure the editing forms for several layers, so that:
+Make some fields read-only, like for example an identifier field. Configure widgets better suited for each field, to help the user and avoid errors. For example, date-time files with a pop-up calendar, and value lists with dropdown selectors.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>September 30, 2019</span>
+<a href=/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2019-05-29-using-qgis-from-conda/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Using QGIS from Conda</h5>
+<p class="card-text post-summary">QGIS recipes have been available on Conda for a while, but now, that they work for the three main operating systems, getting QGIS from Conda is s starting to become a reliable alternative to other QGIS distributions. Anyway, let&rsquo;s rewind a bit&mldr;
 What is Conda?
-Why is that of any relevance?
-Conda provides a similar way to build, package and install QGIS (or any other software) in Linux, Windows, and Mac.</p></div><div class=card-footer><span class=float-left>May 29, 2019</span>
-<a href=/posts/tutorials/2019-05-29-using-qgis-from-conda/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2015-11-06-obter-os-vertices-de-multipoligonos-em-postgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Getting multipolygon vertexes using PostGIS</h5><p class="card-text post-summary">Today I needed to create a view in PostGIS that returned the vertexes of a multi-polygon layer. Besides, I needed that they were numerically ordered starting in 1, and with the respective XY coordinates.
-It seemed to be a trivial task – all I would need was to use the ST_DumpPoints() function to get all vertexes – if it wasn&rsquo;t for the fact that PostGIS polygons have a duplicate vertex (the last vertex must be equal to the first one) that I have no interess in showing.</p></div><div class=card-footer><span class=float-left>November 6, 2015</span>
-<a href=/posts/tutorials/2015-11-06-obter-os-vertices-de-multipoligonos-em-postgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Hack to adjust map symbols location in QGIS</h5><p class="card-text post-summary">Now and then I get too many map symbols (points) in the same place, and I thought how nice it would be if we could drag n' drop them around without messing with their geometries position, just like we do with labels. That thought gave me an idea for a cool hack.
-Choose your point layer and start by creating two new fields called symbX and symbY (Type: Decimal number; Size: 20; Precision: 5).</p></div><div class=card-footer><span class=float-left>February 23, 2015</span>
-<a href=/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2015-02-10-calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Calculate polygon centroid's coordinates</h5><p class="card-text post-summary">I had the need to add columns with the coordinates of polygons centroids. I came up with the following expressions to calculate X e Y, respectively:
+Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>May 29, 2019</span>
+<a href=/posts/tutorials/2019-05-29-using-qgis-from-conda/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2015-11-06-obter-os-vertices-de-multipoligonos-em-postgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Getting multipolygon vertexes using PostGIS</h5>
+<p class="card-text post-summary">Today I needed to create a view in PostGIS that returned the vertexes of a multi-polygon layer. Besides, I needed that they were numerically ordered starting in 1, and with the respective XY coordinates.
+It seemed to be a trivial task – all I would need was to use the ST_DumpPoints() function to get all vertexes – if it wasn&rsquo;t for the fact that PostGIS polygons have a duplicate vertex (the last vertex must be equal to the first one) that I have no interess in showing.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>November 6, 2015</span>
+<a href=/posts/tutorials/2015-11-06-obter-os-vertices-de-multipoligonos-em-postgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Hack to adjust map symbols location in QGIS</h5>
+<p class="card-text post-summary">Now and then I get too many map symbols (points) in the same place, and I thought how nice it would be if we could drag n' drop them around without messing with their geometries position, just like we do with labels. That thought gave me an idea for a cool hack.
+Choose your point layer and start by creating two new fields called symbX and symbY (Type: Decimal number; Size: 20; Precision: 5).</p>
+</div>
+<div class=card-footer>
+<span class=float-left>February 23, 2015</span>
+<a href=/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2015-02-10-calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Calculate polygon centroid's coordinates</h5>
+<p class="card-text post-summary">I had the need to add columns with the coordinates of polygons centroids. I came up with the following expressions to calculate X e Y, respectively:
 [code] xmin(centroid($geometry)) ymin(centroid($geometry)) [/code]
-The expression seems quite simple, but it toke me some time before I realize that, not having a x(geometry) and y(geometry) functions, I could use the xmin() and ymin() to get the coordinates of the polygons centroids. Since this wasn&rsquo;t the first time I had to use this expressions, this post will work as a reminder for the future.</p></div><div class=card-footer><span class=float-left>February 10, 2015</span>
-<a href=/posts/tutorials/2015-02-10-calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2015-01-12-etiquetas-com-guias-em-qgis-e-postgis-labels-leading-lines-with-qgis-and-postgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Labels leading lines with QGIS and Postgis</h5><p class="card-text post-summary">Recently I had the need to add labels to features with very close geometries, resulting in their collision.
+The expression seems quite simple, but it toke me some time before I realize that, not having a x(geometry) and y(geometry) functions, I could use the xmin() and ymin() to get the coordinates of the polygons centroids. Since this wasn&rsquo;t the first time I had to use this expressions, this post will work as a reminder for the future.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>February 10, 2015</span>
+<a href=/posts/tutorials/2015-02-10-calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2015-01-12-etiquetas-com-guias-em-qgis-e-postgis-labels-leading-lines-with-qgis-and-postgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Labels leading lines with QGIS and Postgis</h5>
+<p class="card-text post-summary">Recently I had the need to add labels to features with very close geometries, resulting in their collision.
 Using data-defined override for label&rsquo;s position (I have usedlayer to labeled layer plugin to set this really fast) and the QGIS tool to move labels, it was quite easy to relocate them to better places. However, in same cases, it was difficult to understand to which geometry they belonged.
-I needed some kind of leading lines to connect, whenever necessary, label and feature.</p></div><div class=card-footer><span class=float-left>January 12, 2015</span>
-<a href=/posts/tutorials/2015-01-12-etiquetas-com-guias-em-qgis-e-postgis-labels-leading-lines-with-qgis-and-postgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2014-11-18-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-2-multiple-format-map-series-using-qgis-2-6-part-21/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Multiple format map series using QGIS 2.6 – Part 2</h5><p class="card-text post-summary">In my last post, I have tried to show how I used QGIS 2.6 to create a map series where the page&rsquo;s orientation adapted to the shape of the atlas features. This method is useful when the final scale of the maps is irrelevant, or when the size of the atlas elements is similar, allowing one to use a fixed scale. On the other hand, when using a fixed scale is mandatory and the features size are too different, it is needed to change the size of the paper.</p></div><div class=card-footer><span class=float-left>November 18, 2014</span>
-<a href=/posts/tutorials/2014-11-18-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-2-multiple-format-map-series-using-qgis-2-6-part-21/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Multiple format map series using QGIS 2.6 - Part 1</h5><p class="card-text post-summary">As always, the new QGIS version (QGIS 2.6 Brigthon) brings a vast new set of features that will allow the user to do more, better and faster than with the earlier version. One of this features is the ability to control some of the composer&rsquo;s items properties with data (for instance, size and position). Something that will allow lots of new interesting usages. In the next posts, I propose to show how to create map series with multiple formats.</p></div><div class=card-footer><span class=float-left>November 9, 2014</span>
-<a href=/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Map corner coordinates in QGIS</h5><p class="card-text post-summary">Some time ago in the qgis-pt mailing list, someone asked how to show the coordinates of a map corners using QGIS. Since this features wasn&rsquo;t available (yet), I have tried to reach a automatic solution, but without success, After some thought about it and after reading a blog post by Nathan Woodrow, it came to me that the solution could be creating a user defined function for the expression builder to be used in labels in the map.</p></div><div class=card-footer><span class=float-left>September 9, 2014</span>
-<a href=/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Please use the "IN" operador</h5><p class="card-text post-summary">It&rsquo;s not the first time I see people that, to select feature by their fields values, use expressions like this:
+I needed some kind of leading lines to connect, whenever necessary, label and feature.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>January 12, 2015</span>
+<a href=/posts/tutorials/2015-01-12-etiquetas-com-guias-em-qgis-e-postgis-labels-leading-lines-with-qgis-and-postgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2014-11-18-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-2-multiple-format-map-series-using-qgis-2-6-part-21/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Multiple format map series using QGIS 2.6 – Part 2</h5>
+<p class="card-text post-summary">In my last post, I have tried to show how I used QGIS 2.6 to create a map series where the page&rsquo;s orientation adapted to the shape of the atlas features. This method is useful when the final scale of the maps is irrelevant, or when the size of the atlas elements is similar, allowing one to use a fixed scale. On the other hand, when using a fixed scale is mandatory and the features size are too different, it is needed to change the size of the paper.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>November 18, 2014</span>
+<a href=/posts/tutorials/2014-11-18-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-2-multiple-format-map-series-using-qgis-2-6-part-21/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Multiple format map series using QGIS 2.6 - Part 1</h5>
+<p class="card-text post-summary">As always, the new QGIS version (QGIS 2.6 Brigthon) brings a vast new set of features that will allow the user to do more, better and faster than with the earlier version. One of this features is the ability to control some of the composer&rsquo;s items properties with data (for instance, size and position). Something that will allow lots of new interesting usages. In the next posts, I propose to show how to create map series with multiple formats.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>November 9, 2014</span>
+<a href=/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Map corner coordinates in QGIS</h5>
+<p class="card-text post-summary">Some time ago in the qgis-pt mailing list, someone asked how to show the coordinates of a map corners using QGIS. Since this features wasn&rsquo;t available (yet), I have tried to reach a automatic solution, but without success, After some thought about it and after reading a blog post by Nathan Woodrow, it came to me that the solution could be creating a user defined function for the expression builder to be used in labels in the map.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>September 9, 2014</span>
+<a href=/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Please use the "IN" operador</h5>
+<p class="card-text post-summary">It&rsquo;s not the first time I see people that, to select feature by their fields values, use expressions like this:
 [code language=&ldquo;SQL&rdquo;]&ldquo;field&rdquo; = &lsquo;value1&rsquo; OR &ldquo;field&rdquo; = &lsquo;value2&rsquo; OR &ldquo;field&rdquo; = &lsquo;value3&rsquo; [OR &mldr;][/code]
 A more practical and pretty way of doing this is by using the IN operator instead.
 [code language=&ldquo;SQL&rdquo;]&ldquo;field&rdquo; IN (&lsquo;value1&rsquo;,&lsquo;value2&rsquo;,&lsquo;value3&rsquo;[,&mldr;])[/code]
-This operator is available in almost every GIS software I know. In QGIS, it can be used even if there isn&rsquo;t a small little button to click.</p></div><div class=card-footer><span class=float-left>June 24, 2014</span>
-<a href=/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Old map in QGIS</h5><p class="card-text post-summary">Inspired in a post by Anita Graser, I&rsquo;ve tried to use QGIS to create a Cascais&rsquo;s old looking map, as if it have been drawn by hand in a methodical way.
+This operator is available in almost every GIS software I know. In QGIS, it can be used even if there isn&rsquo;t a small little button to click.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>June 24, 2014</span>
+<a href=/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Old map in QGIS</h5>
+<p class="card-text post-summary">Inspired in a post by Anita Graser, I&rsquo;ve tried to use QGIS to create a Cascais&rsquo;s old looking map, as if it have been drawn by hand in a methodical way.
 Defining the styles I have started by defining the styles for each elements to represent.
-Buildings To fill the buildings, I have tried to use a color that reminds me the portuguese roofs, similar to the color commonly used in old maps of cities, with a slightly darker outline of the same color.</p></div><div class=card-footer><span class=float-left>April 14, 2014</span>
-<a href=/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Substituir strings na tabela de atributos do QGIS</h5><p class="card-text post-summary">Hoje, ao rever uma camada vectorial de distribuição de fauna com interesse para a conservação com a nossa bióloga de serviço, Sara Saraiva, tive necessidade de corrigir (em todas as linhas de determinado atributo) o nome &ldquo;Aquila fasciatus&rdquo;, substituindo-o por &ldquo;Aquila fasciata&rdquo;.
-Devido à opção tomada na organização dos dados, cada polígono continha uma listagem de espécies que nele ocorrem, e o nome a corrigir encontrava-se no meio da mesma. A correcção teria de ser feita sem alterar os restantes nomes.</p></div><div class=card-footer><span class=float-left>May 29, 2013</span>
-<a href=/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div></div><div class=paginator><ul class=pagination><li class=page-item><a href=/posts/tutorials/ class=page-link aria-label=First><span aria-hidden=true>&#171;&#171;</span></a></li><li class="page-item disabled"><a class=page-link aria-label=Previous><span aria-hidden=true>&#171;</span></a></li><li class="page-item active"><a class=page-link href=/posts/tutorials/>1</a></li><li class=page-item><a class=page-link href=/posts/tutorials/page/2/>2</a></li><li class=page-item><a href=/posts/tutorials/page/2/ class=page-link aria-label=Next><span aria-hidden=true>&#187;</span></a></li><li class=page-item><a href=/posts/tutorials/page/2/ class=page-link aria-label=Last><span aria-hidden=true>&#187;&#187;</span></a></li></ul></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#skills>Services</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#recent-posts>Recent Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#achievements>Map Gallery</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:info[at]alexandreneto[dot]eu target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span><span>info[at]alexandreneto[dot]eu</span></a></li><li><span>Twitter:</span> <span>@alexnetogeo</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png alt="Toha Theme Logo">
-Toha</a></div><div class="col-md-4 text-center">© 2021 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=/js/list.js></script></body></html>
+Buildings To fill the buildings, I have tried to use a color that reminds me the portuguese roofs, similar to the color commonly used in old maps of cities, with a slightly darker outline of the same color.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>April 14, 2014</span>
+<a href=/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Substituir strings na tabela de atributos do QGIS</h5>
+<p class="card-text post-summary">Hoje, ao rever uma camada vectorial de distribuição de fauna com interesse para a conservação com a nossa bióloga de serviço, Sara Saraiva, tive necessidade de corrigir (em todas as linhas de determinado atributo) o nome &ldquo;Aquila fasciatus&rdquo;, substituindo-o por &ldquo;Aquila fasciata&rdquo;.
+Devido à opção tomada na organização dos dados, cada polígono continha uma listagem de espécies que nele ocorrem, e o nome a corrigir encontrava-se no meio da mesma. A correcção teria de ser feita sem alterar os restantes nomes.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>May 29, 2013</span>
+<a href=/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class=paginator>
+<ul class="pagination pagination-default">
+<li class="page-item disabled">
+<a aria-disabled=true aria-label=First class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;&#171;</span></a>
+</li>
+<li class="page-item disabled">
+<a aria-disabled=true aria-label=Previous class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;</span></a>
+</li>
+<li class="page-item active">
+<a aria-current=page aria-label="Page 1" class=page-link role=button>1</a>
+</li>
+<li class=page-item>
+<a href=/posts/tutorials/page/2/ aria-label="Page 2" class=page-link role=button>2</a>
+</li>
+<li class=page-item>
+<a href=/posts/tutorials/page/2/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
+</li>
+<li class=page-item>
+<a href=/posts/tutorials/page/2/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<footer id=footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navigation</h5>
+<ul>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#about>About</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#skills>Services</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#projects>Projects</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#recent-posts>Recent Posts</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#achievements>Map Gallery</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://aneto.pt/posts/plugins/>Plugins</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contact me:</h5>
+<ul>
+<li><a href=mailto:info[at]alexandreneto[dot]eu target=_blank rel=noopener>
+<span><i class="fas fa-envelope"></i></span> <span>info[at]alexandreneto[dot]eu</span>
+</a></li>
+<li><a href=https://github.com/srnetochan target=_blank rel=noopener>
+<span><i class="fab fa-github"></i></span> <span>srnetochan</span>
+</a></li>
+<li><a href=https://www.linkedin.com/in/alexandre-neto-geo target=_blank rel=noopener>
+<span><i class="fab fa-linkedin"></i></span> <span>Alexandre Neto</span>
+</a></li>
+<li><span>Twitter: </span> <span>@alexnetogeo</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2022 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=/js/list.js></script>
+</body>
+</html>

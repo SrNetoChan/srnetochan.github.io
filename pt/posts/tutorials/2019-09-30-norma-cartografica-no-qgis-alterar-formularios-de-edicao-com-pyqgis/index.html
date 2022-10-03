@@ -1,11 +1,144 @@
-<!doctype html><html><head><title>Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600"><link rel=stylesheet href=/fontawesome/css/all.min.css><meta property="og:title" content="Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS"><meta property="og:description" content="Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados descrita nas novas Normas e Especificações Técnicas de Cartografia , comecei a configurar os formulários de edição das várias camadas de forma a:
- 1. Bloquear a edição de campos só de leitura, como por exemplo um identificador. 2. Configurar widgets adequados aos campos, que facilitem a vida do utilizador e evitem que cometa erros, como por exemplo campos com dadas e listas de valores fixos."><meta property="og:type" content="article"><meta property="og:url" content="https://srnetochan.github.io/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/"><meta property="article:published_time" content="2019-09-30T21:06:06+00:00"><meta property="article:modified_time" content="2019-09-30T21:06:06+00:00"><meta name=description content="Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span></button>
-<a class=navbar-brand href=/pt>Alexandre Neto</a>
+<!doctype html><html>
+<head>
+<title>Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link rel=stylesheet href=/css/plyr.css>
+<link rel=stylesheet href=/css/flag-icon.min.css>
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel=stylesheet href=/fontawesome/css/all.min.css>
+<link rel=stylesheet href=/css/colortheme/colortheme.css>
+<link rel=icon type=image/png href=/images/site/favicon_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png>
+<meta property="og:title" content="Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS">
+<meta property="og:description" content="Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados descrita nas novas Normas e Especificações Técnicas de Cartografia , comecei a configurar os formulários de edição das várias camadas de forma a:
+ 1. Bloquear a edição de campos só de leitura, como por exemplo um identificador. 2. Configurar widgets adequados aos campos, que facilitem a vida do utilizador e evitem que cometa erros, como por exemplo campos com dadas e listas de valores fixos.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://srnetochan.github.io/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-09-30T21:06:06+00:00">
+<meta property="article:modified_time" content="2019-09-30T21:06:06+00:00">
+<meta name=description content="Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
+<link rel=stylesheet href=/css/layouts/single.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/pt>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png alt=Logo>
+Alexandre Neto</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><span class="flag-icon flag-icon-pt"></span>Português</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis><span class="flag-icon flag-icon-gb"></span>English</a></div></li></ul></div></div></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/pt/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/pt/posts data-filter=all>Posts</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/pt/posts/opinion/>Artigos de Opinião</a><ul><li><a href=/pt/posts/opinion/2013-03-26-nota-de-abertura/ title="Nota de abertura">Nota de abertura</a></li><li><a href=/pt/posts/opinion/2013-03-31-porque-o-open-source/ title="Porquê o Open Source?">Porquê o Open Source?</a></li><li><a href=/pt/posts/opinion/2013-04-04-as-queixas-do-costume/ title="As queixas do costume">As queixas do costume</a></li></ul></li><li><a href=/pt/posts/news/ title=Notícias>Notícias</a></li><li><a href=/pt/posts/tutorials/ title=Tutoriais>Tutoriais</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://srnetochan.github.io/images/default-hero.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/aneto2_hu3ba7f484d115ecd4e89b152fb4092700_544820_120x120_fit_q75_box.jpg alt="Author Image"><h5 class=author-name>Alexandre Neto</h5><p>:date_full</p></div><div class=title><h1>Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS</h1></div><div class=post-content id=post-content><p>Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados descrita nas novas <a href=http://www.dgterritorio.pt/cartografia_e_geodesia/cartografia/normas_e_especificacoes_tecnicas_de_cartografia/>Normas e Especificações Técnicas de Cartografia </a>, comecei a configurar os formulários de edição das várias camadas de forma a:</p><pre><code>  1. Bloquear a edição de campos só de leitura, como por exemplo um identificador.
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span class="flag-icon flag-icon-pt"></span>
+Português
+</a>
+<div class=dropdown-menu aria-labelledby=languageSelector>
+<a class="dropdown-item nav-link languages-item" href=/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis>
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<div id=theme-initialization style=display:none default-theme=system></div>
+<a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector>
+<a class="dropdown-item nav-link" href=# onclick=enableLightTheme()>
+<img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()>
+<img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()>
+<img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<form class=mx-auto method=get action=/pt/search>
+<input type=text name=keyword placeholder=Search data-search id=search-box>
+</form>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/pt/posts data-filter=all>Posts</a></li>
+<div class=subtree>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/pt/posts/opinion/>Artigos de Opinião</a>
+<ul>
+<li><a href=/pt/posts/opinion/2013-03-26-nota-de-abertura/ title="Nota de abertura">Nota de abertura</a></li>
+<li><a href=/pt/posts/opinion/2013-03-31-porque-o-open-source/ title="Porquê o Open Source?">Porquê o Open Source?</a></li>
+<li><a href=/pt/posts/opinion/2013-04-04-as-queixas-do-costume/ title="As queixas do costume">As queixas do costume</a></li>
+</ul>
+</li>
+<li><a href=/pt/posts/news/ title=Notícias>Notícias</a></li>
+<li><a href=/pt/posts/plugins/ title=Plugins>Plugins</a></li>
+<li><a class=active href=/pt/posts/tutorials/ title=Tutoriais>Tutoriais</a></li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class=content>
+<div class="container p-0 read-area">
+<div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://srnetochan.github.io/images/default-hero.jpg)>
+</div>
+<div class=page-content>
+<div class="author-profile ml-auto align-self-lg-center">
+<img class=rounded-circle src=/images/author/aneto2_hu3ba7f484d115ecd4e89b152fb4092700_544820_120x120_fit_q75_box.jpg alt="Author Image">
+<h5 class=author-name>Alexandre Neto</h5>
+<p>segunda-feira, 30 de setembro de 2019</p>
+</div>
+<div class=title>
+<h1>Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS</h1>
+</div>
+<div class=taxonomy-terms>
+<ul>
+<li class=rounded><a href=/pt/tags/python class="btn, btn-sm">python</a></li>
+<li class=rounded><a href=/pt/tags/qgis class="btn, btn-sm">QGIS</a></li>
+</ul>
+</div>
+<div class=post-content id=post-content>
+<p>Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados descrita nas novas <a href=http://www.dgterritorio.pt/cartografia_e_geodesia/cartografia/normas_e_especificacoes_tecnicas_de_cartografia/>Normas e Especificações Técnicas de Cartografia </a>, comecei a configurar os formulários de edição das várias camadas de forma a:</p>
+<pre><code>  1. Bloquear a edição de campos só de leitura, como por exemplo um identificador.
   2. Configurar widgets adequados aos campos, que facilitem a vida do utilizador e evitem que cometa erros, como por exemplo campos com dadas e listas de valores fixos.
-</code></pre><p>No fundo, o que procurava era qualquer coisa deste género:</p><p><img src=/images/2019/09/peek-2019-09-30-15-04_2.gif alt="Peek 2019-09-30 15-04_2"></p><p>Antes de mais, é preciso dizer que o QGIS, quando lê uma tabela PostGreSQL/PostGIS, já faz um excelente trabalho a adivinhar, para cada campo, o tipo de widget a usar, assim  como as constraints a aplicar. O que é uma enorme ajuda. No entanto, alguns campos precisam de uma configuração extra.</p><p>Se se tratassem de meia-dúzia de camadas e campos, teria feito tudo de manualmente, mas ao fim da quinta camada, o meu Mantra começou a chamar por mim:</p><p>Então, comecei a pensar como poderia fazer esta configuração de forma mais sistemática para todas as camadas e campos, sem me causar tendinites. Depois de alguma pesquisa, cheguei às funções PyQGIS que apresento a seguir.</p><h2 id=tornar-um-campo-apenas-de-leitura>Tornar um campo apenas  de leitura</h2><p>O campo identificador é gerado automaticamente pela base de dados, pelo que o utilizador não só não precisa de o editar, como não deve. Por essa razão, convém tornar o campo não editável.</p><p><img src=/images/2019/09/layer-properties-cabo_electrico-attributes-form_103.png alt="Layer Properties - cabo_electrico | Attributes Form_103"></p><p>Para o fazer programaticamente recorri ao seguinte código.</p><pre><code>def field_readonly(layer, fieldname, option = True):
+</code></pre>
+<p>No fundo, o que procurava era qualquer coisa deste género:</p>
+<p><img src=/images/2019/09/peek-2019-09-30-15-04_2.gif alt="Peek 2019-09-30 15-04_2"></p>
+<p>Antes de mais, é preciso dizer que o QGIS, quando lê uma tabela PostGreSQL/PostGIS, já faz um excelente trabalho a adivinhar, para cada campo, o tipo de widget a usar, assim  como as constraints a aplicar. O que é uma enorme ajuda. No entanto, alguns campos precisam de uma configuração extra.</p>
+<p>Se se tratassem de meia-dúzia de camadas e campos, teria feito tudo de manualmente, mas ao fim da quinta camada, o meu Mantra começou a chamar por mim:</p>
+<blockquote>"Quando usas um computador, se estás a fazer manualmente uma tarefa repetitiva, estás a fazê-la mal!"</blockquote>
+<p>Então, comecei a pensar como poderia fazer esta configuração de forma mais sistemática para todas as camadas e campos, sem me causar tendinites. Depois de alguma pesquisa, cheguei às funções PyQGIS que apresento a seguir.</p>
+<h2 id=tornar-um-campo-apenas-de-leitura>Tornar um campo apenas  de leitura</h2>
+<p>O campo identificador é gerado automaticamente pela base de dados, pelo que o utilizador não só não precisa de o editar, como não deve. Por essa razão, convém tornar o campo não editável.</p>
+<p><img src=/images/2019/09/layer-properties-cabo_electrico-attributes-form_103.png alt="Layer Properties - cabo_electrico | Attributes Form_103"></p>
+<p>Para o fazer programaticamente recorri ao seguinte código.</p>
+<pre><code>def field_readonly(layer, fieldname, option = True):
     fields = layer.fields()
     field_idx = fields.indexOf(fieldname)
     if field_idx &gt;= 0:
@@ -20,7 +153,11 @@ layers = project.mapLayers()
 
 for layer in layers.values():
     field_readonly(layer,'identificador')
-</code></pre><h2 id=configurar-um-campo-com-o-widget-datetime>Configurar um campo com o widget DateTime</h2><p>Os campos de datas ficam configurados automaticamente, mas o widget usado por omissão, ao contrário do que é exigido pela norma, apenas guarda a data e não a data e  hora.</p><p>Comecei por configurar como queria um campo de exemplo e depois fui ver como a configuração era gravada em PyQGIS usando a consola python:</p><pre><code>&gt;&gt;&gt;layer = iface.mapCanvas().currentLayer()
+</code></pre>
+<h2 id=configurar-um-campo-com-o-widget-datetime>Configurar um campo com o widget DateTime</h2>
+<p>Os campos de datas ficam configurados automaticamente, mas o widget usado por omissão, ao contrário do que é exigido pela norma, apenas guarda a data e não a data e  hora.</p>
+<p>Comecei por configurar como queria um campo de exemplo e depois fui ver como a configuração era gravada em PyQGIS usando a consola python:</p>
+<pre><code>&gt;&gt;&gt;layer = iface.mapCanvas().currentLayer()
 &gt;&gt;&gt;layer.fields().indexOf('inicio_objeto')
 1
 &gt;&gt;&gt;field = layer.fields()[1]
@@ -28,7 +165,9 @@ for layer in layers.values():
 'DateTime'
 &gt;&gt;&gt;field.editorWidgetSetup().config()
 {'allow_null': True, 'calendar_popup': True, 'display_format': 'yyyy-MM-dd HH:mm:ss', 'field_format': 'yyyy-MM-dd HH:mm:ss', 'field_iso_format': False}
-</code></pre><p>Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração:</p><pre><code>def field_to_datetime(layer, fieldname):
+</code></pre>
+<p>Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração:</p>
+<pre><code>def field_to_datetime(layer, fieldname):
     config = {'allow_null': True,
               'calendar_popup': True,
               'display_format': 'yyyy-MM-dd HH:mm:ss',
@@ -46,7 +185,13 @@ for layer in layers.values():
 for layer in layers.values():
     field_to_datetime(layer,'inicio_objeto')
     field_to_datetime(layer,'fim_objeto')
-</code></pre><h2 id=configurar-um-campo-com-o-widget-value-relation><strong>Configurar um campo com o widget Value Relation</strong></h2><p>No modelo de dados, muitas tabelas contém campos que apenas aceitam um conjunto finito de valores. Valores estes que são listados noutra tabela, os chamados <em>Foreign keys</em>.</p><p>Para estes casos, é conveniente no QGIS configurar um widget de relação de tabela. Para o fazer de forma programática, o processo é identico ao mostrado anteriormente, em que há que descobrir primeiro o tipo e a configuração de uma campo já preparado. Mas neste caso, cada campo terá uma configuração ligeiramente diferente.</p><p>Felizmente, quem desenhou a estrutura de dados facilitou-nos a vida ao dar o mesmo nome aos campos e às tabela de valores associada, e todos eles começados com a texto &ldquo;valor_&rdquo;, tornando possivel que também essa parte seja automática.</p><p>A funçao abaixo começa por identificar para determinada camada todos os campos cujo nome começa por &ldquo;valor_&rdquo;. Depois iterando sobre os campos encontrados, adapta a configuração de forma a usar como camada de referência (&lsquo;Layer&rsquo;) a camada com o mesmo nome que o campo.</p><pre><code>def field_to_value_relation(layer):
+</code></pre>
+<h2 id=configurar-um-campo-com-o-widget-value-relation><strong>Configurar um campo com o widget Value Relation</strong></h2>
+<p>No modelo de dados, muitas tabelas contém campos que apenas aceitam um conjunto finito de valores. Valores estes que são listados noutra tabela, os chamados <em>Foreign keys</em>.</p>
+<p>Para estes casos, é conveniente no QGIS configurar um widget de relação de tabela. Para o fazer de forma programática, o processo é identico ao mostrado anteriormente, em que há que descobrir primeiro o tipo e a configuração de uma campo já preparado. Mas neste caso, cada campo terá uma configuração ligeiramente diferente.</p>
+<p>Felizmente, quem desenhou a estrutura de dados facilitou-nos a vida ao dar o mesmo nome aos campos e às tabela de valores associada, e todos eles começados com a texto &ldquo;valor_&rdquo;, tornando possivel que também essa parte seja automática.</p>
+<p>A funçao abaixo começa por identificar para determinada camada todos os campos cujo nome começa por &ldquo;valor_&rdquo;. Depois iterando sobre os campos encontrados, adapta a configuração de forma a usar como camada de referência (&lsquo;Layer&rsquo;) a camada com o mesmo nome que o campo.</p>
+<pre><code>def field_to_value_relation(layer):
     fields = layer.fields()
     pattern = re.compile(r'^valor_')
     fields_valor = [field for field in fields if pattern.match(field.name())]
@@ -80,6 +225,130 @@ for layer in layers.values():
 # Correr função em todas as camadas
 for layer in layers.values():
     field_to_value_relation(layer)
-</code></pre><h2 id=conclusão><strong>Conclusão</strong></h2><p>Assim, de forma relativamente rápida, consegui configurar todas as camadas do projecto com os widgets que queria.</p><p><img src=/images/2019/09/peek-2019-09-30-16-06.gif alt="Peek 2019-09-30 16-06"></p><p>Esta é a ponta do iceberg. Havendo necessidade, com um pouco de paciência e pesquisa, outras configurações podem ser alteradas usando PyQGIS. Por isso, pense nisso antes de começar a configurar camada a camada, campo a campo.</p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/SrNetoChan/SrNetoChan.github.io/edit/main/content/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis.pt.markdown title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a><div class="dropdown languageSelector"><a class="btn dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><span class="flag-icon flag-icon-pt"></span>Português</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis><span class="flag-icon flag-icon-gb"></span>English</a></div></div></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><a href=#tornar-um-campo-apenas-de-leitura>Tornar um campo apenas  de leitura</a></li><li><a href=#configurar-um-campo-com-o-widget-datetime>Configurar um campo com o widget DateTime</a></li><li><a href=#configurar-um-campo-com-o-widget-value-relation><strong>Configurar um campo com o widget Value Relation</strong></a></li><li><a href=#conclusão><strong>Conclusão</strong></a></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:alex.f.neto@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span><span>alex.f.neto@gmail.com</span></a></li><li><span><i class="fas fa-phone-alt"></i></span><span>+0123456789</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png alt="Toha Theme Logo">
-Toha</a></div><div class="col-md-4 text-center">© 2022 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/single.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>
+</code></pre>
+<h2 id=conclusão><strong>Conclusão</strong></h2>
+<p>Assim, de forma relativamente rápida, consegui configurar todas as camadas do projecto com os widgets que queria.</p>
+<p><img src=/images/2019/09/peek-2019-09-30-16-06.gif alt="Peek 2019-09-30 16-06"></p>
+<p>Esta é a ponta do iceberg. Havendo necessidade, com um pouco de paciência e pesquisa, outras configurações podem ser alteradas usando PyQGIS. Por isso, pense nisso antes de começar a configurar camada a camada, campo a campo.</p>
+</div>
+<div class="row pl-3 pr-3">
+<div class="col-md-6 share-buttons">
+<strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2ftutorials%2f2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis%2f" target=_blank>
+<i class="fab fa-facebook"></i>
+</a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2ftutorials%2f2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis%2f&text=Norma%20Cartogr%c3%a1fica%20no%20QGIS%20-%20Alterar%20formul%c3%a1rios%20de%20edi%c3%a7%c3%a3o%20com%20PyQGIS&via=Alexandre%20Neto" target=_blank>
+<i class="fab fa-twitter"></i>
+</a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2ftutorials%2f2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis%2f&title=Norma%20Cartogr%c3%a1fica%20no%20QGIS%20-%20Alterar%20formul%c3%a1rios%20de%20edi%c3%a7%c3%a3o%20com%20PyQGIS" target=_blank>
+<i class="fab fa-reddit"></i>
+</a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2ftutorials%2f2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis%2f&title=Norma%20Cartogr%c3%a1fica%20no%20QGIS%20-%20Alterar%20formul%c3%a1rios%20de%20edi%c3%a7%c3%a3o%20com%20PyQGIS" target=_blank>
+<i class="fab fa-linkedin"></i>
+</a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Norma%20Cartogr%c3%a1fica%20no%20QGIS%20-%20Alterar%20formul%c3%a1rios%20de%20edi%c3%a7%c3%a3o%20com%20PyQGIS https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2ftutorials%2f2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis%2f" target=_blank>
+<i class="fab fa-whatsapp"></i>
+</a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Norma%20Cartogr%c3%a1fica%20no%20QGIS%20-%20Alterar%20formul%c3%a1rios%20de%20edi%c3%a7%c3%a3o%20com%20PyQGIS&body=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2ftutorials%2f2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis%2f" target=_blank>
+<i class="fas fa-envelope-open-text"></i>
+</a>
+</div>
+<div class="col-md-6 btn-improve-page">
+<a href=https://github.com/SrNetoChan/SrNetoChan.github.io/edit/site_source/content/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis.pt.markdown title="Improve this page" target=_blank rel=noopener>
+<i class="fas fa-code-branch"></i>
+Improve this page
+</a>
+</div>
+</div>
+<hr>
+<div class="row next-prev-navigator">
+</div>
+<hr>
+</div>
+</div>
+</div>
+<a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a>
+<div class="dropdown languageSelector">
+<a class="btn dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span class="flag-icon flag-icon-pt"></span>
+Português
+</a>
+<div class=dropdown-menu aria-labelledby=languageSelector>
+<a class="dropdown-item nav-link languages-item" href=/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis>
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+</div>
+</div>
+</section>
+<section class=toc-section id=toc-section>
+<div class=toc-holder>
+<h5 class="text-center pl-3">Table of Contents</h5>
+<hr>
+<div class=toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#tornar-um-campo-apenas-de-leitura>Tornar um campo apenas  de leitura</a></li>
+<li><a href=#configurar-um-campo-com-o-widget-datetime>Configurar um campo com o widget DateTime</a></li>
+<li><a href=#configurar-um-campo-com-o-widget-value-relation><strong>Configurar um campo com o widget Value Relation</strong></a></li>
+<li><a href=#conclusão><strong>Conclusão</strong></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+</div>
+<footer id=footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navigation</h5>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contact me:</h5>
+<ul>
+<li><a href=mailto:info[at]alexandreneto[dot]eu target=_blank rel=noopener>
+<span><i class="fas fa-envelope"></i></span> <span>info[at]alexandreneto[dot]eu</span>
+</a></li>
+<li><a href=https://github.com/srnetochan target=_blank rel=noopener>
+<span><i class="fab fa-github"></i></span> <span>srnetochan</span>
+</a></li>
+<li><a href=https://www.linkedin.com/in/alexandre-neto-geo target=_blank rel=noopener>
+<span><i class="fab fa-linkedin"></i></span> <span>Alexandre Neto</span>
+</a></li>
+<li><span>Twitter: </span> <span>@alexnetogeo</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2022 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

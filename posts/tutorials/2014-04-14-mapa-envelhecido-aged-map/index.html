@@ -1,16 +1,312 @@
-<!doctype html><html><head><title>Old map in QGIS</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600"><link rel=stylesheet href=/fontawesome/css/all.min.css><meta property="og:title" content="Old map in QGIS"><meta property="og:description" content="Inspired in a post by Anita Graser, I&rsquo;ve tried to use QGIS to create a Cascais&rsquo;s old looking map, as if it have been drawn by hand in a methodical way.
+<!doctype html><html>
+<head>
+<title>Old map in QGIS</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link rel=stylesheet href=/css/plyr.css>
+<link rel=stylesheet href=/css/flag-icon.min.css>
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel=stylesheet href=/fontawesome/css/all.min.css>
+<link rel=stylesheet href=/css/colortheme/colortheme.css>
+<link rel=icon type=image/png href=/images/site/favicon_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png>
+<meta property="og:title" content="Old map in QGIS">
+<meta property="og:description" content="Inspired in a post by Anita Graser, I&rsquo;ve tried to use QGIS to create a Cascais&rsquo;s old looking map, as if it have been drawn by hand in a methodical way.
 Defining the styles I have started by defining the styles for each elements to represent.
-Buildings To fill the buildings, I have tried to use a color that reminds me the portuguese roofs, similar to the color commonly used in old maps of cities, with a slightly darker outline of the same color."><meta property="og:type" content="article"><meta property="og:url" content="https://srnetochan.github.io/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/"><meta property="article:published_time" content="2014-04-14T13:35:11+00:00"><meta property="article:modified_time" content="2014-04-14T13:35:11+00:00"><meta name=description content="Old map in QGIS"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span></button>
-<a class=navbar-brand href=/>Alexandre Neto</a>
+Buildings To fill the buildings, I have tried to use a color that reminds me the portuguese roofs, similar to the color commonly used in old maps of cities, with a slightly darker outline of the same color.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://srnetochan.github.io/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2014-04-14T13:35:11+00:00">
+<meta property="article:modified_time" content="2014-04-14T13:35:11+00:00">
+<meta name=description content="Old map in QGIS">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
+<link rel=stylesheet href=/css/layouts/single.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png alt=Logo>
+Alexandre Neto</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><span class="flag-icon flag-icon-gb"></span>English</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/pt/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map><span class="flag-icon flag-icon-pt"></span>Português</a></div></li></ul></div></div></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts data-filter=all>Posts</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/posts/opinion/>Opinion articles</a><ul><li><a href=/posts/opinion/2013-03-26-nota-de-abertura/ title="Welcome note">Welcome note</a></li><li><a href=/posts/opinion/2013-03-31-porque-o-open-source/ title="Open Source, why?">Open Source, why?</a></li></ul></li><li><a href=/posts/news/ title=News>News</a></li><li><a href=/posts/tutorials/ title=Tutorials>Tutorials</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://srnetochan.github.io/images/default-hero.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/aneto2_hu3ba7f484d115ecd4e89b152fb4092700_544820_120x120_fit_q75_box.jpg alt="Author Image"><h5 class=author-name>Alexandre Neto</h5><p>:date_full</p></div><div class=title><h1>Old map in QGIS</h1></div><div class=post-content id=post-content><p>Inspired in a <a href=http://anitagraser.com/2013/07/29/vintage-map-design-using-qgis/>post</a> by Anita Graser, I&rsquo;ve tried to use QGIS to create a <a href="http://www.openstreetmap.org/#map=16/38.6967/-9.4156">Cascais</a>&rsquo;s old looking map, as if it have been drawn by hand in a methodical way.</p><h2 id=defining-the-styles>Defining the styles</h2><p>I have started by defining the styles for each elements to represent.</p><h3 id=buildings>Buildings</h3><p>To fill the buildings, I have tried to use a color that reminds me the <a href=http://olhares.sapo.pt/client/files/foto/big/517/5174082.jpg>portuguese roofs</a>, similar to the color commonly used in old maps of cities, with a slightly darker outline of the same color.</p><p>To give a bit of dimension, a shadow was created beneath, using a &ldquo;simple fill&rdquo; with dark colors and using a Offset X,Y. The values were chosen assuming the predominant direction of building&rsquo;s facades, so that the effect could be seen all over the map area.</p><p><a href=/images/2014/04/capturar_4.png><img src=/images/2014/04/capturar_4.png alt=Capturar_4>
-</a><a href=/images/2014/04/capturar_6.png><img src=/images/2014/04/capturar_6.png alt=Capturar_6></a></p><h3 id=green-spaces>Green spaces</h3><p>For the green spaces, 3 symbol layers were used. One with a green &ldquo;simple fill&rdquo;. A second one with a thick outline (outline: simple line) in a darker green, and using the new 2.2 <a href=http://changelog.linfiniti.com/qgis/version/21/#115>functionality</a> that allows one to show outlines only in the polygons inside.</p><p><a href=/images/2014/04/capturar_5.png><img src=/images/2014/04/capturar_5.png alt=Capturar_5>
-</a>The last symbol layer is just a tin line of a green even darker than the other two.</p><h3 id=capturar_7images201404capturar_7png>[<img src=/images/2014/04/capturar_7.png alt=Capturar_7></h3><p>](/images/2014/04/capturar_7.png)</p><h3 id=the-sea>The Sea</h3><p>For the sea, the same effect as the green spaces was used, but in blues and with the middle outline even thicker.
-<a href=/images/2014/04/capturar_8.png><img src=/images/2014/04/capturar_8.png alt=Capturar_8></a></p><h3 id=roads>Roads</h3><p>In the road, it was used a thick line with a orange pastel color. Some street names labels were created on top of the line using a script font (in have used <a href=http://ufonts.com/fonts/pristina.html>Pristina Bold</a>). To improve the label readability, a small white buffer with 50% transparency was added.
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+<div class=dropdown-menu aria-labelledby=languageSelector>
+<a class="dropdown-item nav-link languages-item" href=/pt/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map>
+<span class="flag-icon flag-icon-pt"></span>
+Português
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<div id=theme-initialization style=display:none default-theme=system></div>
+<a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector>
+<a class="dropdown-item nav-link" href=# onclick=enableLightTheme()>
+<img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()>
+<img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()>
+<img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<form class=mx-auto method=get action=/search>
+<input type=text name=keyword placeholder=Search data-search id=search-box>
+</form>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/posts data-filter=all>Posts</a></li>
+<div class=subtree>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/posts/opinion/>Opinion articles</a>
+<ul>
+<li><a href=/posts/opinion/2013-03-26-nota-de-abertura/ title="Welcome note">Welcome note</a></li>
+<li><a href=/posts/opinion/2013-03-31-porque-o-open-source/ title="Open Source, why?">Open Source, why?</a></li>
+</ul>
+</li>
+<li><a href=/posts/news/ title=News>News</a></li>
+<li><a href=/posts/plugins/ title=Plugins>Plugins</a></li>
+<li><a class=active href=/posts/tutorials/ title=Tutorials>Tutorials</a></li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class=content>
+<div class="container p-0 read-area">
+<div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://srnetochan.github.io/images/default-hero.jpg)>
+</div>
+<div class=page-content>
+<div class="author-profile ml-auto align-self-lg-center">
+<img class=rounded-circle src=/images/author/aneto2_hu3ba7f484d115ecd4e89b152fb4092700_544820_120x120_fit_q75_box.jpg alt="Author Image">
+<h5 class=author-name>Alexandre Neto</h5>
+<p>Monday, April 14, 2014</p>
+</div>
+<div class=title>
+<h1>Old map in QGIS</h1>
+</div>
+<div class=taxonomy-terms>
+<ul>
+<li class=rounded><a href=/tags/qgis class="btn, btn-sm">QGIS</a></li>
+</ul>
+</div>
+<div class=post-content id=post-content>
+<p>Inspired in a <a href=http://anitagraser.com/2013/07/29/vintage-map-design-using-qgis/>post</a> by Anita Graser, I&rsquo;ve tried to use QGIS to create a <a href="http://www.openstreetmap.org/#map=16/38.6967/-9.4156">Cascais</a>&rsquo;s old looking map, as if it have been drawn by hand in a methodical way.</p>
+<h2 id=defining-the-styles>Defining the styles</h2>
+<p>I have started by defining the styles for each elements to represent.</p>
+<h3 id=buildings>Buildings</h3>
+<p>To fill the buildings, I have tried to use a color that reminds me the <a href=http://olhares.sapo.pt/client/files/foto/big/517/5174082.jpg>portuguese roofs</a>, similar to the color commonly used in old maps of cities, with a slightly darker outline of the same color.</p>
+<p>To give a bit of dimension, a shadow was created beneath, using a &ldquo;simple fill&rdquo; with dark colors and using a Offset X,Y. The values were chosen assuming the predominant direction of building&rsquo;s facades, so that the effect could be seen all over the map area.</p>
+<p><a href=/images/2014/04/capturar_4.png><img src=/images/2014/04/capturar_4.png alt=Capturar_4>
+</a><a href=/images/2014/04/capturar_6.png><img src=/images/2014/04/capturar_6.png alt=Capturar_6>
+</a></p>
+<h3 id=green-spaces>Green spaces</h3>
+<p>For the green spaces, 3 symbol layers were used. One with a green &ldquo;simple fill&rdquo;. A second one with a thick outline (outline: simple line) in a darker green, and using the new 2.2 <a href=http://changelog.linfiniti.com/qgis/version/21/#115>functionality</a> that allows one to show outlines only in the polygons inside.</p>
+<p><a href=/images/2014/04/capturar_5.png><img src=/images/2014/04/capturar_5.png alt=Capturar_5>
+</a>The last symbol layer is just a tin line of a green even darker than the other two.</p>
+<h3 id=capturar_7images201404capturar_7png>[<img src=/images/2014/04/capturar_7.png alt=Capturar_7></h3>
+<p>](/images/2014/04/capturar_7.png)</p>
+<h3 id=the-sea>The Sea</h3>
+<p>For the sea, the same effect as the green spaces was used, but in blues and with the middle outline even thicker.
+<a href=/images/2014/04/capturar_8.png><img src=/images/2014/04/capturar_8.png alt=Capturar_8>
+</a></p>
+<h3 id=roads>Roads</h3>
+<p>In the road, it was used a thick line with a orange pastel color. Some street names labels were created on top of the line using a script font (in have used <a href=http://ufonts.com/fonts/pristina.html>Pristina Bold</a>). To improve the label readability, a small white buffer with 50% transparency was added.
 <a href=/images/2014/04/capturar_9.png><img src=/images/2014/04/captura-de-tela-2014-04-11-17-55-04.png alt="Captura de tela 2014-04-11 17.55.04">
-<img src=/images/2014/04/capturar_9.png alt=Capturar_9></a></p><h3 id=beach>Beach</h3><p>In the beaches, besides a simple fill as background, a point patern fill was used with a very small dot.
+<img src=/images/2014/04/capturar_9.png alt=Capturar_9>
+</a></p>
+<h3 id=beach>Beach</h3>
+<p>In the beaches, besides a simple fill as background, a point patern fill was used with a very small dot.
 <a href=/images/2014/04/capturar_11.png><img src=/images/2014/04/capturar_11.png alt=Capturar_11>
-</a><a href=/images/2014/04/capturar_10.png><img src=/images/2014/04/capturar_10.png alt=Capturar_10></a></p><h2 id=map-composing>Map composing</h2><p>Though the map is looking almost done, it&rsquo;s in the print composer that the final touches are given. First, the map sheet is totally covered with an <a href=http://lostandtaken.com/gallery/antique7.html>image of an old papel</a> (the same used by Anita). A bit of transparency is added (20%), so that the effect is not too strong.</p><p><a href=/images/2014/04/captura-de-tela-2014-04-14-11-24-53.png><img src=/images/2014/04/captura-de-tela-2014-04-14-11-24-53.png alt="Captura de tela 2014-04-14 11.24.53"></a></p><p>Alterwards, the actual map is added, and in the map item properties, the rendering mode is changed from &ldquo;normal&rdquo; (by default) to &ldquo;multiply&rdquo;. This way it looks like if the map was draw directly on the old paper.</p><p><img src=/images/2014/04/captura-de-tela-2014-04-14-11-30-07.png alt="Captura de tela 2014-04-14 11.30.07"></p><p>After this, it&rsquo;s all about adding a few more labels (the beach and places names), a north arrow and the graphic scale (always using &ldquo;multiply&rdquo; rendering mode), and&mldr; Voilá, we have a map!</p><p><a href=/images/2014/04/mapa_antigo.jpg><img src="/images/2014/04/mapa_antigo.jpg?w=584" alt=mapa_antigo></a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/SrNetoChan/SrNetoChan.github.io/edit/main/content/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map.markdown title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a><div class="dropdown languageSelector"><a class="btn dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><span class="flag-icon flag-icon-gb"></span>English</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/pt/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map><span class="flag-icon flag-icon-pt"></span>Português</a></div></div></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><a href=#defining-the-styles>Defining the styles</a><ul><li><a href=#buildings>Buildings</a></li><li><a href=#green-spaces>Green spaces</a></li><li><a href=#capturar_7images201404capturar_7png>[<img src=/images/2014/04/capturar_7.png alt=Capturar_7></a></li><li><a href=#the-sea>The Sea</a></li><li><a href=#roads>Roads</a></li><li><a href=#beach>Beach</a></li></ul></li><li><a href=#map-composing>Map composing</a></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#skills>Services</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#recent-posts>Recent Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#achievements>Map Gallery</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:info[at]alexandreneto[dot]eu target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span><span>info[at]alexandreneto[dot]eu</span></a></li><li><span>Twitter:</span> <span>@alexnetogeo</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png alt="Toha Theme Logo">
-Toha</a></div><div class="col-md-4 text-center">© 2021 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/single.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>
+</a><a href=/images/2014/04/capturar_10.png><img src=/images/2014/04/capturar_10.png alt=Capturar_10>
+</a></p>
+<h2 id=map-composing>Map composing</h2>
+<p>Though the map is looking almost done, it&rsquo;s in the print composer that the final touches are given. First, the map sheet is totally covered with an <a href=http://lostandtaken.com/gallery/antique7.html>image of an old papel</a> (the same used by Anita). A bit of transparency is added (20%), so that the effect is not too strong.</p>
+<p><a href=/images/2014/04/captura-de-tela-2014-04-14-11-24-53.png><img src=/images/2014/04/captura-de-tela-2014-04-14-11-24-53.png alt="Captura de tela 2014-04-14 11.24.53">
+</a></p>
+<p>Alterwards, the actual map is added, and in the map item properties, the rendering mode is changed from &ldquo;normal&rdquo; (by default) to &ldquo;multiply&rdquo;. This way it looks like if the map was draw directly on the old paper.</p>
+<p><img src=/images/2014/04/captura-de-tela-2014-04-14-11-30-07.png alt="Captura de tela 2014-04-14 11.30.07"></p>
+<p>After this, it&rsquo;s all about adding a few more labels (the beach and places names), a north arrow and the graphic scale (always using &ldquo;multiply&rdquo; rendering mode), and&mldr; Voilá, we have a map!</p>
+<p><a href=/images/2014/04/mapa_antigo.jpg><img src="/images/2014/04/mapa_antigo.jpg?w=584" alt=mapa_antigo>
+</a></p>
+</div>
+<div class="row pl-3 pr-3">
+<div class="col-md-6 share-buttons">
+<strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2014-04-14-mapa-envelhecido-aged-map%2f" target=_blank>
+<i class="fab fa-facebook"></i>
+</a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2014-04-14-mapa-envelhecido-aged-map%2f&text=Old%20map%20in%20QGIS&via=Alexandre%20Neto" target=_blank>
+<i class="fab fa-twitter"></i>
+</a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2014-04-14-mapa-envelhecido-aged-map%2f&title=Old%20map%20in%20QGIS" target=_blank>
+<i class="fab fa-reddit"></i>
+</a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2014-04-14-mapa-envelhecido-aged-map%2f&title=Old%20map%20in%20QGIS" target=_blank>
+<i class="fab fa-linkedin"></i>
+</a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Old%20map%20in%20QGIS https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2014-04-14-mapa-envelhecido-aged-map%2f" target=_blank>
+<i class="fab fa-whatsapp"></i>
+</a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Old%20map%20in%20QGIS&body=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2014-04-14-mapa-envelhecido-aged-map%2f" target=_blank>
+<i class="fas fa-envelope-open-text"></i>
+</a>
+</div>
+<div class="col-md-6 btn-improve-page">
+<a href=https://github.com/SrNetoChan/SrNetoChan.github.io/edit/site_source/content/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map.markdown title="Improve this page" target=_blank rel=noopener>
+<i class="fas fa-code-branch"></i>
+Improve this page
+</a>
+</div>
+</div>
+<hr>
+<div class="row next-prev-navigator">
+</div>
+<hr>
+</div>
+</div>
+</div>
+<a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a>
+<div class="dropdown languageSelector">
+<a class="btn dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+<div class=dropdown-menu aria-labelledby=languageSelector>
+<a class="dropdown-item nav-link languages-item" href=/pt/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map>
+<span class="flag-icon flag-icon-pt"></span>
+Português
+</a>
+</div>
+</div>
+</section>
+<section class=toc-section id=toc-section>
+<div class=toc-holder>
+<h5 class="text-center pl-3">Table of Contents</h5>
+<hr>
+<div class=toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#defining-the-styles>Defining the styles</a>
+<ul>
+<li><a href=#buildings>Buildings</a></li>
+<li><a href=#green-spaces>Green spaces</a></li>
+<li><a href=#capturar_7images201404capturar_7png>[<img src=/images/2014/04/capturar_7.png alt=Capturar_7></a></li>
+<li><a href=#the-sea>The Sea</a></li>
+<li><a href=#roads>Roads</a></li>
+<li><a href=#beach>Beach</a></li>
+</ul>
+</li>
+<li><a href=#map-composing>Map composing</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+</div>
+<footer id=footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navigation</h5>
+<ul>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#about>About</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#skills>Services</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#projects>Projects</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#recent-posts>Recent Posts</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://srnetochan.github.io/#achievements>Map Gallery</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=https://aneto.pt/posts/plugins/>Plugins</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contact me:</h5>
+<ul>
+<li><a href=mailto:info[at]alexandreneto[dot]eu target=_blank rel=noopener>
+<span><i class="fas fa-envelope"></i></span> <span>info[at]alexandreneto[dot]eu</span>
+</a></li>
+<li><a href=https://github.com/srnetochan target=_blank rel=noopener>
+<span><i class="fab fa-github"></i></span> <span>srnetochan</span>
+</a></li>
+<li><a href=https://www.linkedin.com/in/alexandre-neto-geo target=_blank rel=noopener>
+<span><i class="fab fa-linkedin"></i></span> <span>Alexandre Neto</span>
+</a></li>
+<li><span>Twitter: </span> <span>@alexnetogeo</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2022 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

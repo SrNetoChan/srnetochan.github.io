@@ -1,30 +1,363 @@
-<!doctype html><html><head><title>QGIS</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600"><link rel=stylesheet href=/fontawesome/css/all.min.css><meta property="og:title" content="QGIS"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://srnetochan.github.io/pt/tags/qgis/"><meta property="og:updated_time" content="2019-09-30T21:06:06+00:00"><link rel=stylesheet href=/css/layouts/list.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span></button>
-<a class=navbar-brand href=/pt>Alexandre Neto</a>
+<!doctype html><html>
+<head>
+<title>QGIS</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link rel=stylesheet href=/css/plyr.css>
+<link rel=stylesheet href=/css/flag-icon.min.css>
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel=stylesheet href=/fontawesome/css/all.min.css>
+<link rel=stylesheet href=/css/colortheme/colortheme.css>
+<link rel=icon type=image/png href=/images/site/favicon_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png>
+<meta property="og:title" content="QGIS">
+<meta property="og:description" content>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://srnetochan.github.io/pt/tags/qgis/">
+<link rel=stylesheet href=/css/layouts/list.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/pt>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png alt=Logo>
+Alexandre Neto</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><span class="flag-icon flag-icon-pt"></span>Português</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/tags/qgis><span class="flag-icon flag-icon-gb"></span>English</a></div></li></ul></div></div></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/pt/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/pt/tags data-filter=all>Tags</a></li><div class="subtree taxonomy-terms"><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/atlas/ data-taxonomy-term=atlas><span class=taxonomy-label>atlas</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/cartografia/ data-taxonomy-term=cartografia><span class=taxonomy-label>Cartografia</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/compositor/ data-taxonomy-term=compositor><span class=taxonomy-label>Compositor</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/dica/ data-taxonomy-term=dica><span class=taxonomy-label>Dica</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/gdal/ data-taxonomy-term=gdal><span class=taxonomy-label>gdal</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/linux/ data-taxonomy-term=linux><span class=taxonomy-label>linux</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/master/ data-taxonomy-term=master><span class=taxonomy-label>master</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/opini%C3%A3o/ data-taxonomy-term=opini%C3%A3o><span class=taxonomy-label>Opinião</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/postgis/ data-taxonomy-term=postgis><span class=taxonomy-label>Postgis</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/python/ data-taxonomy-term=python><span class=taxonomy-label>python</span></a></li><li><a class="taxonomy-term active" href=https://srnetochan.github.io/pt/tags/qgis/ data-taxonomy-term=qgis><span class=taxonomy-label>QGIS</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/sql/ data-taxonomy-term=sql><span class=taxonomy-label>SQL</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/trigger/ data-taxonomy-term=trigger><span class=taxonomy-label>trigger</span></a></li><li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/tutorial/ data-taxonomy-term=tutorial><span class=taxonomy-label>tutorial</span></a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid post-card-holder" id=post-card-holder><div class=post-card><a href=/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS</h5><p class="card-text post-summary">Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados descrita nas novas Normas e Especificações Técnicas de Cartografia , comecei a configurar os formulários de edição das várias camadas de forma a:
-1. Bloquear a edição de campos só de leitura, como por exemplo um identificador. 2. Configurar widgets adequados aos campos, que facilitem a vida do utilizador e evitem que cometa erros, como por exemplo campos com dadas e listas de valores fixos.</p></div><div class=card-footer><span class=float-left>September 30, 2019</span>
-<a href=/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/opinion/2016-01-28-saudades-do-qgis-enquanto-uso-arcgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Saudades do QGIS (enquanto uso ArcGIS)</h5><p class="card-text post-summary">(aka Funcionalidades que os utilizadores de ArcGIS Desktop nem sonham que existem) De tempos a tempos, leio artigos de comparação entre o ArcGIS e o QGIS. Uma vez que partem geralmente do ponto de vista de utilizadores de ArcGIS, acabam invariavelmente em observações parciais sobre a falta de funcionalidades do QGIS. Está na hora de mudar o ponto de vista. Por isso, convido-vos a acompanharem-me neste artigo (um pouco) longo, totalmente e assumidamente parcial.</p></div><div class=card-footer><span class=float-left>January 28, 2016</span>
-<a href=/pt/posts/opinion/2016-01-28-saudades-do-qgis-enquanto-uso-arcgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/news/2016-01-01-qgis-top-features-2015/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Top Novas Funcionalidades do QGIS em 2015</h5><p class="card-text post-summary">Com o lançamento da primeira versão com suporte de longa duração (2.8 LTR) e mais duas versões estáveis (2.10 e 2.12), 2015 foi um ano fantástico (e atarefado) para a comunidade QGIS, com inúmeras melhorias e novas funcionalidades a chegarem ao QGIS.
-Em jeitos de balanço, pedi aos utilizadores que escolhessem as funcionalidades introduzidas em 2015 suas favoritas (da lista do registo visual de alterações). Como resultado, obtive o seguinte top 5 de novas funcionalidades.</p></div><div class=card-footer><span class=float-left>January 2, 2016</span>
-<a href=/pt/posts/news/2016-01-01-qgis-top-features-2015/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Dica para ajustar posição de símbolos em QGIS</h5><p class="card-text post-summary">De quando em vez aparecem-me zonas com demasiado símbolos no mesmo local, e pensei como seria fantástico se os pudesse arrastar para um local mais conveniente sem ter de alterar as suas geometrias, tal como é possível fazer com as etiquetas. Esse pensamento deu-me a ideia base para a dica que vou demonstrar.
-Escolha a sua camada de pontos e comece por criar dois novos campos chamados symbX e symbY (Tipo: Decimal; Tamanho: 20; precisão: 5).</p></div><div class=card-footer><span class=float-left>February 23, 2015</span>
-<a href=/pt/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Séries de mapas com formatos múltiplos em QGIS 2.6 - Parte 1</h5><p class="card-text post-summary">Para não variar, a nova versão do QGIS (o QGIS 2.6 Brigthon) traz um conjunto alargado de novas funcionalidades que permitem ao utilizador fazer mais, melhor e mais rápido do que com a versão anterior. Uma das novidades desta versão é a possibilidade de controlar algumas propriedades dos itens do compositor através de dados (por exemplo, o tamanho e a posição). Algo que abre a porta a aplicações bastante interessantes. Nos próximos artigos, proponho-me a mostrar como criar séries de mapas com multiplos formatos.</p></div><div class=card-footer><span class=float-left>November 9, 2014</span>
-<a href=/pt/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/tutorials/2014-10-08-instalar-duas-versoes-de-qgis-em-linux/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Instalar duas versões de QGIS em Linux</h5><p class="card-text post-summary">Em altura de testes à versão em desenvolvimento do QGIS (versão master), dá jeito ter também instalada a última versão estável do QGIS. Em windows isso não representa um problema, uma vez que se podem instalar várias versões do QGIS em paralelo (tanto via Osgeo4w como standalone). Em linux, o processo não é tão directo pelo facto da instalação se realizar por obtenção de diversos pacotes disponíveis nos repositórios, não sendo por isso possível instalar mais do que uma versão sem que se originem quebras de dependências.</p></div><div class=card-footer><span class=float-left>October 8, 2014</span>
-<a href=/pt/posts/tutorials/2014-10-08-instalar-duas-versoes-de-qgis-em-linux/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Coordenadas dos cantos do mapa em QGIS</h5><p class="card-text post-summary">O desafio Em tempos na lista de discussão do qgis-pt alguém perguntou como dispor as coordenadas dos cantos do mapa no QGIS. Não estando (ainda) disponível tal funcionalidade, tentei chegar sem sucesso a uma solução que fosse de certa forma automática. Depois de remoer a ideia, e de ler um artigo do Nathan Woodrow, achei que a solução poderia passar por criar uma função para o construtor de expressões que pudesse ser usada em etiquetas no mapa.</p></div><div class=card-footer><span class=float-left>September 9, 2014</span>
-<a href=/pt/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Por favor, use o operador "IN"</h5><p class="card-text post-summary">Já não é a primeira vez que vejo pessoas que para seleccionarem elementos pelos valores dos seus atributos, usam expressões como
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span class="flag-icon flag-icon-pt"></span>
+Português
+</a>
+<div class=dropdown-menu aria-labelledby=languageSelector>
+<a class="dropdown-item nav-link languages-item" href=/tags/qgis>
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<div id=theme-initialization style=display:none default-theme=system></div>
+<a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector>
+<a class="dropdown-item nav-link" href=# onclick=enableLightTheme()>
+<img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()>
+<img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()>
+<img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<form class=mx-auto method=get action=/pt/search>
+<input type=text name=keyword placeholder=Search data-search id=search-box>
+</form>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/pt/tags data-filter=all>Tags</a></li>
+<div class="subtree taxonomy-terms">
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/atlas/ data-taxonomy-term=atlas><span class=taxonomy-label>atlas</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/cartografia/ data-taxonomy-term=cartografia><span class=taxonomy-label>Cartografia</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/compositor/ data-taxonomy-term=compositor><span class=taxonomy-label>Compositor</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/dica/ data-taxonomy-term=dica><span class=taxonomy-label>Dica</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/gdal/ data-taxonomy-term=gdal><span class=taxonomy-label>gdal</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/linux/ data-taxonomy-term=linux><span class=taxonomy-label>linux</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/master/ data-taxonomy-term=master><span class=taxonomy-label>master</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/opini%C3%A3o/ data-taxonomy-term=opini%C3%A3o><span class=taxonomy-label>Opinião</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/postgis/ data-taxonomy-term=postgis><span class=taxonomy-label>Postgis</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/python/ data-taxonomy-term=python><span class=taxonomy-label>python</span></a></li>
+<li><a class="taxonomy-term active" href=https://srnetochan.github.io/pt/tags/qgis/ data-taxonomy-term=qgis><span class=taxonomy-label>QGIS</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/sql/ data-taxonomy-term=sql><span class=taxonomy-label>SQL</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/trigger/ data-taxonomy-term=trigger><span class=taxonomy-label>trigger</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/tutorial/ data-taxonomy-term=tutorial><span class=taxonomy-label>tutorial</span></a></li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class="content container-fluid" id=content>
+<div class="container-fluid post-card-holder" id=post-card-holder>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS</h5>
+<p class="card-text post-summary">Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados descrita nas novas Normas e Especificações Técnicas de Cartografia , comecei a configurar os formulários de edição das várias camadas de forma a:
+1. Bloquear a edição de campos só de leitura, como por exemplo um identificador. 2. Configurar widgets adequados aos campos, que facilitem a vida do utilizador e evitem que cometa erros, como por exemplo campos com dadas e listas de valores fixos.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>September 30, 2019</span>
+<a href=/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/opinion/2016-01-28-saudades-do-qgis-enquanto-uso-arcgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Saudades do QGIS (enquanto uso ArcGIS)</h5>
+<p class="card-text post-summary">(aka Funcionalidades que os utilizadores de ArcGIS Desktop nem sonham que existem) De tempos a tempos, leio artigos de comparação entre o ArcGIS e o QGIS. Uma vez que partem geralmente do ponto de vista de utilizadores de ArcGIS, acabam invariavelmente em observações parciais sobre a falta de funcionalidades do QGIS. Está na hora de mudar o ponto de vista. Por isso, convido-vos a acompanharem-me neste artigo (um pouco) longo, totalmente e assumidamente parcial.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>January 28, 2016</span>
+<a href=/pt/posts/opinion/2016-01-28-saudades-do-qgis-enquanto-uso-arcgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/news/2016-01-01-qgis-top-features-2015/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Top Novas Funcionalidades do QGIS em 2015</h5>
+<p class="card-text post-summary">Com o lançamento da primeira versão com suporte de longa duração (2.8 LTR) e mais duas versões estáveis (2.10 e 2.12), 2015 foi um ano fantástico (e atarefado) para a comunidade QGIS, com inúmeras melhorias e novas funcionalidades a chegarem ao QGIS.
+Em jeitos de balanço, pedi aos utilizadores que escolhessem as funcionalidades introduzidas em 2015 suas favoritas (da lista do registo visual de alterações). Como resultado, obtive o seguinte top 5 de novas funcionalidades.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>January 2, 2016</span>
+<a href=/pt/posts/news/2016-01-01-qgis-top-features-2015/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Dica para ajustar posição de símbolos em QGIS</h5>
+<p class="card-text post-summary">De quando em vez aparecem-me zonas com demasiado símbolos no mesmo local, e pensei como seria fantástico se os pudesse arrastar para um local mais conveniente sem ter de alterar as suas geometrias, tal como é possível fazer com as etiquetas. Esse pensamento deu-me a ideia base para a dica que vou demonstrar.
+Escolha a sua camada de pontos e comece por criar dois novos campos chamados symbX e symbY (Tipo: Decimal; Tamanho: 20; precisão: 5).</p>
+</div>
+<div class=card-footer>
+<span class=float-left>February 23, 2015</span>
+<a href=/pt/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Séries de mapas com formatos múltiplos em QGIS 2.6 - Parte 1</h5>
+<p class="card-text post-summary">Para não variar, a nova versão do QGIS (o QGIS 2.6 Brigthon) traz um conjunto alargado de novas funcionalidades que permitem ao utilizador fazer mais, melhor e mais rápido do que com a versão anterior. Uma das novidades desta versão é a possibilidade de controlar algumas propriedades dos itens do compositor através de dados (por exemplo, o tamanho e a posição). Algo que abre a porta a aplicações bastante interessantes. Nos próximos artigos, proponho-me a mostrar como criar séries de mapas com multiplos formatos.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>November 9, 2014</span>
+<a href=/pt/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2014-10-08-instalar-duas-versoes-de-qgis-em-linux/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Instalar duas versões de QGIS em Linux</h5>
+<p class="card-text post-summary">Em altura de testes à versão em desenvolvimento do QGIS (versão master), dá jeito ter também instalada a última versão estável do QGIS. Em windows isso não representa um problema, uma vez que se podem instalar várias versões do QGIS em paralelo (tanto via Osgeo4w como standalone). Em linux, o processo não é tão directo pelo facto da instalação se realizar por obtenção de diversos pacotes disponíveis nos repositórios, não sendo por isso possível instalar mais do que uma versão sem que se originem quebras de dependências.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>October 8, 2014</span>
+<a href=/pt/posts/tutorials/2014-10-08-instalar-duas-versoes-de-qgis-em-linux/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Coordenadas dos cantos do mapa em QGIS</h5>
+<p class="card-text post-summary">O desafio Em tempos na lista de discussão do qgis-pt alguém perguntou como dispor as coordenadas dos cantos do mapa no QGIS. Não estando (ainda) disponível tal funcionalidade, tentei chegar sem sucesso a uma solução que fosse de certa forma automática. Depois de remoer a ideia, e de ler um artigo do Nathan Woodrow, achei que a solução poderia passar por criar uma função para o construtor de expressões que pudesse ser usada em etiquetas no mapa.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>September 9, 2014</span>
+<a href=/pt/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Por favor, use o operador "IN"</h5>
+<p class="card-text post-summary">Já não é a primeira vez que vejo pessoas que para seleccionarem elementos pelos valores dos seus atributos, usam expressões como
 [code language=&ldquo;SQL&rdquo;]&ldquo;field&rdquo; = &lsquo;value1&rsquo; OR &ldquo;field&rdquo; = &lsquo;value2&rsquo; OR &ldquo;field&rdquo; = &lsquo;value3&rsquo; [OR &mldr;][/code]
 Uma forma mais prática e bonita de o fazer é usar o operador** IN**.
 [code language=&ldquo;SQL&rdquo;]&ldquo;field&rdquo; IN (&lsquo;value1&rsquo;,&lsquo;value2&rsquo;,&lsquo;value3&rsquo;[,&mldr;])[/code]
-Este operador existe em quase todos os softwares SIG que conheço. No QGIS, pode ser usado mesmo quando não existe um botãozinho para clicar.</p></div><div class=card-footer><span class=float-left>June 24, 2014</span>
-<a href=/pt/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Old map in QGIS</h5><p class="card-text post-summary">Inspirado num artigo da Anita Graser, tentei usar o QGIS para criar um mapa de Cascais que tivesse um aspecto antigo, como que se tivesse sido metodicamente desenhado à mão, embora tivesse ligeiramente maltratado.
+Este operador existe em quase todos os softwares SIG que conheço. No QGIS, pode ser usado mesmo quando não existe um botãozinho para clicar.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>June 24, 2014</span>
+<a href=/pt/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Old map in QGIS</h5>
+<p class="card-text post-summary">Inspirado num artigo da Anita Graser, tentei usar o QGIS para criar um mapa de Cascais que tivesse um aspecto antigo, como que se tivesse sido metodicamente desenhado à mão, embora tivesse ligeiramente maltratado.
 Definir os Estilos Comecei por definir a simbologia para cada um dos elementos a representar.
-Edifícios Para preenchimento dos edifícios tentei usar uma cor que lembrasse os telhados portugueses, e muito usada em mapas antigos de cidades, com um contorno ligeiramente mais escuro do mesma cor.</p></div><div class=card-footer><span class=float-left>April 14, 2014</span>
-<a href=/pt/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/tutorials/2014-01-15-mapas-de-fluxos-em-qgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Mapas de fluxos em QGIS</h5><p class="card-text post-summary">Hoje surgiu a questão &ldquo;Como consigo fazer um mapa em que a sobreposição de símbolos aumente a opacidade?&rdquo;. Fiz o meu melhor para descrever como fazê-lo em QGIS, que transcrevo agora para português.
+Edifícios Para preenchimento dos edifícios tentei usar uma cor que lembrasse os telhados portugueses, e muito usada em mapas antigos de cidades, com um contorno ligeiramente mais escuro do mesma cor.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>April 14, 2014</span>
+<a href=/pt/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2014-01-15-mapas-de-fluxos-em-qgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Mapas de fluxos em QGIS</h5>
+<p class="card-text post-summary">Hoje surgiu a questão &ldquo;Como consigo fazer um mapa em que a sobreposição de símbolos aumente a opacidade?&rdquo;. Fiz o meu melhor para descrever como fazê-lo em QGIS, que transcrevo agora para português.
 Este tipo de mapas pode ser feito em QGISs usando a uma combinação da transparência e cor dos símbolos e o blending mode dos elementos.
-Note-se a diferença entre a transparência e blending mode da camada (que é aplicado a toda a camada) e a transparência do símbolo e blending dos elementos (que acumulam com outros elementos da mesma camada).</p></div><div class=card-footer><span class=float-left>January 15, 2014</span>
-<a href=/pt/posts/tutorials/2014-01-15-mapas-de-fluxos-em-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/pt/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>Substituir strings na tabela de atributos do QGIS</h5><p class="card-text post-summary">Hoje, ao rever uma camada vectorial de distribuição de fauna com interesse para a conservação com a nossa bióloga de serviço, Sara Saraiva, tive necessidade de corrigir (em todas as linhas de determinado atributo) o nome &ldquo;Aquila fasciatus&rdquo;, substituindo-o por &ldquo;Aquila fasciata&rdquo;.
-Devido à opção tomada na organização dos dados, cada polígono continha uma listagem de espécies que nele ocorrem, e o nome a corrigir encontrava-se no meio da mesma. A correcção teria de ser feita sem alterar os restantes nomes.</p></div><div class=card-footer><span class=float-left>May 29, 2013</span>
-<a href=/pt/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div></div><div class=paginator></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:alex.f.neto@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span><span>alex.f.neto@gmail.com</span></a></li><li><span><i class="fas fa-phone-alt"></i></span><span>+0123456789</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png alt="Toha Theme Logo">
-Toha</a></div><div class="col-md-4 text-center">© 2022 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=/js/list.js></script></body></html>
+Note-se a diferença entre a transparência e blending mode da camada (que é aplicado a toda a camada) e a transparência do símbolo e blending dos elementos (que acumulam com outros elementos da mesma camada).</p>
+</div>
+<div class=card-footer>
+<span class=float-left>January 15, 2014</span>
+<a href=/pt/posts/tutorials/2014-01-15-mapas-de-fluxos-em-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/default-hero.jpg alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Substituir strings na tabela de atributos do QGIS</h5>
+<p class="card-text post-summary">Hoje, ao rever uma camada vectorial de distribuição de fauna com interesse para a conservação com a nossa bióloga de serviço, Sara Saraiva, tive necessidade de corrigir (em todas as linhas de determinado atributo) o nome &ldquo;Aquila fasciatus&rdquo;, substituindo-o por &ldquo;Aquila fasciata&rdquo;.
+Devido à opção tomada na organização dos dados, cada polígono continha uma listagem de espécies que nele ocorrem, e o nome a corrigir encontrava-se no meio da mesma. A correcção teria de ser feita sem alterar os restantes nomes.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>May 29, 2013</span>
+<a href=/pt/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/ class="float-right btn btn-outline-info btn-sm">Read</a>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class=paginator>
+</div>
+</div>
+</section>
+</div>
+<footer id=footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navigation</h5>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contact me:</h5>
+<ul>
+<li><a href=mailto:info[at]alexandreneto[dot]eu target=_blank rel=noopener>
+<span><i class="fas fa-envelope"></i></span> <span>info[at]alexandreneto[dot]eu</span>
+</a></li>
+<li><a href=https://github.com/srnetochan target=_blank rel=noopener>
+<span><i class="fab fa-github"></i></span> <span>srnetochan</span>
+</a></li>
+<li><a href=https://www.linkedin.com/in/alexandre-neto-geo target=_blank rel=noopener>
+<span><i class="fab fa-linkedin"></i></span> <span>Alexandre Neto</span>
+</a></li>
+<li><span>Twitter: </span> <span>@alexnetogeo</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2022 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=/js/list.js></script>
+</body>
+</html>

@@ -1,8 +1,256 @@
-<!doctype html><html><head><title>Porquê o Open Source?</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600"><link rel=stylesheet href=/fontawesome/css/all.min.css><meta property="og:title" content="Porquê o Open Source?"><meta property="og:description" content="Durante a minha vida profissional e pessoal tenho trabalhado como muitos softwares diferentes, com todo o tipo de licenças. Grande parte deles seriam proprietários, de código fechado e\ou comerciais. Então porquê dedicar o meu tempo e aprendizagem &ldquo;exclusivamente&rdquo; ao Open Source?
-Sem entrar em pormenores sobre as diferenças entre software aberto (open source) e o software livre (free software), são vários os motivos pelos quais o FOSS (Free and Open Source Software) me interessam."><meta property="og:type" content="article"><meta property="og:url" content="https://srnetochan.github.io/pt/posts/opinion/2013-03-31-porque-o-open-source/"><meta property="article:published_time" content="2013-03-31T22:41:48+00:00"><meta property="article:modified_time" content="2013-03-31T22:41:48+00:00"><meta name=description content="Porquê o Open Source?"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span></button>
-<a class=navbar-brand href=/pt>Alexandre Neto</a>
+<!doctype html><html>
+<head>
+<title>Porquê o Open Source?</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link rel=stylesheet href=/css/plyr.css>
+<link rel=stylesheet href=/css/flag-icon.min.css>
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel=stylesheet href=/fontawesome/css/all.min.css>
+<link rel=stylesheet href=/css/colortheme/colortheme.css>
+<link rel=icon type=image/png href=/images/site/favicon_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png>
+<meta property="og:title" content="Porquê o Open Source?">
+<meta property="og:description" content="Durante a minha vida profissional e pessoal tenho trabalhado como muitos softwares diferentes, com todo o tipo de licenças. Grande parte deles seriam proprietários, de código fechado e\ou comerciais. Então porquê dedicar o meu tempo e aprendizagem &ldquo;exclusivamente&rdquo; ao Open Source?
+Sem entrar em pormenores sobre as diferenças entre software aberto (open source) e o software livre (free software), são vários os motivos pelos quais o FOSS (Free and Open Source Software) me interessam.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://srnetochan.github.io/pt/posts/opinion/2013-03-31-porque-o-open-source/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2013-03-31T22:41:48+00:00">
+<meta property="article:modified_time" content="2013-03-31T22:41:48+00:00">
+<meta name=description content="Porquê o Open Source?">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
+<link rel=stylesheet href=/css/layouts/single.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/pt>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png alt=Logo>
+Alexandre Neto</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><span class="flag-icon flag-icon-pt"></span>Português</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/posts/opinion/2013-03-31-porque-o-open-source><span class="flag-icon flag-icon-gb"></span>English</a></div></li></ul></div></div></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/pt/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/pt/posts data-filter=all>Posts</a></li><div class=subtree><li><i class="fas fa-minus-circle"></i><a class=active href=/pt/posts/opinion/>Artigos de Opinião</a><ul class=active><li><a href=/pt/posts/opinion/2013-03-26-nota-de-abertura/ title="Nota de abertura">Nota de abertura</a></li><li><a class=active href=/pt/posts/opinion/2013-03-31-porque-o-open-source/ title="Porquê o Open Source?">Porquê o Open Source?</a></li><li><a href=/pt/posts/opinion/2013-04-04-as-queixas-do-costume/ title="As queixas do costume">As queixas do costume</a></li></ul></li><li><a href=/pt/posts/news/ title=Notícias>Notícias</a></li><li><a href=/pt/posts/tutorials/ title=Tutoriais>Tutoriais</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://srnetochan.github.io/images/default-hero.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/aneto2_hu3ba7f484d115ecd4e89b152fb4092700_544820_120x120_fit_q75_box.jpg alt="Author Image"><h5 class=author-name>Alexandre Neto</h5><p>:date_full</p></div><div class=title><h1>Porquê o Open Source?</h1></div><div class=post-content id=post-content><p>Durante a minha vida profissional e pessoal tenho trabalhado como muitos softwares diferentes, com todo o tipo de licenças. Grande parte deles seriam proprietários, de código fechado e\ou comerciais. Então porquê dedicar o meu tempo e aprendizagem &ldquo;exclusivamente&rdquo; ao <em>Open Source</em>?</p><p>Sem entrar em pormenores sobre as <a href=http://pt.wikipedia.org/wiki/Software_livre#Ideologia:_as_diferen.C3.A7as_entre_Software_Livre_e_C.C3.B3digo_Aberto>diferenças</a> entre software aberto (<em>open source</em>) e o software livre (<em>free software</em>), são vários os motivos pelos quais o FOSS (<em>Free and Open Source Software</em>) me interessam.</p><p>O primeiro é obviamente a <strong>liberdade</strong>. Ser livre de poder usar o software sob qualquer contexto e para qualquer finalidade, sem estar limitado pelos custos inerentes à aquisição de software e\ou às regras e condições impostas pelo fabricante (como muitos softwares ditos grátis o fazem). O que me permite, por exemplo, familiarizar-me com as suas funcionalidades sem que tenha de recorrer à pirataria, ou, como trabalhador _freelancer, _desenvolver o meu trabalho baseado nas minhas capacidades intelectuais e não nas financeiras.</p><p>Em segundo lugar, o aspecto <strong>comunitário e colaborativo</strong>. O facto do Open Source ser construído por pessoas e para pessoas, onde o objectivo principal é melhorar as suas funcionalidades (e não o aumentar do número de vendas), e em que cada melhoria introduzida por um indivíduo ou empresa é posteriormente partilhada para benefício de toda a comunidade, evitando a duplicação de esforços e o &ldquo;reinventar a roda&rdquo;. Isto é feito, em parte, através de muito trabalho voluntário e da constante partilha de conhecimentos, quer por parte dos programadores, quer dos utilizadores. Assim, juntos, todos evoluem ao mesmo tempo que o próprio software. Para além disso, todos podem colaborar de alguma forma, seja produzindo código, escrevendo e preparando documentação de apoio, traduzindo-os para outros idiomas ou simplesmente reportando_ bugs_.</p><p>Por fim, os &ldquo;<strong>custos</strong>&rdquo;. A adopção de sofware open source por parte de empresas (incluindo as públicas), permite focar os seus investimentos na formação dos seus recursos humanos e no eventual (e desejável) patrocínio na criação de novas funcionalidades que realmente necessitem, normalmente por uma porção reduzida do que gastariam na aquisição de software comercial (que geralmente &ldquo;obriga&rdquo; à compra de funcionalidades que podemos nunca vir a usar).</p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/SrNetoChan/SrNetoChan.github.io/edit/main/content/posts/opinion/2013-03-31-porque-o-open-source.pt.markdown title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>Improve this page</a></div></div><hr><div class="row next-prev-navigator"><div class="col-md-6 previous-article"><a href=/pt/posts/opinion/2013-03-26-nota-de-abertura/ title="Nota de abertura" class="btn btn-outline-info"><div><i class="fas fa-chevron-circle-left"></i>Prev</div><div class=next-prev-text>Nota de abertura</div></a></div><div class="col-md-6 next-article"><a href=/pt/posts/opinion/2013-04-04-as-queixas-do-costume/ title="As queixas do costume" class="btn btn-outline-info"><div>Next <i class="fas fa-chevron-circle-right"></i></div><div class=next-prev-text>As queixas do costume</div></a></div></div><hr></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a><div class="dropdown languageSelector"><a class="btn dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><span class="flag-icon flag-icon-pt"></span>Português</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/posts/opinion/2013-03-31-porque-o-open-source><span class="flag-icon flag-icon-gb"></span>English</a></div></div></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:alex.f.neto@gmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span><span>alex.f.neto@gmail.com</span></a></li><li><span><i class="fas fa-phone-alt"></i></span><span>+0123456789</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png alt="Toha Theme Logo">
-Toha</a></div><div class="col-md-4 text-center">© 2022 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script><script type=text/javascript src=/js/popper.min.js></script><script type=text/javascript src=/js/bootstrap.min.js></script><script type=text/javascript src=/js/navbar.js></script><script type=text/javascript src=/js/plyr.js></script><script type=text/javascript src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/single.js></script><script>hljs.initHighlightingOnLoad();</script></body></html>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span class="flag-icon flag-icon-pt"></span>
+Português
+</a>
+<div class=dropdown-menu aria-labelledby=languageSelector>
+<a class="dropdown-item nav-link languages-item" href=/posts/opinion/2013-03-31-porque-o-open-source>
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<div id=theme-initialization style=display:none default-theme=system></div>
+<a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector>
+<a class="dropdown-item nav-link" href=# onclick=enableLightTheme()>
+<img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()>
+<img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()>
+<img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<img src=/images/site/main-logo_hu9ad2f25a877e6fef77c7a3dbef5094ad_6881_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_hub02d7508a1c89b2b7812eab204efeb9a_4223_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<form class=mx-auto method=get action=/pt/search>
+<input type=text name=keyword placeholder=Search data-search id=search-box>
+</form>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/pt/posts data-filter=all>Posts</a></li>
+<div class=subtree>
+<li>
+<i class="fas fa-minus-circle"></i><a class=active href=/pt/posts/opinion/>Artigos de Opinião</a>
+<ul class=active>
+<li><a href=/pt/posts/opinion/2013-03-26-nota-de-abertura/ title="Nota de abertura">Nota de abertura</a></li>
+<li><a class=active href=/pt/posts/opinion/2013-03-31-porque-o-open-source/ title="Porquê o Open Source?">Porquê o Open Source?</a></li>
+<li><a href=/pt/posts/opinion/2013-04-04-as-queixas-do-costume/ title="As queixas do costume">As queixas do costume</a></li>
+</ul>
+</li>
+<li><a href=/pt/posts/news/ title=Notícias>Notícias</a></li>
+<li><a href=/pt/posts/plugins/ title=Plugins>Plugins</a></li>
+<li><a href=/pt/posts/tutorials/ title=Tutoriais>Tutoriais</a></li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class=content>
+<div class="container p-0 read-area">
+<div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://srnetochan.github.io/images/default-hero.jpg)>
+</div>
+<div class=page-content>
+<div class="author-profile ml-auto align-self-lg-center">
+<img class=rounded-circle src=/images/author/aneto2_hu3ba7f484d115ecd4e89b152fb4092700_544820_120x120_fit_q75_box.jpg alt="Author Image">
+<h5 class=author-name>Alexandre Neto</h5>
+<p>domingo, 31 de março de 2013</p>
+</div>
+<div class=title>
+<h1>Porquê o Open Source?</h1>
+</div>
+<div class=taxonomy-terms>
+<ul>
+</ul>
+</div>
+<div class=post-content id=post-content>
+<p>Durante a minha vida profissional e pessoal tenho trabalhado como muitos softwares diferentes, com todo o tipo de licenças. Grande parte deles seriam proprietários, de código fechado e\ou comerciais. Então porquê dedicar o meu tempo e aprendizagem &ldquo;exclusivamente&rdquo; ao <em>Open Source</em>?</p>
+<p>Sem entrar em pormenores sobre as <a href=http://pt.wikipedia.org/wiki/Software_livre#Ideologia:_as_diferen.C3.A7as_entre_Software_Livre_e_C.C3.B3digo_Aberto>diferenças</a> entre software aberto (<em>open source</em>) e o software livre (<em>free software</em>), são vários os motivos pelos quais o FOSS (<em>Free and Open Source Software</em>) me interessam.</p>
+<p>O primeiro é obviamente a <strong>liberdade</strong>. Ser livre de poder usar o software sob qualquer contexto e para qualquer finalidade, sem estar limitado pelos custos inerentes à aquisição de software e\ou às regras e condições impostas pelo fabricante (como muitos softwares ditos grátis o fazem). O que me permite, por exemplo, familiarizar-me com as suas funcionalidades sem que tenha de recorrer à pirataria, ou, como trabalhador _freelancer, _desenvolver o meu trabalho baseado nas minhas capacidades intelectuais e não nas financeiras.</p>
+<p>Em segundo lugar, o aspecto <strong>comunitário e colaborativo</strong>. O facto do Open Source ser construído por pessoas e para pessoas, onde o objectivo principal é melhorar as suas funcionalidades (e não o aumentar do número de vendas), e em que cada melhoria introduzida por um indivíduo ou empresa é posteriormente partilhada para benefício de toda a comunidade, evitando a duplicação de esforços e o &ldquo;reinventar a roda&rdquo;. Isto é feito, em parte, através de muito trabalho voluntário e da constante partilha de conhecimentos, quer por parte dos programadores, quer dos utilizadores. Assim, juntos, todos evoluem ao mesmo tempo que o próprio software. Para além disso, todos podem colaborar de alguma forma, seja produzindo código, escrevendo e preparando documentação de apoio, traduzindo-os para outros idiomas ou simplesmente reportando_ bugs_.</p>
+<p>Por fim, os &ldquo;<strong>custos</strong>&rdquo;. A adopção de sofware open source por parte de empresas (incluindo as públicas), permite focar os seus investimentos na formação dos seus recursos humanos e no eventual (e desejável) patrocínio na criação de novas funcionalidades que realmente necessitem, normalmente por uma porção reduzida do que gastariam na aquisição de software comercial (que geralmente &ldquo;obriga&rdquo; à compra de funcionalidades que podemos nunca vir a usar).</p>
+</div>
+<div class="row pl-3 pr-3">
+<div class="col-md-6 share-buttons">
+<strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2fopinion%2f2013-03-31-porque-o-open-source%2f" target=_blank>
+<i class="fab fa-facebook"></i>
+</a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2fopinion%2f2013-03-31-porque-o-open-source%2f&text=Porqu%c3%aa%20o%20Open%20Source%3f&via=Alexandre%20Neto" target=_blank>
+<i class="fab fa-twitter"></i>
+</a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2fopinion%2f2013-03-31-porque-o-open-source%2f&title=Porqu%c3%aa%20o%20Open%20Source%3f" target=_blank>
+<i class="fab fa-reddit"></i>
+</a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2fopinion%2f2013-03-31-porque-o-open-source%2f&title=Porqu%c3%aa%20o%20Open%20Source%3f" target=_blank>
+<i class="fab fa-linkedin"></i>
+</a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Porqu%c3%aa%20o%20Open%20Source%3f https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2fopinion%2f2013-03-31-porque-o-open-source%2f" target=_blank>
+<i class="fab fa-whatsapp"></i>
+</a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Porqu%c3%aa%20o%20Open%20Source%3f&body=https%3a%2f%2fsrnetochan.github.io%2fpt%2fposts%2fopinion%2f2013-03-31-porque-o-open-source%2f" target=_blank>
+<i class="fas fa-envelope-open-text"></i>
+</a>
+</div>
+<div class="col-md-6 btn-improve-page">
+<a href=https://github.com/SrNetoChan/SrNetoChan.github.io/edit/site_source/content/posts/opinion/2013-03-31-porque-o-open-source.pt.markdown title="Improve this page" target=_blank rel=noopener>
+<i class="fas fa-code-branch"></i>
+Improve this page
+</a>
+</div>
+</div>
+<hr>
+<div class="row next-prev-navigator">
+<div class="col-md-6 previous-article">
+<a href=/pt/posts/opinion/2013-03-26-nota-de-abertura/ title="Nota de abertura" class="btn btn-outline-info">
+<div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+<div class=next-prev-text>Nota de abertura</div>
+</a>
+</div>
+<div class="col-md-6 next-article">
+<a href=/pt/posts/opinion/2013-04-04-as-queixas-do-costume/ title="As queixas do costume" class="btn btn-outline-info">
+<div>Next <i class="fas fa-chevron-circle-right"></i></div>
+<div class=next-prev-text>As queixas do costume</div>
+</a>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a>
+<div class="dropdown languageSelector">
+<a class="btn dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span class="flag-icon flag-icon-pt"></span>
+Português
+</a>
+<div class=dropdown-menu aria-labelledby=languageSelector>
+<a class="dropdown-item nav-link languages-item" href=/posts/opinion/2013-03-31-porque-o-open-source>
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+</div>
+</div>
+</section>
+<section class=toc-section id=toc-section>
+<div class=toc-holder>
+<h5 class="text-center pl-3">Table of Contents</h5>
+<hr>
+<div class=toc>
+<nav id=TableOfContents></nav>
+</div>
+</div>
+</section>
+</div>
+<footer id=footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navigation</h5>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contact me:</h5>
+<ul>
+<li><a href=mailto:info[at]alexandreneto[dot]eu target=_blank rel=noopener>
+<span><i class="fas fa-envelope"></i></span> <span>info[at]alexandreneto[dot]eu</span>
+</a></li>
+<li><a href=https://github.com/srnetochan target=_blank rel=noopener>
+<span><i class="fab fa-github"></i></span> <span>srnetochan</span>
+</a></li>
+<li><a href=https://www.linkedin.com/in/alexandre-neto-geo target=_blank rel=noopener>
+<span><i class="fab fa-linkedin"></i></span> <span>Alexandre Neto</span>
+</a></li>
+<li><span>Twitter: </span> <span>@alexnetogeo</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2022 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
