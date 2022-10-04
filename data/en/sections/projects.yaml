@@ -2,7 +2,7 @@
 section:
   name: Projects
   id: projects
-  enable: true
+  enable: false
   weight: 4
   showOnNavbar: true
   # Can optionally hide the title in sections
@@ -24,16 +24,16 @@ projects:
 - name: QGIS
   logo: /images/sections/projects/kubernetes.png
   role: Contributor
-  timeline: "March 2018 - Present"
+  timeline: "2014 - Present"
   repo: https://github.com/QGIS/QGIS # If your project is a public repo on GitHub, then provide this link. it will show star count.
   #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: Production-Grade Container Scheduling and Management.
+  summary: Documentation, Testing and Translations (PT_pt)
   tags: ["professional", "gis", "spatial analysis", "training", "documentation"]
 
 - name: conda-forge
   logo: /images/sections/projects/tensorflow.png
-  role: Package maintainer
-  timeline: "Jun 2018 - Present"
+  role: QGIS LTR Package maintainer
+  timeline: "2019 - Present"
   repo: https://github.com/tensorflow/tensorflow
   #url: ""
   summary: An Open Source Machine Learning Framework for Everyone.

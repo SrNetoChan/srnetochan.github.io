@@ -18,10 +18,16 @@ designation: Geospatial Consultant
 resume: "files/CV-Europass-Alexandre-Neto-EN.pdf"
 
 # a summary about you
-summary: 'I work as geospatial consultant freelancer. I have more than 20 years of experience in the field. In my daily work, I help others with their GIS/Geospatial challenges and workflows, mostly using QGIS, GDAL, PostgreSQL/PostGIS, Python and other free and open source solutions. 
+summary: 'I work as geospatial consultant freelancer. I have more than 20 years of working experience. On my daily work, I help others with their GIS/Geospatial challenges and workflows, mostly using QGIS, GDAL, PostgreSQL/PostGIS, Python and other free and open source solutions. 
 
 
-I also run several regular trainings, including: "Cartography and Datavis with QGIS", "Relational Spatial Databases with QGIS and PostGIS", and "Introduction to PyQGIS"'
+I run regular online trainings on "Introduction to QGIS", "Cartography and Datavis with QGIS", "Relational Spatial Databases with QGIS and PostGIS", and "Introduction to PyQGIS".
+
+
+I believe that knowledge needs to be spread as much as possible, and that is why I often share tips and tutorial on my blog, twitter or Linkedin accounts, and answer questions on the QGIS mailing lists and gisstackexchange.
+
+
+I try to be a active member of the QGIS community, where I help with documentation, testing and portuguese translations.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.

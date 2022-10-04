@@ -6,7 +6,7 @@ description: Site and personal blog of Alexandre Neto.
 
 customMenus:
 - name: Plugins
-  url: https://aneto.pt/posts/plugins/
+  url: /posts/plugins/
   # specify whether to hide the menu item from top navbar or not.
   hideFromNavbar: false
   # specify whether to show the menu item in footer or not.

@@ -13,26 +13,25 @@ section:
 skills:
 - name: Spatial Analysis
   icon: "/images/sections/skills/kubernetes.png"
-  summary: "Capable of performing spatial analysis from different data sources, either raster or vector. Able to write scripts, using Python, PyQGIS, SQL or QGIS processing Modeller to automate analysis"
-  url: "https://kubernetes.io/"
+  summary: "All types of spatial analysis, including, but not limited to: Overlay, multi-criteria, network, location-allocation, etc... Writing of scripts, using Python, PyQGIS, SQL or QGIS processing Modeller to automate analysis"
 
-- name: Spatial Database Management
+- name: Spatial Databases Management
   icon: "/images/sections/skills/go.png"
-  summary: "Able to design, deploy and manage PostgreSQL/Postgis spatial databases, including the creation of triggers and other mechanisms to ensure database consistency."
-  url: "https://golang.org/"
+  summary: "Design, deploy and manage PostgreSQL/Postgis spatial relational databases, users and permissions, creation of triggers and other mechanisms for automation and ensurance of data consistency."
 
 - name: QGIS Plugins Development
   icon: "/images/sections/skills/cloud.png"
-  summary: "Development of QGIS plugins on demand. Creation of processing toolbars plugins"
+  summary: "Development of custom python plugins for QGIS. Creation of processing tools for using in longer workflows. Check the plugins section for examples."
+  url: "/posts/#plugins"
 
-- name: Training
+- name: Training and Technical Support
   icon: "/images/sections/skills/cloud.png"
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+  summary: "Online and presential trainings on Introduction to QGIS, Cartography and Datavis using QGIS, Spatial Relational Databases with PostGIS and QGIS etc... One-on-one coaching and technical support."
 
-- name: Cartography
+- name: Cartography and WebGIS
   icon: "/images/sections/skills/cloud.png"
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+  summary: "Cartography, map design and production. Automation of multi-pages/ multi-thematic maps production. Installation and deployment of WebGIS systems for publish Maps/spatial data online."
 
-- name: Documentation and Technical Writing
+- name: Carttop/RECART support
   icon: "/images/sections/skills/cloud.png"
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+  summary: "Conversion of CAD to RECART databases (Portuguese Topographic Cartography). Creation of validation and fixing tools for QGIS. Technical support and coaching"
