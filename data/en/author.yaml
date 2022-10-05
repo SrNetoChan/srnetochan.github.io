@@ -8,7 +8,14 @@ image: "images/author/aneto2.jpg"
 contactInfo:
   github: srnetochan
   linkedin: alexandre-neto-geo
-  twitter: "@alexnetogeo"
+  twitter: 
+    icon: twitter
+    url: https://twitter.com/AlexNetoGeo
+    text: "@alexnetogeo"
+  telegram: 
+    icon: telegram
+    url: https://t.me/alexnetogeo
+    text: "@alexnetogeo"
 
 # some summary about what you do
 summary:
