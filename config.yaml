@@ -134,8 +134,8 @@ params:
       counterDev:
         id: 63e860bf-e19f-4ca0-b36f-963821c9b28d
       # # GoatCounter
-      # goatCounter:
-      #   code: <your goat counter code>
+      goatCounter:
+        code: alexnetogeo
       # # Matomo / Piwik
       # matomo:
       #   instance: matomo.example.com
