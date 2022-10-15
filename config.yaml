@@ -132,7 +132,7 @@ params:
       #  id: G-H4LBG7NDFZ
       # # CounterDev
       counterDev:
-        id: 3f1214e8-aef3-401e-9ac7-f2faab83b345
+        id: 63e860bf-e19f-4ca0-b36f-963821c9b28d
       # # GoatCounter
       # goatCounter:
       #   code: <your goat counter code>
@@ -142,13 +142,13 @@ params:
       #   siteId: 1 # Or any other number
 
     # # Enable Support
-    # support:
-    #   enabled: true
-    #   kofi:
-    #     user: hossainemruz
-    #     text: Tip Me
-    #     textColor: '#f9fafc'
-    #     backgroundColor: '#248aaa'
+      support:
+        enabled: true
+        kofi:
+          user: alexandreneto
+          text: Tip Me
+          textColor: '#f9fafc'
+          backgroundColor: '#248aaa'
 
   # specify whether you want to show Table of Contents in reading page
   enableTOC: true
