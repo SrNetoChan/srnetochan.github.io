@@ -2,8 +2,10 @@
 date: 2019-09-30 21:06:06+00:00
 title: Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS
 tags:
-- python
+- pyqgis
 - QGIS
+- Recart
+hero: /images/posts_hero/form_widget_pyqgis.png
 ---
 
 Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados descrita nas novas [Normas e Especificações Técnicas de Cartografia ](http://www.dgterritorio.pt/cartografia_e_geodesia/cartografia/normas_e_especificacoes_tecnicas_de_cartografia/), comecei a configurar os formulários de edição das várias camadas de forma a:

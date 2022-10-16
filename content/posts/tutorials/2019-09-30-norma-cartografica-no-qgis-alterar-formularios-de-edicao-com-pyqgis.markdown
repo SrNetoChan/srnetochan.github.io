@@ -6,8 +6,9 @@ categories:
 - Sem categoria
 tags:
 - pyqgis
-- python
 - QGIS
+- Recart
+hero: /images/posts_hero/form_widget_pyqgis.png
 ---
 
 As I was preparing a QGIS Project to read a database structured according to the new [rules and technical specifications for the Portuguese Cartography](http://www.dgterritorio.pt/cartografia_e_geodesia/cartografia/normas_e_especificacoes_tecnicas_de_cartografia/), I started to configure the editing forms for several layers, so that:
