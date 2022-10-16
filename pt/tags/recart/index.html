@@ -1,0 +1,186 @@
+<!doctype html><html>
+<head>
+<title>Recart</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link rel=stylesheet href=/css/plyr.css>
+<link rel=stylesheet href=/css/flag-icon.min.css>
+<link rel=stylesheet href=/google-fonts/Mulish/mulish.css>
+<link rel=stylesheet href=/fontawesome/css/all.min.css>
+<link rel=stylesheet href=/css/colortheme/colortheme.css>
+<link rel=icon type=image/png href=/images/site/inverted-globe_hu83d55f8dff2638a1abb17965c75830f1_170033_42x0_resize_box_3.png>
+<meta property="og:title" content="Recart">
+<meta property="og:description" content>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://srnetochan.github.io/pt/tags/recart/">
+<link rel=stylesheet href=/css/layouts/list.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+<link rel=stylesheet href=/css/style.css>
+<script>!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!==0&&fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"63e860bf-e19f-4ca0-b36f-963821c9b28d",utcoffset:"1"})),sessionStorage.setItem("_swa","1")</script>
+<script data-goatcounter=https://alexnetogeo.goatcounter.com/count async src=//gc.zgo.at/count.js></script>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/pt>
+<img src=/images/site/globe_huf470c2acc03b6e591de5c6cfa080296e_178497_42x0_resize_box_3.png alt=Logo>
+Alexandre Neto</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<span class="flag-icon flag-icon-pt"></span>
+Português
+</a>
+<div class=dropdown-menu aria-labelledby=languageSelector>
+<a class="dropdown-item nav-link languages-item" href=/tags/recart>
+<span class="flag-icon flag-icon-gb"></span>
+English
+</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<div id=theme-initialization style=display:none default-theme=system></div>
+<a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+<img id=navbar-theme-icon-svg src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector>
+<a class="dropdown-item nav-link" href=# onclick=enableLightTheme()>
+<img class=menu-icon-center src=/icons/sun-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=enableDarkTheme()>
+<img class=menu-icon-center src=/icons/moon-svgrepo-com.svg width=20>
+</a>
+<a class="dropdown-item nav-link" href=# onclick=useSystemTheme()>
+<img class=menu-icon-center src=/icons/computer-svgrepo-com.svg width=20>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<img src=/images/site/globe_huf470c2acc03b6e591de5c6cfa080296e_178497_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-globe_hu83d55f8dff2638a1abb17965c75830f1_170033_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<form class=mx-auto method=get action=/pt/search>
+<input type=text name=keyword placeholder=Pesquisar data-search id=search-box>
+</form>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/pt/tags data-filter=all>Etiquetas</a></li>
+<div class="subtree taxonomy-terms">
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/atlas/ data-taxonomy-term=atlas><span class=taxonomy-label>atlas</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/cartografia/ data-taxonomy-term=cartografia><span class=taxonomy-label>Cartografia</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/compositor/ data-taxonomy-term=compositor><span class=taxonomy-label>Compositor</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/dica/ data-taxonomy-term=dica><span class=taxonomy-label>Dica</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/gdal/ data-taxonomy-term=gdal><span class=taxonomy-label>gdal</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/linux/ data-taxonomy-term=linux><span class=taxonomy-label>linux</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/master/ data-taxonomy-term=master><span class=taxonomy-label>master</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/opini%C3%A3o/ data-taxonomy-term=opini%C3%A3o><span class=taxonomy-label>Opinião</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/postgis/ data-taxonomy-term=postgis><span class=taxonomy-label>Postgis</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/pyqgis/ data-taxonomy-term=pyqgis><span class=taxonomy-label>pyqgis</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/python/ data-taxonomy-term=python><span class=taxonomy-label>python</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/qgis/ data-taxonomy-term=qgis><span class=taxonomy-label>QGIS</span></a></li>
+<li><a class="taxonomy-term active" href=https://srnetochan.github.io/pt/tags/recart/ data-taxonomy-term=recart><span class=taxonomy-label>Recart</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/sql/ data-taxonomy-term=sql><span class=taxonomy-label>SQL</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/trigger/ data-taxonomy-term=trigger><span class=taxonomy-label>trigger</span></a></li>
+<li><a class=taxonomy-term href=https://srnetochan.github.io/pt/tags/tutorial/ data-taxonomy-term=tutorial><span class=taxonomy-label>tutorial</span></a></li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class="content container-fluid" id=content>
+<div class="container-fluid post-card-holder" id=post-card-holder>
+<div class=post-card>
+<a href=/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class=post-card-link>
+<div class=card>
+<div class=card-head>
+<img class=card-img-top src=/images/posts_hero/form_widget_pyqgis.png alt="Hero Image">
+</div>
+<div class=card-body>
+<h5 class=card-title>Norma Cartográfica no QGIS - Alterar formulários de edição com PyQGIS</h5>
+<p class="card-text post-summary">Enquanto preparava um projecto QGIS para leitura da estrutura de base de dados descrita nas novas Normas e Especificações Técnicas de Cartografia , comecei a configurar os formulários de edição das várias camadas de forma a:
+1. Bloquear a edição de campos só de leitura, como por exemplo um identificador. 2. Configurar widgets adequados aos campos, que facilitem a vida do utilizador e evitem que cometa erros, como por exemplo campos com dadas e listas de valores fixos.</p>
+</div>
+<div class=card-footer>
+<span class=float-left>September 30, 2019</span>
+<a href=/pt/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/ class="float-right btn btn-outline-info btn-sm">Ler</a>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class=paginator>
+</div>
+</div>
+</section>
+</div>
+<footer id=footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navegação</h5>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contacte-me:</h5>
+<ul>
+<li><a href=mailto:info[at]alexandreneto[dot]eu target=_blank rel=noopener>
+<span><i class="fas fa-envelope"></i></span> <span>info[at]alexandreneto[dot]eu</span>
+</a></li>
+<li><a href=https://github.com/srnetochan target=_blank rel=noopener>
+<span><i class="fab fa-github"></i></span> <span>srnetochan</span>
+</a></li>
+<li><a href=https://www.linkedin.com/in/alexandre-neto-geo target=_blank rel=noopener>
+<span><i class="fab fa-linkedin"></i></span> <span>Alexandre Neto</span>
+</a></li>
+<li><span>Twitter: </span> <span>@alexnetogeo</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2022 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Desenvolvido por
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script type=text/javascript src=/js/darkreader.js></script>
+<script type=text/javascript src=/js/darkmode-darkreader.js></script>
+<script src=/js/list.js></script>
+</body>
+</html>
