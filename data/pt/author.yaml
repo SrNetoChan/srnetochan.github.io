@@ -6,14 +6,20 @@ greeting: "Olá, chamo-me"
 image: "images/author/aneto2.jpg"
 # give your some contact information. they will be used in the footer
 contactInfo:
-  email: "info[at]alexandreneto[dot]eu"
   github: srnetochan
   linkedin: alexandre-neto-geo
-  twitter: "@alexnetogeo"
+  twitter: 
+    icon: twitter
+    url: https://twitter.com/AlexNetoGeo
+    text: "@alexnetogeo"
+  telegram: 
+    icon: telegram
+    url: https://t.me/alexnetogeo
+    text: "@alexnetogeo"
 
 # some summary about what you do
 summary:
   - Trabalho como consultor geoespacial
   - Ajudo pessoas e empresas com os seus desafios SIG
   - Uso soluções livres e de código aberto
-  - Adoro partilhar os meus conhecimentos com os outros
+  - Adoro partilhar os meus conhecimentos com outros

@@ -1,0 +1,21 @@
+# Copyright Notice
+copyright: © 2022 Copyright. <a href="https://www.flaticon.com/free-icons/internet" title="internet icons">Globe icon created by Freepik - Flaticon</a>
+
+# Meta description for your site.  This will help the search engines to find your site.
+description: Site e blog de Alexandre Neto
+
+customMenus:
+- name: Plugins
+  url: /posts/plugins/
+  # specify whether to hide the menu item from top navbar or not.
+  hideFromNavbar: false
+  # specify whether to show the menu item in footer or not.
+  # if you set it to true, make sure you have set `footer.navigation.customMenus: true` in your config.yaml
+  showOnFooter: true
+
+openGraph:
+  title: Alexandre Neto
+  type: website
+  description: Site e blog de Alexandre Neto
+  image: images/author/aneto2.png
+  url: https://aneto.pt 

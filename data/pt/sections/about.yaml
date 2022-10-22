@@ -1,0 +1,73 @@
+# section information
+section:
+  name: Sobre
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Consultor Geoespacial
+# your company information
+#company:
+#  name: Example Co.
+#  url: "https://www.example.com"
+
+# your resume. this file path should be relative to you "static" directory
+resume: "files/CV_Alexandre_Neto_PT.pdf"
+
+# a summary about you
+summary: 'Trabalho como consultor geoespacial freelancer. Conto com mais de 20 anos de experiência na área. No meu trabalho diário, ajudo outras pessoas com seus desafios e fluxos de trabalho SIG, usando maioritariamente QGIS, GDAL, PostgreSQL/PostGIS, Python e outras soluções livres e de código aberto.
+
+
+Dou regularmente formações online e presenciais sobre *"Introdução ao QGIS"*, *"Cartografia e Datavis com QGIS"*, *"Bases de dados espaciais relacionais com QGIS e PostGIS"*, *"Introdução ao PyQGIS"* e *"QGIS e PostGIS na homologação de cartografia RECART"*.
+
+
+Acredito firmemente que o conhecimento deve ser difundido o máximo possível. É por isso que costumo partilhar dicas e tutoriais no meu [blog](/posts), [twitter](https://twitter.com/AlexNetoGeo) e [Linkedin](https://www.linkedin.com/in /alexandre-neto-geo/). Também respondo a perguntas em [listas de discussão](https://lists.osgeo.org/mailman/listinfo/qgis-user), [gis.stackexchange.com](https://gis.stackexchange.com/users/6191 /alexandre-neto?tab=profile) e o [chat QGIS Community Telegram](https://t.me/+4U6j0dycRy40MTU0).
+
+Tento ser um membro activo da comunidade QGIS, onde ajudo com documentação, testing e traduções para Português.'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/SrNetoChan"
+- name: LinkedIN
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/alexandre-neto-geo/?locale=pt"
+- name: Twitter
+  icon: "fab fa-twitter"
+  url: "https://twitter.com/AlexNetoGeo"
+- name: GIS Stackexchange
+  icon: "fab fa-stack-exchange"
+  url: "https://gis.stackexchange.com/users/6191/alexandre-neto?tab=profile"
+
+
+
+
+# your soft skills
+# give the percentage between 50 to 100 with 5 intervals.
+# currently supported colors: blue, yellow, pink, green, sky, orange
+#softSkills:
+#
+#- name: Communication
+#  percentage: 95
+#  color: green
+#- name: Team Work
+#  percentage: 90
+#  color: yellow
+#- name: Adaptability
+#  percentage: 85
+#  color: blue
+#- name: Problem solving
+#  percentage: 90
+#  color: orange
+#- name: Critical Thinking
+#  percentage: 75
+#  color: sky
+#- name: Work Ethic
+#  percentage: 100
+#  color: pink
+

@@ -15,7 +15,7 @@ designation: Geospatial Consultant
 #  url: "https://www.example.com"
 
 # your resume. this file path should be relative to you "static" directory
-resume: "files/CV-Europass-Alexandre-Neto-EN.pdf"
+resume: "files/CV_Alexandre_Neto_EN.pdf"
 
 # a summary about you
 summary: 'I work as geospatial consultant freelancer. I have more than 20 years of working experience. On my daily work, I help others with their GIS/Geospatial challenges and workflows, mainly using QGIS, GDAL, PostgreSQL/PostGIS, Python and other free and open source solutions. 

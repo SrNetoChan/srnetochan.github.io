@@ -1,0 +1,37 @@
+# section information
+section:
+  name: Serviços
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Análise Espacial
+  icon: "/images/sections/skills/kubernetes.png"
+  summary: "Todos o tipo de análise espacial, incluindo, mas não se limitando a: overlay, multicritério, rede, localização-alocação, etc... Escrita de scripts usando Python, PyQGIS, SQL ou QGIS Processing Modeler para automatizar a processos"
+
+- name: Gestão Bases de Dados Espaciais
+  icon: "/images/sections/skills/go.png"
+  summary: "Desenhar, implantar e gerir bases de dados espaciais PostgreSQL/Postgis, utilizadores e permissões, criação de triggers e outros mecanismos de automatização e garantia de consistência de dados."
+
+- name: Desenvolvimento de Plugins QGIS
+  icon: "/images/sections/skills/cloud.png"
+  summary: "Desenvolvimento de plugins QGIS em Python. Criação de ferramentas de processamento para usar em workflows mais complexas. Veja exemplos na secção dos plugins."
+  url: "/posts/#plugins"
+
+- name: Formação e Suporte Técnico
+  icon: "/images/sections/skills/cloud.png"
+  summary: "Formação presencial e remota em Introdução ao QGIS, Cartografia e Datavis com QGIS, Bases de dados relacionais com PostGIS e QGIS, etc... Coaching e suporte técnico."
+
+- name: Cartografia e WebSIG
+  icon: "/images/sections/skills/cloud.png"
+  summary: "Cartografia, desenho e produção de mapas. Automatização de produção cartográfica com multiplas páginas ou temáticas. Instalação de WebSIGs para publicação de mapas online."
+
+- name: Suporte Carttop/RECART
+  icon: "/images/sections/skills/cloud.png"
+  summary: "Conversão de CAD para bases de dados RECART (Normas de Produção Cartografia Topográfica). Desenvolvimento de ferramentas de validação e correcção de erros para QGIS (e.g. **QGIS2carttop**). Coaching e suporte técnico."
