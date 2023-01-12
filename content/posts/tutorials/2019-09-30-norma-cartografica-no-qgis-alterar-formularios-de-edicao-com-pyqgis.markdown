@@ -68,7 +68,7 @@ To make all the identifier fields read-only, I used the following code.
 ## Set fields with DateTime widget
 
 
-The date fields are configured automatically, but the default widget setting only outputs the date, and not date-time, as the rules required.
+The date fields are configured automatically, but the default widget setting only outputs the date, and not date-time, as the rules required. Besides, for my use case the date field can be automatically filled by usint the current time.
 
 I started by setting a field in a layer exactly how I wanted, then I tried to figure out how those setting were saved in PyQGIS using the Python console:
 
@@ -85,6 +85,7 @@ I started by setting a field in a layer exactly how I wanted, then I tried to fi
 
 
 Knowing this, I was able to create a function that allows configuring a field in a layer using the exact same settings, and apply it to all layers.
+As an extra, I have added a default valueDefinition to use the function `now()`.
 
 
     def field_to_datetime(layer, fieldname):
@@ -93,20 +94,18 @@ Knowing this, I was able to create a function that allows configuring a field in
                   'display_format': 'yyyy-MM-dd HH:mm:ss',
                   'field_format': 'yyyy-MM-dd HH:mm:ss',
                   'field_iso_format': False}
-        type = 'Datetime'
+        type = 'DateTime'
         fields = layer.fields()
         field_idx = fields.indexOf(fieldname)
         if field_idx >= 0:
             widget_setup = QgsEditorWidgetSetup(type,config)
             layer.setEditorWidgetSetup(field_idx, widget_setup)
+            layer.setDefaultValueDefinition(field_idx, QgsDefaultValue('now()'))
 
     # Example applied to "inicio_objeto" e "fim_objeto"
 
     for layer in layers.values():
         field_to_datetime(layer,'inicio_objeto')
-        field_to_datetime(layer,'fim_objeto')
-
-
 
 
 
