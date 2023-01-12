@@ -164,7 +164,7 @@ for layer in layers.values():
     field_readonly(layer,'identificador')
 </code></pre>
 <h2 id=set-fields-with-datetime-widget>Set fields with DateTime widget</h2>
-<p>The date fields are configured automatically, but the default widget setting only outputs the date, and not date-time, as the rules required.</p>
+<p>The date fields are configured automatically, but the default widget setting only outputs the date, and not date-time, as the rules required. Besides, for my use case the date field can be automatically filled by usint the current time.</p>
 <p>I started by setting a field in a layer exactly how I wanted, then I tried to figure out how those setting were saved in PyQGIS using the Python console:</p>
 <pre><code>&gt;&gt;&gt;layer = iface.mapCanvas().currentLayer()
 &gt;&gt;&gt;layer.fields().indexOf('inicio_objeto')
@@ -175,25 +175,26 @@ for layer in layers.values():
 &gt;&gt;&gt;field.editorWidgetSetup().config()
 {'allow_null': True, 'calendar_popup': True, 'display_format': 'yyyy-MM-dd HH:mm:ss', 'field_format': 'yyyy-MM-dd HH:mm:ss', 'field_iso_format': False}
 </code></pre>
-<p>Knowing this, I was able to create a function that allows configuring a field in a layer using the exact same settings, and apply it to all layers.</p>
+<p>Knowing this, I was able to create a function that allows configuring a field in a layer using the exact same settings, and apply it to all layers.
+As an extra, I have added a default valueDefinition to use the function <code>now()</code>.</p>
 <pre><code>def field_to_datetime(layer, fieldname):
     config = {'allow_null': True,
               'calendar_popup': True,
               'display_format': 'yyyy-MM-dd HH:mm:ss',
               'field_format': 'yyyy-MM-dd HH:mm:ss',
               'field_iso_format': False}
-    type = 'Datetime'
+    type = 'DateTime'
     fields = layer.fields()
     field_idx = fields.indexOf(fieldname)
     if field_idx &gt;= 0:
         widget_setup = QgsEditorWidgetSetup(type,config)
         layer.setEditorWidgetSetup(field_idx, widget_setup)
+        layer.setDefaultValueDefinition(field_idx, QgsDefaultValue('now()'))
 
 # Example applied to &quot;inicio_objeto&quot; e &quot;fim_objeto&quot;
 
 for layer in layers.values():
     field_to_datetime(layer,'inicio_objeto')
-    field_to_datetime(layer,'fim_objeto')
 </code></pre>
 <h2 id=setting-a-field-with-the-value-relation-widget>Setting a field with the Value Relation widget</h2>
 <p>In the data model, many tables have fields that only allow a limited number of values. Those values are referenced to other tables, the <em>Foreign keys</em>.</p>
