@@ -65,7 +65,7 @@ Para o fazer programaticamente recorri ao seguinte código.
 ## Configurar um campo com o widget DateTime
 
 
-Os campos de datas ficam configurados automaticamente, mas o widget usado por omissão, ao contrário do que é exigido pela norma, apenas guarda a data e não a data e  hora.
+Os campos de datas ficam configurados automaticamente, mas o widget usado por omissão, ao contrário do que é exigido pela norma, apenas guarda a data e não a data e hora. Para além disso, para o meu caso posso preencher o campo da data com a data e hora actuais, para evitar ter de o fazer de forma manual. 
 
 Comecei por configurar como queria um campo de exemplo e depois fui ver como a configuração era gravada em PyQGIS usando a consola python:
 
@@ -81,7 +81,7 @@ Comecei por configurar como queria um campo de exemplo e depois fui ver como a c
 
 
 
-Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração:
+Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração. Como extra, usei a função `now()` como default para quando um novo elemento é criado:
 
 
     def field_to_datetime(layer, fieldname):
@@ -96,12 +96,13 @@ Com isso consegui criar uma função que me permitisse configurar qualquer campo
         if field_idx >= 0:
             widget_setup = QgsEditorWidgetSetup(type,config)
             layer.setEditorWidgetSetup(field_idx, widget_setup)
+	    layer.setDefaultValueDefinition(field_idx, QgsDefaultValue('now()'))
+
 
     # Exemplo para os campos "inicio_objeto" e "fim_objeto"
 
     for layer in layers.values():
         field_to_datetime(layer,'inicio_objeto')
-        field_to_datetime(layer,'fim_objeto')
 
 
 
