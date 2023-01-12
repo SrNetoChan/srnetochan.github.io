@@ -164,7 +164,7 @@ for layer in layers.values():
     field_readonly(layer,'identificador')
 </code></pre>
 <h2 id=configurar-um-campo-com-o-widget-datetime>Configurar um campo com o widget DateTime</h2>
-<p>Os campos de datas ficam configurados automaticamente, mas o widget usado por omissão, ao contrário do que é exigido pela norma, apenas guarda a data e não a data e  hora.</p>
+<p>Os campos de datas ficam configurados automaticamente, mas o widget usado por omissão, ao contrário do que é exigido pela norma, apenas guarda a data e não a data e hora. Para além disso, para o meu caso posso preencher o campo da data com a data e hora actuais, para evitar ter de o fazer de forma manual.</p>
 <p>Comecei por configurar como queria um campo de exemplo e depois fui ver como a configuração era gravada em PyQGIS usando a consola python:</p>
 <pre><code>&gt;&gt;&gt;layer = iface.mapCanvas().currentLayer()
 &gt;&gt;&gt;layer.fields().indexOf('inicio_objeto')
@@ -175,7 +175,7 @@ for layer in layers.values():
 &gt;&gt;&gt;field.editorWidgetSetup().config()
 {'allow_null': True, 'calendar_popup': True, 'display_format': 'yyyy-MM-dd HH:mm:ss', 'field_format': 'yyyy-MM-dd HH:mm:ss', 'field_iso_format': False}
 </code></pre>
-<p>Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração:</p>
+<p>Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração. Como extra, usei a função <code>now()</code> como default para quando um novo elemento é criado:</p>
 <pre><code>def field_to_datetime(layer, fieldname):
     config = {'allow_null': True,
               'calendar_popup': True,
@@ -188,12 +188,13 @@ for layer in layers.values():
     if field_idx &gt;= 0:
         widget_setup = QgsEditorWidgetSetup(type,config)
         layer.setEditorWidgetSetup(field_idx, widget_setup)
+    layer.setDefaultValueDefinition(field_idx, QgsDefaultValue('now()'))
+
 
 # Exemplo para os campos &quot;inicio_objeto&quot; e &quot;fim_objeto&quot;
 
 for layer in layers.values():
     field_to_datetime(layer,'inicio_objeto')
-    field_to_datetime(layer,'fim_objeto')
 </code></pre>
 <h2 id=configurar-um-campo-com-o-widget-value-relation><strong>Configurar um campo com o widget Value Relation</strong></h2>
 <p>No modelo de dados, muitas tabelas contém campos que apenas aceitam um conjunto finito de valores. Valores estes que são listados noutra tabela, os chamados <em>Foreign keys</em>.</p>
