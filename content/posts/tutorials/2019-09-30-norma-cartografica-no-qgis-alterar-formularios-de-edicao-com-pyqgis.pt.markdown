@@ -81,7 +81,9 @@ Comecei por configurar como queria um campo de exemplo e depois fui ver como a c
 
 
 
-Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração. Como extra, usei a função `now()` como default para quando um novo elemento é criado:
+Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração. 
+
+**ACTUALIZAÇÃO:** Como extra, usei a função `now()` como default para quando um novo elemento é criado.
 
 
     def field_to_datetime(layer, fieldname):
@@ -166,5 +168,6 @@ Assim, de forma relativamente rápida, consegui configurar todas as camadas do p
 
 ![Peek 2019-09-30 16-06](/images/2019/09/peek-2019-09-30-16-06.gif)
 
+Pode consultar o código completo [aqui](https://gist.github.com/SrNetoChan/6e4bec315749e3d65e3b7c91bb0a98ad)
 
 Esta é a ponta do iceberg. Havendo necessidade, com um pouco de paciência e pesquisa, outras configurações podem ser alteradas usando PyQGIS. Por isso, pense nisso antes de começar a configurar camada a camada, campo a campo.

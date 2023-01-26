@@ -84,8 +84,9 @@ I started by setting a field in a layer exactly how I wanted, then I tried to fi
 
 
 
-Knowing this, I was able to create a function that allows configuring a field in a layer using the exact same settings, and apply it to all layers.
-As an extra, I have added a default valueDefinition to use the function `now()`.
+Knowing this, I was able to create a function that allows configuring a field in a layer using the exact same settings, and apply it to all layers. 
+
+**UPDATE:** As an extra, I have added a default valueDefinition to use the function `now()`.
 
 
     def field_to_datetime(layer, fieldname):
@@ -165,5 +166,6 @@ The function stars by gathering all fields in which the name starts with 'valor_
 
 In a relatively quick way, I was able to set all the project's layers with the widgets I needed.![Peek 2019-09-30 16-06](/images/2019/09/peek-2019-09-30-16-06.gif)
 
+You can find the complete code in [here](https://gist.github.com/SrNetoChan/6e4bec315749e3d65e3b7c91bb0a98ad)
 
 This seems to me like the tip of the iceberg. If one has the need, with some search and patience, other configurations can be changed using PyQGIS. Therefore, think twice before embarking in configuring a big project, layer by layer, field by fields.
