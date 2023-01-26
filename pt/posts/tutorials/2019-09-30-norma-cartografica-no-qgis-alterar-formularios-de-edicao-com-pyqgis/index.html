@@ -175,7 +175,8 @@ for layer in layers.values():
 &gt;&gt;&gt;field.editorWidgetSetup().config()
 {'allow_null': True, 'calendar_popup': True, 'display_format': 'yyyy-MM-dd HH:mm:ss', 'field_format': 'yyyy-MM-dd HH:mm:ss', 'field_iso_format': False}
 </code></pre>
-<p>Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração. Como extra, usei a função <code>now()</code> como default para quando um novo elemento é criado:</p>
+<p>Com isso consegui criar uma função que me permitisse configurar qualquer campo com a mesma configuração.</p>
+<p><strong>ACTUALIZAÇÃO:</strong> Como extra, usei a função <code>now()</code> como default para quando um novo elemento é criado.</p>
 <pre><code>def field_to_datetime(layer, fieldname):
     config = {'allow_null': True,
               'calendar_popup': True,
@@ -239,6 +240,7 @@ for layer in layers.values():
 <h2 id=conclusão><strong>Conclusão</strong></h2>
 <p>Assim, de forma relativamente rápida, consegui configurar todas as camadas do projecto com os widgets que queria.</p>
 <p><img src=/images/2019/09/peek-2019-09-30-16-06.gif alt="Peek 2019-09-30 16-06"></p>
+<p>Pode consultar o código completo <a href=https://gist.github.com/SrNetoChan/6e4bec315749e3d65e3b7c91bb0a98ad>aqui</a></p>
 <p>Esta é a ponta do iceberg. Havendo necessidade, com um pouco de paciência e pesquisa, outras configurações podem ser alteradas usando PyQGIS. Por isso, pense nisso antes de começar a configurar camada a camada, campo a campo.</p>
 </div>
 <div class="row pl-3 pr-3">

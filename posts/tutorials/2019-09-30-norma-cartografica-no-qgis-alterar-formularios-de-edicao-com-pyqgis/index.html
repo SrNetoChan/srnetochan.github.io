@@ -175,8 +175,8 @@ for layer in layers.values():
 &gt;&gt;&gt;field.editorWidgetSetup().config()
 {'allow_null': True, 'calendar_popup': True, 'display_format': 'yyyy-MM-dd HH:mm:ss', 'field_format': 'yyyy-MM-dd HH:mm:ss', 'field_iso_format': False}
 </code></pre>
-<p>Knowing this, I was able to create a function that allows configuring a field in a layer using the exact same settings, and apply it to all layers.
-As an extra, I have added a default valueDefinition to use the function <code>now()</code>.</p>
+<p>Knowing this, I was able to create a function that allows configuring a field in a layer using the exact same settings, and apply it to all layers.</p>
+<p><strong>UPDATE:</strong> As an extra, I have added a default valueDefinition to use the function <code>now()</code>.</p>
 <pre><code>def field_to_datetime(layer, fieldname):
     config = {'allow_null': True,
               'calendar_popup': True,
@@ -238,6 +238,7 @@ for layer in layers.values():
 </code></pre>
 <h2 id=conclusion><strong>Conclusion</strong></h2>
 <p>In a relatively quick way, I was able to set all the project&rsquo;s layers with the widgets I needed.<img src=/images/2019/09/peek-2019-09-30-16-06.gif alt="Peek 2019-09-30 16-06"></p>
+<p>You can find the complete code in <a href=https://gist.github.com/SrNetoChan/6e4bec315749e3d65e3b7c91bb0a98ad>here</a></p>
 <p>This seems to me like the tip of the iceberg. If one has the need, with some search and patience, other configurations can be changed using PyQGIS. Therefore, think twice before embarking in configuring a big project, layer by layer, field by fields.</p>
 </div>
 <div class="row pl-3 pr-3">
