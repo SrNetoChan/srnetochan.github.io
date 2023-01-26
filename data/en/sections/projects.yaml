@@ -2,7 +2,7 @@
 section:
   name: Projects
   id: projects
-  enable: false
+  enable: true
   weight: 4
   showOnNavbar: true
   # Can optionally hide the title in sections
@@ -21,22 +21,22 @@ buttons:
 
 # your projects
 projects:
-- name: QGIS
+- name: Multipart Split
   logo: /images/sections/projects/kubernetes.png
-  role: Contributor
+  role: Developer
   timeline: "2014 - Present"
-  repo: https://github.com/QGIS/QGIS # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  repo: https://github.com/SrNetoChan/MultipartSplit # If your project is a public repo on GitHub, then provide this link. it will show star count.
   #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: Documentation, Testing and Translations (PT_pt)
-  tags: ["professional", "gis", "spatial analysis", "training", "documentation"]
+  summary: QGIS Python Plugin for spliting multi geometry features
+  tags: ["hobby", "maintainer"]
 
-- name: conda-forge
+- name: Walking Time
   logo: /images/sections/projects/tensorflow.png
-  role: QGIS LTR Package maintainer
-  timeline: "2019 - Present"
-  repo: https://github.com/tensorflow/tensorflow
-  #url: ""
-  summary: An Open Source Machine Learning Framework for Everyone.
+  role: Developer
+  #timeline: "2019 - Present"
+  #repo: https://github.com/SrNetoChan/WalkingTime
+  url: "/posts/plugins/walking-time/"
+  summary: Walking time is a QGIS python plugin that uses Tobbler’s hiking function to estimate the travel time along a line depending on the slope.
   tags: ["hobby", "maintainer"]
 
 - name: OpenStreenMap
