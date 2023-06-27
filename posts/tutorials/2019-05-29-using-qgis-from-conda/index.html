@@ -1,6 +1,6 @@
 <!doctype html><html>
 <head>
-<title>Using QGIS from Conda</title>
+<title>Using QGIS from conda-forge</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="ie=edge">
@@ -13,15 +13,15 @@
 <link rel=stylesheet href=/fontawesome/css/all.min.css>
 <link rel=stylesheet href=/css/colortheme/colortheme.css>
 <link rel=icon type=image/png href=/images/site/inverted-globe_hu83d55f8dff2638a1abb17965c75830f1_170033_42x0_resize_box_3.png>
-<meta property="og:title" content="Using QGIS from Conda">
-<meta property="og:description" content="QGIS recipes have been available on Conda for a while, but now, that they work for the three main operating systems, getting QGIS from Conda is s starting to become a reliable alternative to other QGIS distributions. Anyway, let&rsquo;s rewind a bit&mldr;
+<meta property="og:title" content="Using QGIS from conda-forge">
+<meta property="og:description" content="QGIS recipes have been available on Conda-forge for a while, but now, that they work for the three main operating systems, installing QGIS from Conda is s starting to become a very reliable alternative to other QGIS distributions. Anyway, let&rsquo;s rewind a bit&mldr;
 What is Conda?
-Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies.">
+Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and all their dependencies.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://srnetochan.github.io/posts/tutorials/2019-05-29-using-qgis-from-conda/"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2019-05-29T22:46:23+00:00">
 <meta property="article:modified_time" content="2019-05-29T22:46:23+00:00">
-<meta name=description content="Using QGIS from Conda">
+<meta name=description content="Using QGIS from conda-forge">
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
 <link rel=stylesheet href=/css/layouts/single.css>
 <link rel=stylesheet href=/css/navigators/sidebar.css>
@@ -111,34 +111,36 @@ Alexandre Neto</a>
 <p>Wednesday, May 29, 2019</p>
 </div>
 <div class=title>
-<h1>Using QGIS from Conda</h1>
+<h1>Using QGIS from conda-forge</h1>
 </div>
 <div class=taxonomy-terms>
 <ul>
 <li class=rounded><a href=/tags/conda class="btn, btn-sm">conda</a></li>
 <li class=rounded><a href=/tags/qgis class="btn, btn-sm">QGIS</a></li>
+<li class=rounded><a href=/tags/conda-forge class="btn, btn-sm">conda-forge</a></li>
+<li class=rounded><a href=/tags/mamba class="btn, btn-sm">mamba</a></li>
 </ul>
 </div>
 <div class=post-content id=post-content>
-<p>QGIS recipes have been available on Conda for a while, but now, that they work for the three main operating systems, getting QGIS from Conda is s starting to become a reliable alternative to other QGIS distributions. Anyway, let&rsquo;s rewind a bit&mldr;</p>
+<p>QGIS recipes have been available on Conda-forge for a while, but now, that they work for the three main operating systems, installing QGIS from Conda is s starting to become a very reliable alternative to other QGIS distributions. Anyway, let&rsquo;s rewind a bit&mldr;</p>
 <p>What is Conda?</p>
-<blockquote>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.</blockquote>
+<blockquote>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and all their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python packages, but it can package and distribute software for any language.</blockquote>
+<p>What is Conda-forge?</p>
+<p>Conda-forge is a community driven channel that builds and enable hundreads of packages.</p>
 <p>Why is that of any relevance?</p>
-<p>Conda provides a similar way to build, package and install QGIS (or any other software) in Linux, Windows, and Mac. It also provides builds for Linux aarch64 and Mac arm64. You can also choose what version onf python you want to use with it.</p>
-<p>As a user, it&rsquo;s the installation part that I enjoy the most. I am a Linux user, and one of the significant limitations is not having an easy way to install more than one version of QGIS on my machine (for example the latest stable version and the Long Term Release). I was able to work around that limitation by compiling QGIS myself, but with Conda, I can install as many versions as I want in a very convenient way.</p>
+<p>Conda provides a similar way to build, package and install QGIS (or any other software) in Linux, Windows, and Mac. It also provides builds for Linux aarch64 and Mac arm64. You can also choose what version of python you want to use with it.</p>
+<p>As a user, it&rsquo;s the installation part that I enjoy the most. I am a Linux user, and one of the significant limitations is not having an easy way to install more than one version of QGIS on my machine (for example the latest stable version and the Long Term Release version). I was able to work around that limitation by compiling QGIS myself, but with Conda, I can install as many versions as I want in a very convenient way.</p>
 <p>The following paragraphs explain how to install QGIS using Conda. The instructions and Conda commands should be quite similar for all the operating systems.</p>
-<p><strong>[Update]</strong></p>
-<h2 id=anaconda-minicond-or-mambaforge>Anaconda, minicond or mambaforge?</h2>
-<p>First thing you need to do is to install the Conda packaging system. Two distributions install Conda: Anaconda and Miniconda. There&rsquo;s is also an alternative called Mambaforge.</p>
-<p><strong>TL;DR</strong> Anaconda is big (3Gb?) and installs the packaging system and a lot of useful tools, python packages, libraries, etc&mldr; . Miniconda is much smaller and installs just the packaging system, which is the bare minimum that you need to work with Conda and will allow you to selectively install the tools and packages you need.</p>
-<p>Finally, my favorite, <strong>Mambaforge</strong>, it is as small as miniconda, it uses Conda Forge channel as default. and uses <a href=https://mamba.readthedocs.io/en/latest/index.html>mamba</a> instead of conda, with the exact same commands, but blasing fast!</p>
+<h2 id=anaconda-miniconda-or-mambaforge>Anaconda, miniconda or mambaforge?</h2>
+<p>First thing you need to do is to install the Conda packaging system. Two distributions install Conda: <strong>Anaconda</strong> and <strong>Miniconda</strong>. There&rsquo;s is also an alternative called <strong>Mambaforge</strong> that also installs Mamba.</p>
+<p><strong>TL;DR</strong> Anaconda is big (3Gb?) and installs the packaging system and a lot of useful tools, python packages, libraries, etc&mldr; . Miniconda is much smaller and installs just the packaging system, which is the bare minimum that you need to work with Conda and will allow you to selectively install the tools and packages you need. Finally, my current favorite, <strong>Mambaforge</strong>. It is as small as miniconda, it uses conda-forge channel as default, and allow you to use <a href=https://mamba.readthedocs.io/en/latest/index.html>mamba</a> instead of conda, which has the exact same commands, but it is blasing fast!</p>
 <p>For more information, check this stack exchange answer on <a href=https://stackoverflow.com/a/45421527/1918685>anaconda vs miniconda.</a></p>
 <p>Download <a href=https://www.anaconda.com/distribution/>anaconda</a> or <a href=https://docs.conda.io/en/latest/miniconda.html>miniconda</a> or <a href=https://github.com/conda-forge/miniforge#mambaforge>mambaforge</a> installers for your system and follow the instructions to install it.</p>
 <p>Windows installer is an executable, you should run it as administrator. The OSX and Linux installers are bash scripts, which means that, once downloaded, you need to run something like this to install:</p>
 <pre><code>bash Miniconda3-latest-Linux-x86_64.sh
 </code></pre>
 <h2 id=installing-qgis>Installing QGIS</h2>
-<p>Notice that the Conda (or mamba) tools are used in a command line terminal. Besides, on Windows, you need to use the command prompt that is installed with miniconda.</p>
+<p>Notice that the Conda (or mamba) tools are used in a command line terminal. Besides, on Windows, you need to use the specific command prompt that is installed with miniconda.</p>
 <h3 id=using-environments>Using environments</h3>
 <p>Conda works with environments, which are similar to <a href=https://virtualenv.pypa.io/en/latest/>Python virtual environments</a> but not limited only to python. Basically, it allows isolating different installations or setups without interfering with the rest of the system. I recommend that you always use environments. If, like me, you want to have more that one version of QGIS installed, then the use of environments is mandatory.</p>
 <p>Creating an environment is as easy as entering the following command on the terminal:</p>
@@ -147,8 +149,8 @@ Alexandre Neto</a>
 <p>For example,</p>
 <pre><code>conda create --name qgis_stable
 </code></pre>
-<p>You can choose the version of python to use in your environment by adding the option <code>python=&lt;version></code>. Currently versions of QGIS run on python 3.6, 3.7, 3.8 and 3.9.</p>
-<p>conda create &ndash;name qgis_stable python=3.7</p>
+<p>You can choose the version of python to use in your environment by adding the option <code>python=&lt;version></code>. Currently versions of QGIS run on python 3.8, 3.9, 3.10 and 3.11.</p>
+<p>conda create &ndash;name qgis_stable python=3.10</p>
 <p>To use an environment, you need to activate it.</p>
 <pre><code>conda activate qgis_stable
 </code></pre>
@@ -162,7 +164,7 @@ Alexandre Neto</a>
 <p>Installing packages using Conda is as simples as:</p>
 <pre><code>conda install &lt;package_name&gt;
 </code></pre>
-<p>Because conda packages can be stored in different channels, and because the default channels (from the anaconda service) do not contain QGIS, we may need to specify the channel we want to get the package from. <a href=https://conda-forge.org/>conda-forge</a> is a community-driven repository of conda recipes and includes updated QGIS packages. Make sure to activate the environment first.</p>
+<p>Because conda packages can be stored in different channels, and because the default channels (from the anaconda service) do not contain QGIS (and are actually free), we may need to specify the channel we want to get the package from. <a href=https://conda-forge.org/>conda-forge</a> is a community-driven repository of conda recipes and includes updated QGIS packages. Make sure to activate the environment first.</p>
 <pre><code>conda install qgis --channel conda-forge
 </code></pre>
 <p>If we use mambaforge, we can simply do:</p>
@@ -211,19 +213,19 @@ qgis
 <a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f" target=_blank>
 <i class="fab fa-facebook"></i>
 </a>
-<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f&text=Using%20QGIS%20from%20Conda&via=Alexandre%20Neto" target=_blank>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f&text=Using%20QGIS%20from%20conda-forge&via=Alexandre%20Neto" target=_blank>
 <i class="fab fa-twitter"></i>
 </a>
-<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f&title=Using%20QGIS%20from%20Conda" target=_blank>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f&title=Using%20QGIS%20from%20conda-forge" target=_blank>
 <i class="fab fa-reddit"></i>
 </a>
-<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f&title=Using%20QGIS%20from%20Conda" target=_blank>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f&title=Using%20QGIS%20from%20conda-forge" target=_blank>
 <i class="fab fa-linkedin"></i>
 </a>
-<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Using%20QGIS%20from%20Conda https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f" target=_blank>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Using%20QGIS%20from%20conda-forge https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f" target=_blank>
 <i class="fab fa-whatsapp"></i>
 </a>
-<a class="btn btn-sm email-btn" href="mailto:?subject=Using%20QGIS%20from%20Conda&body=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f" target=_blank>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Using%20QGIS%20from%20conda-forge&body=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2019-05-29-using-qgis-from-conda%2f" target=_blank>
 <i class="fas fa-envelope-open-text"></i>
 </a>
 </div>
@@ -250,7 +252,7 @@ Improve this page
 <div class=toc>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#anaconda-minicond-or-mambaforge>Anaconda, minicond or mambaforge?</a></li>
+<li><a href=#anaconda-miniconda-or-mambaforge>Anaconda, miniconda or mambaforge?</a></li>
 <li><a href=#installing-qgis>Installing QGIS</a>
 <ul>
 <li><a href=#using-environments>Using environments</a></li>
