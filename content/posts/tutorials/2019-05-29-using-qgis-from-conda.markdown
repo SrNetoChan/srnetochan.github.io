@@ -1,39 +1,39 @@
 ---
 
 date: 2019-05-29 22:46:23+00:00
-title: Using QGIS from Conda
+title: Using QGIS from conda-forge
 categories:
 - Sem categoria
 tags:
 - conda
 - QGIS
+- conda-forge
+- mamba
 ---
 
-QGIS recipes have been available on Conda for a while, but now, that they work for the three main operating systems, getting QGIS from Conda is s starting to become a reliable alternative to other QGIS distributions. Anyway, let's rewind a bit...
+QGIS recipes have been available on Conda-forge for a while, but now, that they work for the three main operating systems, installing QGIS from Conda is s starting to become a very reliable alternative to other QGIS distributions. Anyway, let's rewind a bit...
 
 What is Conda?
 
+<blockquote>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and all their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python packages, but it can package and distribute software for any language.</blockquote>
 
-<blockquote>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.</blockquote>
+What is Conda-forge?
 
+Conda-forge is a community driven channel that builds and enable hundreads of packages.
 
 Why is that of any relevance?
 
-Conda provides a similar way to build, package and install QGIS (or any other software) in Linux, Windows, and Mac. It also provides builds for Linux aarch64 and Mac arm64. You can also choose what version onf python you want to use with it.
+Conda provides a similar way to build, package and install QGIS (or any other software) in Linux, Windows, and Mac. It also provides builds for Linux aarch64 and Mac arm64. You can also choose what version of python you want to use with it.
 
-As a user, it's the installation part that I enjoy the most. I am a Linux user, and one of the significant limitations is not having an easy way to install more than one version of QGIS on my machine (for example the latest stable version and the Long Term Release). I was able to work around that limitation by compiling QGIS myself, but with Conda, I can install as many versions as I want in a very convenient way.
+As a user, it's the installation part that I enjoy the most. I am a Linux user, and one of the significant limitations is not having an easy way to install more than one version of QGIS on my machine (for example the latest stable version and the Long Term Release version). I was able to work around that limitation by compiling QGIS myself, but with Conda, I can install as many versions as I want in a very convenient way.
 
 The following paragraphs explain how to install QGIS using Conda. The instructions and Conda commands should be quite similar for all the operating systems.
 
-**[Update]**
+## Anaconda, miniconda or mambaforge?
 
-## Anaconda, minicond or mambaforge?
+First thing you need to do is to install the Conda packaging system. Two distributions install Conda: **Anaconda** and **Miniconda**. There's is also an alternative called **Mambaforge** that also installs Mamba.
 
-First thing you need to do is to install the Conda packaging system. Two distributions install Conda: Anaconda and Miniconda. There's is also an alternative called Mambaforge.
-
-**TL;DR** Anaconda is big (3Gb?) and installs the packaging system and a lot of useful tools, python packages, libraries, etc... . Miniconda is much smaller and installs just the packaging system, which is the bare minimum that you need to work with Conda and will allow you to selectively install the tools and packages you need. 
-
-Finally, my favorite, **Mambaforge**, it is as small as miniconda, it uses Conda Forge channel as default. and uses [mamba](https://mamba.readthedocs.io/en/latest/index.html) instead of conda, with the exact same commands, but blasing fast!
+**TL;DR** Anaconda is big (3Gb?) and installs the packaging system and a lot of useful tools, python packages, libraries, etc... . Miniconda is much smaller and installs just the packaging system, which is the bare minimum that you need to work with Conda and will allow you to selectively install the tools and packages you need. Finally, my current favorite, **Mambaforge**. It is as small as miniconda, it uses conda-forge channel as default, and allow you to use [mamba](https://mamba.readthedocs.io/en/latest/index.html) instead of conda, which has the exact same commands, but it is blasing fast!
 
 For more information, check this stack exchange answer on [anaconda vs miniconda.](https://stackoverflow.com/a/45421527/1918685)
 
@@ -47,7 +47,7 @@ Windows installer is an executable, you should run it as administrator. The OSX 
 ## Installing QGIS
 
 
-Notice that the Conda (or mamba) tools are used in a command line terminal. Besides, on Windows, you need to use the command prompt that is installed with miniconda.
+Notice that the Conda (or mamba) tools are used in a command line terminal. Besides, on Windows, you need to use the specific command prompt that is installed with miniconda.
 
 
 ### Using environments
@@ -67,9 +67,9 @@ For example,
     conda create --name qgis_stable
 
 
-You can choose the version of python to use in your environment by adding the option `python=<version>`. Currently versions of QGIS run on python 3.6, 3.7, 3.8 and 3.9.
+You can choose the version of python to use in your environment by adding the option `python=<version>`. Currently versions of QGIS run on python 3.8, 3.9, 3.10 and 3.11.
 
-conda create --name qgis_stable python=3.7
+conda create --name qgis_stable python=3.10
 
 To use an environment, you need to activate it.
 
@@ -100,7 +100,7 @@ Installing packages using Conda is as simples as:
     conda install <package_name>
 
 
-Because conda packages can be stored in different channels, and because the default channels (from the anaconda service) do not contain QGIS, we may need to specify the channel we want to get the package from. [conda-forge](https://conda-forge.org/) is a community-driven repository of conda recipes and includes updated QGIS packages. Make sure to activate the  environment first.
+Because conda packages can be stored in different channels, and because the default channels (from the anaconda service) do not contain QGIS (and are actually free), we may need to specify the channel we want to get the package from. [conda-forge](https://conda-forge.org/) is a community-driven repository of conda recipes and includes updated QGIS packages. Make sure to activate the  environment first.
 
 
     conda install qgis --channel conda-forge
