@@ -120,8 +120,7 @@ Alexandre Neto</a>
 </div>
 <div class=post-content id=post-content>
 <p>Há já algum tempo que queria estudar a funcionalidade de triggers em <a href=http://www.postgresql.org/>PostgreSQL</a>. A grosso modo, tinha ideia que permitiam executar comandos de forma automática, sempre que se alterasse determinada tabela, mas desconhecia os mecanismos para o fazer. Uma das aplicações que me veio à ideia foi a de usar triggers para manter actualizado atributos geométricos como a área ou o comprimento. Quando editamos de elementos que contêm atributos relacionados com as dimensões, forma ou localização das suas geometrias (área, perímetro, comprimento), é muito fácil esquecermo-nos de os actualizar depois da edição. Se mais tarde usarmos esses atributos para realizar alguma análise, este esquecimento pode levar a resultados errados.Como exemplo, vou criar um trigger para actualizar os atributos &ldquo;área&rdquo;, &ldquo;latitude&rdquo; e &ldquo;longitude&rdquo; de uma tabela de polígonos.A primeira coisa a fazer é criar uma função que execute o que pretendemos. No caso em questão, usei a seguinte:</p>
-<pre><code>[code language=&quot;sql&quot;]
-CREATE OR REPLACE FUNCTION update_geometry_fields()
+<pre><code>CREATE OR REPLACE FUNCTION update_geometry_fields()
 RETURNS trigger;
 $BODY$
 DECLARE
@@ -139,20 +138,16 @@ RETURN NEW;
 END;
 $BODY$
 LANGUAGE plpgsql VOLATILE
-[/code]
 </code></pre>
 <p>Depois, é necessário criar o trigger que despolete a função:</p>
-<pre><code>[code language=&quot;sql&quot;]
-CREATE TRIGGER update_epvu_sgev_geom_fields
+<pre><code>CREATE TRIGGER update_epvu_sgev_geom_fields
 BEFORE INSERT OR UPDATE OF geom
 ON epvu.sgev
 FOR EACH ROW
 EXECUTE PROCEDURE update_geometry_fields();
-[/code]
 </code></pre>
 <p>O trigger, quando lido em inglês, é bastante simples de entender. Antes de inserir uma linha nova, ou actualizar a geometria (geom) de uma linha existente da tabela &ldquo;epvu.sgev&rdquo;, executa a função update_geometry_fields() De notar que a criação do triggers (e respectivas funções) pode ter variações. Em primeiro lugar, os triggers podem ser despoletados antes ou depois de um INSERT, DELETE ou UPDATE numa tabela. Em segundo, podem executar a função sobre toda a tabela ou apenas nas linhas em questão. Para ilustrar estas diferenças, mais um exemplo. Com o objectivo de optimizar a impressão em mapas no <a href=www.qgis.org>QGIS</a>, através da nova funcionalidade de <a href=http://docs.qgis.org/testing/en/docs/user_manual/print_composer/print_composer.html#atlas-generation>atlas</a> do print composer, criei uma consulta para agregar vários polígonos com base num atributo (&ldquo;codigo&rdquo;) e me determinasse se os multi-polígonos resultantes encaixava melhor numa folha ao alto ou deitado. Na tentativa de tornar o processo mais rápido, pensei em gravar a consulta como tabela mantê-la actualizada sempre que alguma alteração pertinente ocorresse através de um trigger. A função a usar no trigger era pouco mais que a consulta em si:</p>
-<pre><code>[code language=&quot;sql&quot;]
-CREATE OR REPLACE FUNCTION epvu.refresh_geom_paginas_prestadores()
+<pre><code>CREATE OR REPLACE FUNCTION epvu.refresh_geom_paginas_prestadores()
 RETURNS trigger AS
 $BODY$
 BEGIN
@@ -178,16 +173,12 @@ RETURN NEW;
 END;
 $BODY$
 LANGUAGE plpgsql VOLATILE
-[/code]
 </code></pre>
 <p>Neste caso, a função deve ser despoletada sempre que forem feitas alterações à tabela que usada na consulta (epvu.sgev) e que possam alterar os seus resultados. Assim, sempre que haja introdução (INSERT) ou eliminação (DELETE) de registos, ou que sejam alterados (UPDATE) os campos da geometria (geom) e &ldquo;codigo&rdquo;, o trigger executa uma única vez a função descrita acima:</p>
-<pre><code>[code language=&quot;sql&quot;]
-CREATE TRIGGER actualiza_paginas_update
+<pre><code>CREATE TRIGGER actualiza_paginas_update
 AFTER INSERT OR UPDATE OF geom, codigo OR DELETE
 ON epvu.sgev
 FOR EACH STATEMENT
-EXECUTE PROCEDURE epvu.refresh_geom_paginas_prestadores();
-[/code]
 </code></pre>
 <p><strong>Nota</strong>: Depois de alguns teste, cheguei à conclusão que, dado o número reduzido de registos que tinha, era mais rápido usar uma VIEW. Continuo no entanto a achar que, este tipo de triggers podem ser úteis para pre-processar consultas mais exigentes. Para mais informação sobre o uso de triggers, a <a href=http://www.postgresql.org/docs/9.3/static/sql-createtrigger.html>documentação do PostgreSQL</a> é um excelente ponto de partida.</p>
 </div>
