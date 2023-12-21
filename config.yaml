@@ -99,7 +99,7 @@ params:
         # tumblr: true
         # pocket: true
         # diaspora: true
-        # mastodon: true
+        mastodon: true
 
     # Enable & configure "Notes" features
     #notes:
