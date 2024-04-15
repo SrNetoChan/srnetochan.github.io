@@ -13,7 +13,6 @@ Some time ago in the [qgis-pt mailing list](http://osgeo-org.1560.x6.nabble.com/
 
 Closely following the blog post instructions, I have created a file called **userfunctions.py** in the  **.qgis2/python** folder and, with [a help](http://osgeo-org.1560.x6.nabble.com/How-to-get-Composer-s-name-title-using-Python-td5160691.html) from [Nyall Dawson](http://nyalldawson.net/) I wrote the following code.
 
-[code language="Python"]
 ```
 from qgis.utils import qgsfunction, iface
 from qgis.core import QGis
@@ -39,7 +38,6 @@ def map_x_min(values, feature, parent):
  result = extent.xMinimum()
  return result
 ``` 
-[/code]
 
 After running the command **import userfunctions** in the python console  (Plugins > Python Console), it was already possible to use the  **map_x_min()** function (from the python category) in an expression to get the minimum X value of the map.
 
@@ -48,8 +46,7 @@ After running the command **import userfunctions** in the python console  (Plu
 
 All I needed now was to create the other three functions,  **map_x_max()**, **map_y_min()** and** map_y_max()**.  Since part of the code would be repeated, I have decided to put it in a function called **map_bound()**, that would use the print composer title and map id as arguments, and return the map extent (in the form of a QgsRectangle).
 
-[code language="Python"]
-
+```
 from qgis.utils import qgsfunction, iface
 from qgis.core import QGis
 
@@ -73,11 +70,11 @@ def map_bounds(composer_title, map_id):
 
  return extent
  
- [/code]
+```
 
 With this function available, I could now use it in the other functions to obtain the map X and Y minimum and maximum values, making the code more clear and easy to maintain. I also add some mechanisms to the original code to prevent errors.
 
-[code language="Python"]
+```
 
 @qgsfunction(2,"python")
 def map_x_min(values, feature, parent):
@@ -175,7 +172,7 @@ map_y_max('my pretty map', 0) -> 12345.679
 
  return result
  
- [/code]
+```
 
 The functions became available to the expression builder in the "Python" category (could have been any other name) and the functions descriptions are formatted as help texts to provide the user all the information needed to use them.
 
@@ -194,11 +191,11 @@ The functions result can be used with other functions. In the following image, t
 
 There was a setback... For the functions to become available, it was necessary to manually import them in each QGIS session. Not very practical. Again with Nathan's [help](http://osgeo-org.1560.x6.nabble.com/How-to-import-a-user-defined-expression-functions-on-QGIS-start-up-td5159062.html), I found out that it's possible to import python modules at QGIS startup by putting a **startup.py** file with the import statements in the **.qgis2/python** folder. In my case, this was enough.
 
-[code language="Python"]
+```
 
 import userfunctions
 
-[/code]
+```
 
 I was pretty satisfied with the end result. The ability to create your own functions in expressions demonstrates once more how easy it is to customize QGIS and create your own tools. I'm already thinking in more applications for this amazing functionality.
 
