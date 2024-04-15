@@ -12,7 +12,7 @@ Português
 English</a></div></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg class=theme-icon src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div id=themeMenu class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# data-scheme=light><img class=theme-icon src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme">
 </a><a class="dropdown-item nav-link" href=# data-scheme=dark><img class=theme-icon src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme">
 </a><a class="dropdown-item nav-link" href=# data-scheme=system><img class=theme-icon src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/globe_huf470c2acc03b6e591de5c6cfa080296e_178497_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
-<img src=/images/site/inverted-globe_hu83d55f8dff2638a1abb17965c75830f1_170033_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts/ data-filter=all>Posts</a></li><div class=subtree><li><i data-feather=plus-circle></i><a class=list-link href=/posts/opinion/> Opinion articles</a><ul><li><a class=list-link href=/posts/opinion/2013-03-26-nota-de-abertura/ title="Welcome note">Welcome note</a></li><li><a class=list-link href=/posts/opinion/2013-03-31-porque-o-open-source/ title="Open Source, why?">Open Source, why?</a></li></ul></li><li><i data-feather=plus-circle></i><a class=list-link href=/posts/plugins/> Plugins</a><ul><li><a class=list-link href=/posts/plugins/multipart-split/ title="Multipart Split">Multipart Split</a></li><li><a class=list-link href=/posts/plugins/walking-time/ title="Walking time">Walking time</a></li></ul></li><li><a class=list-link href=/posts/news/ title=News>News</a></li><li><a class="active list-link" href=/posts/tutorials/ title=Tutorials>Tutorials</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/images/default-hero.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/aneto2_hu586225030306c83000ec23d4f2e8aa5b_202140_120x120_fit_q75_box.jpg alt="Author Image"><h5 class=author-name>Alexandre Neto</h5><p class=text-muted>Tuesday, September 9, 2014 | 5 minutes</p></div><div class=title><h1>Map corner coordinates in QGIS</h1></div><div class=tags><ul style=padding-left:0><li class=rounded><a href=/tags/cartography/ class="btn, btn-sm">Cartography</a></li><li class=rounded><a href=/tags/python/ class="btn, btn-sm">python</a></li><li class=rounded><a href=/tags/qgis/ class="btn, btn-sm">QGIS</a></li><li class=rounded><a href=/tags/tutorial/ class="btn, btn-sm">tutorial</a></li></ul></div><div class=post-content id=post-content><p>Some time ago in the <a href=http://osgeo-org.1560.x6.nabble.com/QGIS-pt-f5128248.html target=_blank rel=noopener>qgis-pt mailing list</a>, someone asked <a href=http://osgeo-org.1560.x6.nabble.com/QGIS-Layout-coordenadas-nos-4-cantos-do-mapa-tt5140019.html target=_blank rel=noopener>how to show the coordinates of a map corners using QGIS</a>. Since this features wasn&rsquo;t available (yet), I have tried to reach a automatic solution, but without success,  After some thought about it and after reading a <a href=http://nathanw.net/2012/11/10/user-defined-expression-functions-for-qgis/ target=_blank rel=noopener>blog post</a> by <a href=http://nathanw.net/aboutme.html target=_blank rel=noopener>Nathan Woodrow</a>, it came to me that the solution could be creating a user defined function for the expression builder to be used in labels in the map.</p><p>Closely following the blog post instructions, I have created a file called <strong>userfunctions.py</strong> in the  <strong>.qgis2/python</strong> folder and, with <a href=http://osgeo-org.1560.x6.nabble.com/How-to-get-Composer-s-name-title-using-Python-td5160691.html target=_blank rel=noopener>a help</a> from <a href=http://nyalldawson.net/ target=_blank rel=noopener>Nyall Dawson</a> I wrote the following code.</p><p>[code language=&ldquo;Python&rdquo;]</p><pre tabindex=0><code>from qgis.utils import qgsfunction, iface
+<img src=/images/site/inverted-globe_hu83d55f8dff2638a1abb17965c75830f1_170033_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts/ data-filter=all>Posts</a></li><div class=subtree><li><i data-feather=plus-circle></i><a class=list-link href=/posts/opinion/> Opinion articles</a><ul><li><a class=list-link href=/posts/opinion/2013-03-26-nota-de-abertura/ title="Welcome note">Welcome note</a></li><li><a class=list-link href=/posts/opinion/2013-03-31-porque-o-open-source/ title="Open Source, why?">Open Source, why?</a></li></ul></li><li><i data-feather=plus-circle></i><a class=list-link href=/posts/plugins/> Plugins</a><ul><li><a class=list-link href=/posts/plugins/multipart-split/ title="Multipart Split">Multipart Split</a></li><li><a class=list-link href=/posts/plugins/walking-time/ title="Walking time">Walking time</a></li></ul></li><li><a class=list-link href=/posts/news/ title=News>News</a></li><li><a class="active list-link" href=/posts/tutorials/ title=Tutorials>Tutorials</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/images/default-hero.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/aneto2_hu586225030306c83000ec23d4f2e8aa5b_202140_120x120_fit_q75_box.jpg alt="Author Image"><h5 class=author-name>Alexandre Neto</h5><p class=text-muted>Tuesday, September 9, 2014 | 5 minutes</p></div><div class=title><h1>Map corner coordinates in QGIS</h1></div><div class=tags><ul style=padding-left:0><li class=rounded><a href=/tags/cartography/ class="btn, btn-sm">Cartography</a></li><li class=rounded><a href=/tags/python/ class="btn, btn-sm">python</a></li><li class=rounded><a href=/tags/qgis/ class="btn, btn-sm">QGIS</a></li><li class=rounded><a href=/tags/tutorial/ class="btn, btn-sm">tutorial</a></li></ul></div><div class=post-content id=post-content><p>Some time ago in the <a href=http://osgeo-org.1560.x6.nabble.com/QGIS-pt-f5128248.html target=_blank rel=noopener>qgis-pt mailing list</a>, someone asked <a href=http://osgeo-org.1560.x6.nabble.com/QGIS-Layout-coordenadas-nos-4-cantos-do-mapa-tt5140019.html target=_blank rel=noopener>how to show the coordinates of a map corners using QGIS</a>. Since this features wasn&rsquo;t available (yet), I have tried to reach a automatic solution, but without success,  After some thought about it and after reading a <a href=http://nathanw.net/2012/11/10/user-defined-expression-functions-for-qgis/ target=_blank rel=noopener>blog post</a> by <a href=http://nathanw.net/aboutme.html target=_blank rel=noopener>Nathan Woodrow</a>, it came to me that the solution could be creating a user defined function for the expression builder to be used in labels in the map.</p><p>Closely following the blog post instructions, I have created a file called <strong>userfunctions.py</strong> in the  <strong>.qgis2/python</strong> folder and, with <a href=http://osgeo-org.1560.x6.nabble.com/How-to-get-Composer-s-name-title-using-Python-td5160691.html target=_blank rel=noopener>a help</a> from <a href=http://nyalldawson.net/ target=_blank rel=noopener>Nyall Dawson</a> I wrote the following code.</p><pre tabindex=0><code>from qgis.utils import qgsfunction, iface
 from qgis.core import QGis
 
 @qgsfunction(2,&#34;python&#34;)
@@ -35,72 +35,129 @@ def map_x_min(values, feature, parent):
     break
  result = extent.xMinimum()
  return result
-</code></pre><p>[/code]</p><p>After running the command <strong>import userfunctions</strong> in the python console  (Plugins > Python Console), it was already possible to use the  <strong>map_x_min()</strong> function (from the python category) in an expression to get the minimum X value of the map.</p><p><img alt="Screenshot from 2014-09-09 16^%29^%29" src="/images/2014/09/screenshot-from-2014-09-09-162929.png?w=584"></p><p>All I needed now was to create the other three functions,  <strong>map_x_max()</strong>, <strong>map_y_min()</strong> and** map_y_max()**.  Since part of the code would be repeated, I have decided to put it in a function called <strong>map_bound()</strong>, that would use the print composer title and map id as arguments, and return the map extent (in the form of a QgsRectangle).</p><p>[code language=&ldquo;Python&rdquo;]</p><p>from qgis.utils import qgsfunction, iface
-from qgis.core import QGis</p><p>def map_bounds(composer_title, map_id):
-"""
-Returns a rectangle with the bounds of a map
-from a specific composer
-"""
-composers = iface.activeComposers()
-for composer_view in composers:
-composer_window = composer_view.composerWindow()
-window_title = composer_window.windowTitle()
-if window_title == composer_title:
-composition = composer_view.composition()
-map = composition.getComposerMapById(map_id)
-if map:
-extent = map.currentMapExtent()
-break
-else:
-extent = None</p><p>return extent</p><p>[/code]</p><p>With this function available, I could now use it in the other functions to obtain the map X and Y minimum and maximum values, making the code more clear and easy to maintain. I also add some mechanisms to the original code to prevent errors.</p><p>[code language=&ldquo;Python&rdquo;]</p><p>@qgsfunction(2,&ldquo;python&rdquo;)
+</code></pre><p>After running the command <strong>import userfunctions</strong> in the python console  (Plugins > Python Console), it was already possible to use the  <strong>map_x_min()</strong> function (from the python category) in an expression to get the minimum X value of the map.</p><p><img alt="Screenshot from 2014-09-09 16^%29^%29" src="/images/2014/09/screenshot-from-2014-09-09-162929.png?w=584"></p><p>All I needed now was to create the other three functions,  <strong>map_x_max()</strong>, <strong>map_y_min()</strong> and** map_y_max()**.  Since part of the code would be repeated, I have decided to put it in a function called <strong>map_bound()</strong>, that would use the print composer title and map id as arguments, and return the map extent (in the form of a QgsRectangle).</p><pre tabindex=0><code>from qgis.utils import qgsfunction, iface
+from qgis.core import QGis
+
+def map_bounds(composer_title, map_id):
+ &#34;&#34;&#34;
+ Returns a rectangle with the bounds of a map
+ from a specific composer
+ &#34;&#34;&#34;
+ composers = iface.activeComposers()
+ for composer_view in composers:
+  composer_window = composer_view.composerWindow()
+  window_title = composer_window.windowTitle()
+  if window_title == composer_title:
+   composition = composer_view.composition()
+   map = composition.getComposerMapById(map_id)
+   if map:
+    extent = map.currentMapExtent()
+    break
+ else:
+  extent = None
+
+ return extent
+ 
+</code></pre><p>With this function available, I could now use it in the other functions to obtain the map X and Y minimum and maximum values, making the code more clear and easy to maintain. I also add some mechanisms to the original code to prevent errors.</p><pre tabindex=0><code>
+@qgsfunction(2,&#34;python&#34;)
 def map_x_min(values, feature, parent):
-"""
-Returns the minimum x coordinate of a map from a specific composer.
-Calculations are in the Spatial Reference System of the project.</p><h2>Syntax</h2>map_x_min(composer_title, map_id)<h2>Arguments</h2>composer_title - is string. The title of the composer where the map is.
-map_id - integer. The id of the map.<h2>Example</h2>map_x_min('my pretty map', 0) -> -12345.679<p>"""
-composer_title = values[0]
-map_id = values[1]
-map_extent = map_bounds(composer_title, map_id)
-if map_extent:
-result = map_extent.xMinimum()
-else:
-result = None</p><p>return result</p><p>@qgsfunction(2,&ldquo;python&rdquo;)
+ &#34;&#34;&#34;
+ Returns the minimum x coordinate of a map from a specific composer.
+ Calculations are in the Spatial Reference System of the project.
+&lt;h2&gt;Syntax&lt;/h2&gt;
+map_x_min(composer_title, map_id)
+&lt;h2&gt;Arguments&lt;/h2&gt;
+composer_title - is string. The title of the composer where the map is.
+ map_id - integer. The id of the map.
+&lt;h2&gt;Example&lt;/h2&gt;
+map_x_min(&#39;my pretty map&#39;, 0) -&gt; -12345.679
+
+ &#34;&#34;&#34;
+ composer_title = values[0]
+ map_id = values[1]
+ map_extent = map_bounds(composer_title, map_id)
+ if map_extent:
+  result = map_extent.xMinimum()
+ else:
+  result = None
+
+ return result
+
+@qgsfunction(2,&#34;python&#34;)
 def map_x_max(values, feature, parent):
-"""
-Returns the maximum x coordinate of a map from a specific composer.
-Calculations are in the Spatial Reference System of the project.</p><h2>Syntax</h2>map_x_max(composer_title, map_id)<h2>Arguments</h2>composer_title - is string. The title of the composer where the map is.
-map_id - integer. The id of the map.<h2>Example</h2>map_x_max('my pretty map', 0) -> 12345.679<p>"""
-composer_title = values[0]
-map_id = values[1]
-map_extent = map_bounds(composer_title, map_id)
-if map_extent:
-result = map_extent.xMaximum()
-else:
-result = None</p><p>return result</p><p>@qgsfunction(2,&ldquo;python&rdquo;)
+ &#34;&#34;&#34;
+ Returns the maximum x coordinate of a map from a specific composer.
+ Calculations are in the Spatial Reference System of the project.
+&lt;h2&gt;Syntax&lt;/h2&gt;
+map_x_max(composer_title, map_id)
+&lt;h2&gt;Arguments&lt;/h2&gt;
+composer_title - is string. The title of the composer where the map is.
+ map_id - integer. The id of the map.
+&lt;h2&gt;Example&lt;/h2&gt;
+map_x_max(&#39;my pretty map&#39;, 0) -&gt; 12345.679
+
+ &#34;&#34;&#34;
+ composer_title = values[0]
+ map_id = values[1]
+ map_extent = map_bounds(composer_title, map_id)
+ if map_extent:
+  result = map_extent.xMaximum()
+ else:
+  result = None
+
+ return result
+
+@qgsfunction(2,&#34;python&#34;)
 def map_y_min(values, feature, parent):
-"""
-Returns the minimum y coordinate of a map from a specific composer.
-Calculations are in the Spatial Reference System of the project.</p><h2>Syntax</h2>map_y_min(composer_title, map_id)<h2>Arguments</h2>composer_title - is string. The title of the composer where the map is.
-map_id - integer. The id of the map.<h2>Example</h2>map_y_min('my pretty map', 0) -> -12345.679<p>"""
-composer_title = values[0]
-map_id = values[1]
-map_extent = map_bounds(composer_title, map_id)
-if map_extent:
-result = map_extent.yMinimum()
-else:
-result = None</p><p>return result</p><p>@qgsfunction(2,&ldquo;python&rdquo;)
+ &#34;&#34;&#34;
+ Returns the minimum y coordinate of a map from a specific composer.
+ Calculations are in the Spatial Reference System of the project.
+&lt;h2&gt;Syntax&lt;/h2&gt;
+map_y_min(composer_title, map_id)
+&lt;h2&gt;Arguments&lt;/h2&gt;
+composer_title - is string. The title of the composer where the map is.
+ map_id - integer. The id of the map.
+&lt;h2&gt;Example&lt;/h2&gt;
+map_y_min(&#39;my pretty map&#39;, 0) -&gt; -12345.679
+
+ &#34;&#34;&#34;
+ composer_title = values[0]
+ map_id = values[1]
+ map_extent = map_bounds(composer_title, map_id)
+ if map_extent:
+  result = map_extent.yMinimum()
+ else:
+  result = None
+
+ return result
+
+@qgsfunction(2,&#34;python&#34;)
 def map_y_max(values, feature, parent):
-"""
-Returns the maximum y coordinate of a map from a specific composer.
-Calculations are in the Spatial Reference System of the project.</p><h2>Syntax</h2>map_y_max(composer_title, map_id)<h2>Arguments</h2>composer_title - is string. The title of the composer where the map is.
-map_id - integer. The id of the map.<h2>Example</h2>map_y_max('my pretty map', 0) -> 12345.679<p>"""
-composer_title = values[0]
-map_id = values[1]
-map_extent = map_bounds(composer_title, map_id)
-if map_extent:
-result = map_extent.yMaximum()
-else:
-result = None</p><p>return result</p><p>[/code]</p><p>The functions became available to the expression builder in the &ldquo;Python&rdquo; category (could have been any other name) and the functions descriptions are formatted as help texts to provide the user all the information needed to use them.</p><p><img alt="Screenshot from 2014-09-09 15^%39^%19" src="/images/2014/09/screenshot-from-2014-09-09-153919.png?w=584"></p><p>Using the created functions, it was now easy to put the corner coordinates in labels near the map corners. Any change to the map extents is reflected in the label, therefore quite useful to use with the atlas mode.</p><p><a href=/images/2014/09/screenshot-from-2014-09-09-154027.png><img alt="Screenshot from 2014-09-09 15^%40^%27" src="/images/2014/09/screenshot-from-2014-09-09-154027.png?w=584"></a></p><p>The functions result can be used with other functions. In the following image, there is an expression to show the coordinates in a more compact way.</p><p><a href=/images/2014/09/screenshot-from-2014-09-09-154355.png><img alt="Screenshot from 2014-09-09 15^%43^%55" src="/images/2014/09/screenshot-from-2014-09-09-154355.png?w=584"></a></p><p>There was a setback&mldr; For the functions to become available, it was necessary to manually import them in each QGIS session. Not very practical. Again with Nathan&rsquo;s <a href=http://osgeo-org.1560.x6.nabble.com/How-to-import-a-user-defined-expression-functions-on-QGIS-start-up-td5159062.html target=_blank rel=noopener>help</a>, I found out that it&rsquo;s possible to import python modules at QGIS startup by putting a <strong>startup.py</strong> file with the import statements in the <strong>.qgis2/python</strong> folder. In my case, this was enough.</p><p>[code language=&ldquo;Python&rdquo;]</p><p>import userfunctions</p><p>[/code]</p><p>I was pretty satisfied with the end result. The ability to create your own functions in expressions demonstrates once more how easy it is to customize QGIS and create your own tools. I&rsquo;m already thinking in more applications for this amazing functionality.</p><p><a href=/images/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg><img alt="UT 9 - Qta da Peninha - Vegetação potencial" src="/images/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg?w=584"></a></p><p>You can download the Python files with the functions <a href="https://www.dropbox.com/s/b0ejc7216eboach/user_functions.zip?dl=0" target=_blank rel=noopener>HERE</a>. Just unzip both files to the .qgis2/python folder, and restart QGIS, and the functions should become available.</p><p>**Disclaimer: **I&rsquo;m not an English native speaker, therefore I apologize for any errors, and I will thank any advice on how to improve the text.</p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+ &#34;&#34;&#34;
+ Returns the maximum y coordinate of a map from a specific composer.
+ Calculations are in the Spatial Reference System of the project.
+&lt;h2&gt;Syntax&lt;/h2&gt;
+map_y_max(composer_title, map_id)
+&lt;h2&gt;Arguments&lt;/h2&gt;
+composer_title - is string. The title of the composer where the map is.
+ map_id - integer. The id of the map.
+&lt;h2&gt;Example&lt;/h2&gt;
+map_y_max(&#39;my pretty map&#39;, 0) -&gt; 12345.679
+
+ &#34;&#34;&#34;
+ composer_title = values[0]
+ map_id = values[1]
+ map_extent = map_bounds(composer_title, map_id)
+ if map_extent:
+  result = map_extent.yMaximum()
+ else:
+  result = None
+
+ return result
+ 
+</code></pre><p>The functions became available to the expression builder in the &ldquo;Python&rdquo; category (could have been any other name) and the functions descriptions are formatted as help texts to provide the user all the information needed to use them.</p><p><img alt="Screenshot from 2014-09-09 15^%39^%19" src="/images/2014/09/screenshot-from-2014-09-09-153919.png?w=584"></p><p>Using the created functions, it was now easy to put the corner coordinates in labels near the map corners. Any change to the map extents is reflected in the label, therefore quite useful to use with the atlas mode.</p><p><a href=/images/2014/09/screenshot-from-2014-09-09-154027.png><img alt="Screenshot from 2014-09-09 15^%40^%27" src="/images/2014/09/screenshot-from-2014-09-09-154027.png?w=584"></a></p><p>The functions result can be used with other functions. In the following image, there is an expression to show the coordinates in a more compact way.</p><p><a href=/images/2014/09/screenshot-from-2014-09-09-154355.png><img alt="Screenshot from 2014-09-09 15^%43^%55" src="/images/2014/09/screenshot-from-2014-09-09-154355.png?w=584"></a></p><p>There was a setback&mldr; For the functions to become available, it was necessary to manually import them in each QGIS session. Not very practical. Again with Nathan&rsquo;s <a href=http://osgeo-org.1560.x6.nabble.com/How-to-import-a-user-defined-expression-functions-on-QGIS-start-up-td5159062.html target=_blank rel=noopener>help</a>, I found out that it&rsquo;s possible to import python modules at QGIS startup by putting a <strong>startup.py</strong> file with the import statements in the <strong>.qgis2/python</strong> folder. In my case, this was enough.</p><pre tabindex=0><code>
+import userfunctions
+</code></pre><p>I was pretty satisfied with the end result. The ability to create your own functions in expressions demonstrates once more how easy it is to customize QGIS and create your own tools. I&rsquo;m already thinking in more applications for this amazing functionality.</p><p><a href=/images/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg><img alt="UT 9 - Qta da Peninha - Vegetação potencial" src="/images/2014/09/ut-9-qta-da-peninha-vegetac3a7c3a3o-potencial.jpg?w=584"></a></p><p>You can download the Python files with the functions <a href="https://www.dropbox.com/s/b0ejc7216eboach/user_functions.zip?dl=0" target=_blank rel=noopener>HERE</a>. Just unzip both files to the .qgis2/python folder, and restart QGIS, and the functions should become available.</p><p>**Disclaimer: **I&rsquo;m not an English native speaker, therefore I apologize for any errors, and I will thank any advice on how to improve the text.</p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
 <a class="btn icon-button bg-facebook" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis%2f" target=_blank><i class="fab fa-facebook"></i>
 </a><a class="btn icon-button bg-twitter" href="https://twitter.com/share?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis%2f&text=Map%20corner%20coordinates%20in%20QGIS&via=Alexandre%20Neto" target=_blank><i class="fab fa-twitter"></i>
 </a><a class="btn icon-button bg-reddit" href="https://reddit.com/submit?url=https%3a%2f%2fsrnetochan.github.io%2fposts%2ftutorials%2f2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis%2f&title=Map%20corner%20coordinates%20in%20QGIS" target=_blank><i class="fab fa-reddit"></i>
