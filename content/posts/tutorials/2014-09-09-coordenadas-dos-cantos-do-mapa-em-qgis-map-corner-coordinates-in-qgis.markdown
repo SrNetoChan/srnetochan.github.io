@@ -14,7 +14,7 @@ Some time ago in the [qgis-pt mailing list](http://osgeo-org.1560.x6.nabble.com/
 Closely following the blog post instructions, I have created a file called **userfunctions.py** in the  **.qgis2/python** folder and, with [a help](http://osgeo-org.1560.x6.nabble.com/How-to-get-Composer-s-name-title-using-Python-td5160691.html) from [Nyall Dawson](http://nyalldawson.net/) I wrote the following code.
 
 [code language="Python"]
-
+```
 from qgis.utils import qgsfunction, iface
 from qgis.core import QGis
 
@@ -38,7 +38,7 @@ def map_x_min(values, feature, parent):
     break
  result = extent.xMinimum()
  return result
- 
+``` 
 [/code]
 
 After running the command **import userfunctions** in the python console  (Plugins > Python Console), it was already possible to use the  **map_x_min()** function (from the python category) in an expression to get the minimum X value of the map.
