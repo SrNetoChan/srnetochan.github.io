@@ -1,112 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>index</title>
-<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
-<script src="./threejs/three.min.js"></script>
-<script src="./threejs/OrbitControls.js"></script>
-<script src="./Qgis2threejs.js"></script>
-</head>
-<body>
-<div id="view">
-  <div id="labels"></div>
-  <div id="northarrow"></div>
-</div>
-
-<!-- popup -->
-<div id="popup">
-  <div id="closebtn">&times;</div>
-  <div id="popupbar"></div>
-  <div id="popupbody">
-    <div id="popupcontent"></div>
-
-    <!-- query result -->
-    <div id="queryresult">
-      <table id="qr_layername_table">
-        <caption>Layer name</caption>
-        <tr><td id="qr_layername"></td></tr>
-      </table>
-
-      <table id="qr_coords_table">
-        <caption>Clicked coordinates</caption>
-        <tr><td id="qr_coords"></td></tr>
-      </table>
-
-      <!-- camera actions -->
-      <div class="action-btn action-zoom" onclick="app.cameraAction.zoomIn(); app.closePopup();">Zoom in here</div>
-      <div class="action-btn action-move" onclick="app.cameraAction.move(); app.closePopup();">Move here</div>
-      <div class="action-btn action-orbit" onclick="app.cameraAction.orbit(); app.closePopup();">Orbit around here</div>
-
-      <!-- attributes -->
-      <table id="qr_attrs_table">
-        <caption>Attributes</caption>
-      </table>
-    </div>
-
-    <!-- page info -->
-    <div id="pageinfo">
-      <h1>Current View URL</h1>
-      <div><input id="urlbox" type="text"></div>
-
-      <h1>Usage</h1>
-      <table id="usage">
-        <tr><td colspan="2" class="star">Mouse</td></tr>
-        <tr><td>Left button + Move</td><td>Orbit</td></tr>
-        <tr><td>Mouse Wheel</td><td>Zoom</td></tr>
-        <tr><td>Right button + Move</td><td>Pan</td></tr>
-
-        <tr><td colspan="2" class="star">Keys</td></tr>
-        <tr><td>Arrow keys</td><td>Move Horizontally</td></tr>
-        <tr><td>Shift + Arrow keys</td><td>Orbit</td></tr>
-        <tr><td>Ctrl + Arrow keys</td><td>Rotate</td></tr>
-        <tr><td>Shift + Ctrl + Up / Down</td><td>Zoom In / Out</td></tr>
-        <tr><td>L</td><td>Toggle Label Visibility</td></tr>
-        <tr><td>R</td><td>Start / Stop Rotate Animation (Orbiting)</td></tr>
-        <tr><td>W</td><td>Wireframe Mode</td></tr>
-        <tr><td>Shift + R</td><td>Reset Camera Position</td></tr>
-        <tr><td>Shift + S</td><td>Save Image</td></tr>
-      </table>
-
-      <h1>About</h1>
-      <div id="about">
-        This page was made with <a href="https://www.qgis.org/" target="_blank">QGIS</a> and <a href="https://github.com/minorua/Qgis2threejs" target="_blank">Qgis2threejs</a> plugin.
-        Dependent JavaScript libraries are
-        <a href="https://threejs.org/" target="_blank">three.js</a>
-        <span id="lib_proj4js"> and <a href="https://trac.osgeo.org/proj4js/" target="_blank">Proj4js</a></span>
-        .
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- progress bar -->
-<div id="progress"><div id="bar"></div></div>
-
-<!-- header and footer -->
-<div id="header"></div>
-<div id="footer"><span id="infobtn"><img src="./Qgis2threejs.png"></span> </div>
-
-<script>
-Q3D.Config.allVisible = true;
-Q3D.Config.viewpoint = {lookAt:{x:4.956939208228188,y:-5.242094990174781,z:2.8888949165808538e-34},pos:{x:18.649675352056015,y:-56.73422249567844,z:43.79049539516069}};
-if (typeof proj4 === "undefined") document.getElementById("lib_proj4js").style.display = "none";
-
-var app = Q3D.application,
-    container = document.getElementById("view");
-
-app.init(container);           // initialize application
-
-// load the scene
-app.loadSceneFile("./data/index/scene.json", function () {
-  app.start();
-
-  // North arrow inset
-  if (Q3D.Config.northArrow.visible) app.buildNorthArrow(document.getElementById("northarrow"), app.scene.userData.rotation);
-});
-
-document.getElementById("infobtn").onclick = app.showInfo.bind(app);
-</script>
-</body>
-</html>
+<!doctype html><html lang=en><head><title></title>
+<meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><link rel=stylesheet href=/application.a5bce1c673fd360bf7031e3ca005af29a2e75fe4ff189f37d2299d4ea08a5ce5.css integrity="sha256-pbzhxnP9Ngv3Ax48oAWvKaLnX+T/GJ830imdTqCKXOU="><link rel=icon type=image/png href=/images/site/inverted-globe_hu83d55f8dff2638a1abb17965c75830f1_170033_42x0_resize_box_3.png><meta property="og:title" content><meta property="og:description" content="<!DOCTYPE html> index &#215; Layer name Clicked coordinates Zoom in here Move here Orbit around here Attributes Current View URL Usage Mouse Left button + MoveOrbit Mouse WheelZoom Right button + MovePan Keys Arrow keysMove Horizontally Shift + Arrow keysOrbit Ctrl + Arrow keysRotate Shift + Ctrl + Up / DownZoom In / Out LToggle Label Visibility RStart / Stop Rotate Animation (Orbiting) WWireframe Mode Shift + RReset Camera Position Shift + SSave Image About This page was made with QGIS and Qgis2threejs plugin."><meta property="og:type" content="article"><meta property="og:url" content="https://srnetochan.github.io/modelos3d/incendiocascais2020/"><meta property="article:section" content="modelos3d"><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="<!DOCTYPE html> index &#215; Layer name Clicked coordinates Zoom in here Move here Orbit around here Attributes Current View URL Usage Mouse Left button + MoveOrbit Mouse WheelZoom Right button + MovePan Keys Arrow keysMove Horizontally Shift + Arrow keysOrbit Ctrl + Arrow keysRotate Shift + Ctrl + Up / DownZoom In / Out LToggle Label Visibility RStart / Stop Rotate Animation (Orbiting) WWireframe Mode Shift + RReset Camera Position Shift + SSave Image About This page was made with QGIS and Qgis2threejs plugin."><meta name=description content><script>theme=localStorage.getItem("darkmode:color-scheme")||"system",theme=="system"&&(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?theme="dark":theme="light"),document.documentElement.setAttribute("data-theme",theme)</script></head><body class="type-modelos3d kind-page" data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-secondary wrapper"><nav class="navbar navbar-expand-xl top-navbar shadow" id=top-navbar><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button>
+<i data-feather=sidebar></i>
+</button>
+<a class=navbar-brand href=/><img src=/images/site/globe_huf470c2acc03b6e591de5c6cfa080296e_178497_42x0_resize_box_3.png id=logo alt=Logo>
+Alexandre Neto</a>
+<button class="navbar-toggler navbar-light" id=navbar-toggler type=button data-toggle=collapse data-target=#top-nav-items aria-label=menu>
+<i data-feather=menu></i></button><div class="collapse navbar-collapse dynamic-navbar" id=top-nav-items><ul class="nav navbar-nav ml-auto"><li class=nav-item><a class=nav-link href=/#home>Home</a></li><li class=nav-item><a class=nav-link href=/#about>About</a></li><li class=nav-item><a class=nav-link href=/#skills>Services</a></li><li class=nav-item><a class=nav-link href=/#recent-posts>Recent Posts</a></li><div id=top-navbar-divider></div><li class=nav-item><a class=nav-link id=blog-link href=/posts>Posts</a></li><li class=nav-item><a class=nav-link href=/posts/plugins/>Plugins</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=themeSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><img id=navbar-theme-icon-svg class=theme-icon src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme"></a><div id=themeMenu class="dropdown-menu dropdown-menu-icons-only" aria-labelledby=themeSelector><a class="dropdown-item nav-link" href=# data-scheme=light><img class=theme-icon src=/icons/sun-svgrepo-com.svg width=20 alt="Light Theme">
+</a><a class="dropdown-item nav-link" href=# data-scheme=dark><img class=theme-icon src=/icons/moon-svgrepo-com.svg width=20 alt="Dark Theme">
+</a><a class="dropdown-item nav-link" href=# data-scheme=system><img class=theme-icon src=/icons/computer-svgrepo-com.svg width=20 alt="System Theme"></a></div></li></ul></div></div><img src=/images/site/globe_huf470c2acc03b6e591de5c6cfa080296e_178497_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-globe_hu83d55f8dff2638a1abb17965c75830f1_170033_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts/ data-filter=all>Posts</a></li><div class=subtree><li><i data-feather=plus-circle></i><a class=list-link href=/posts/opinion/> Opinion articles</a><ul><li><a class=list-link href=/posts/opinion/2013-03-26-nota-de-abertura/ title="Welcome note">Welcome note</a></li><li><a class=list-link href=/posts/opinion/2013-03-31-porque-o-open-source/ title="Open Source, why?">Open Source, why?</a></li></ul></li><li><i data-feather=plus-circle></i><a class=list-link href=/posts/plugins/> Plugins</a><ul><li><a class=list-link href=/posts/plugins/multipart-split/ title="Multipart Split">Multipart Split</a></li><li><a class=list-link href=/posts/plugins/walking-time/ title="Walking time">Walking time</a></li></ul></li><li><a class=list-link href=/posts/news/ title=News>News</a></li><li><a class=list-link href=/posts/tutorials/ title=Tutorials>Tutorials</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(/images/default-hero.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/aneto2_hu586225030306c83000ec23d4f2e8aa5b_202140_120x120_fit_q75_box.jpg alt="Author Image"><h5 class=author-name>Alexandre Neto</h5><p class=text-muted>Monday, January 1, 1 | 1 minute</p></div><div class=title><h1></h1></div><div class=tags><ul style=padding-left:0></ul></div><div class=post-content id=post-content><!doctype html><html><head><meta charset=UTF-8><title>index</title>
+<meta name=viewport content="width=device-width,user-scalable=no,minimum-scale=1,maximum-scale=1"><link rel=stylesheet type=text/css href=./Qgis2threejs.css><script src=./threejs/three.min.js></script><script src=./threejs/OrbitControls.js></script><script src=./Qgis2threejs.js></script></head><body><div id=view><div id=labels></div><div id=northarrow></div></div><div id=popup><div id=closebtn>&#215;</div><div id=popupbar></div><div id=popupbody><div id=popupcontent></div><div id=queryresult><table id=qr_layername_table><caption>Layer name</caption><tr><td id=qr_layername></td></tr></table><table id=qr_coords_table><caption>Clicked coordinates</caption><tr><td id=qr_coords></td></tr></table><div class="action-btn action-zoom" onclick=app.cameraAction.zoomIn(),app.closePopup()>Zoom in here</div><div class="action-btn action-move" onclick=app.cameraAction.move(),app.closePopup()>Move here</div><div class="action-btn action-orbit" onclick=app.cameraAction.orbit(),app.closePopup()>Orbit around here</div><table id=qr_attrs_table><caption>Attributes</caption></table></div><div id=pageinfo><h1>Current View URL</h1><div><input id=urlbox type=text></div><h1>Usage</h1><table id=usage><tr><td colspan=2 class=star>Mouse</td></tr><tr><td>Left button + Move</td><td>Orbit</td></tr><tr><td>Mouse Wheel</td><td>Zoom</td></tr><tr><td>Right button + Move</td><td>Pan</td></tr><tr><td colspan=2 class=star>Keys</td></tr><tr><td>Arrow keys</td><td>Move Horizontally</td></tr><tr><td>Shift + Arrow keys</td><td>Orbit</td></tr><tr><td>Ctrl + Arrow keys</td><td>Rotate</td></tr><tr><td>Shift + Ctrl + Up / Down</td><td>Zoom In / Out</td></tr><tr><td>L</td><td>Toggle Label Visibility</td></tr><tr><td>R</td><td>Start / Stop Rotate Animation (Orbiting)</td></tr><tr><td>W</td><td>Wireframe Mode</td></tr><tr><td>Shift + R</td><td>Reset Camera Position</td></tr><tr><td>Shift + S</td><td>Save Image</td></tr></table><h1>About</h1><div id=about>This page was made with <a href=https://www.qgis.org/ target=_blank>QGIS</a> and <a href=https://github.com/minorua/Qgis2threejs target=_blank>Qgis2threejs</a> plugin.
+Dependent JavaScript libraries are
+<a href=https://threejs.org/ target=_blank>three.js</a>
+<span id=lib_proj4js>and <a href=https://trac.osgeo.org/proj4js/ target=_blank>Proj4js</a></span>
+.</div></div></div></div><div id=progress><div id=bar></div></div><div id=header></div><div id=footer><span id=infobtn><img src=./Qgis2threejs.png></span></div><script>Q3D.Config.allVisible=!0,Q3D.Config.viewpoint={lookAt:{x:4.956939208228188,y:-5.242094990174781,z:28888949165808538e-50},pos:{x:18.649675352056015,y:-56.73422249567844,z:43.79049539516069}},typeof proj4=="undefined"&&(document.getElementById("lib_proj4js").style.display="none");var app=Q3D.application,container=document.getElementById("view");app.init(container),app.loadSceneFile("./data/index/scene.json",function(){app.start(),Q3D.Config.northArrow.visible&&app.buildNorthArrow(document.getElementById("northarrow"),app.scene.userData.rotation)}),document.getElementById("infobtn").onclick=app.showInfo.bind(app)</script></body></html></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn icon-button bg-facebook" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fsrnetochan.github.io%2fmodelos3d%2fincendiocascais2020%2f" target=_blank><i class="fab fa-facebook"></i>
+</a><a class="btn icon-button bg-twitter" href="https://twitter.com/share?url=https%3a%2f%2fsrnetochan.github.io%2fmodelos3d%2fincendiocascais2020%2f&text=&via=Alexandre%20Neto" target=_blank><i class="fab fa-twitter"></i>
+</a><a class="btn icon-button bg-reddit" href="https://reddit.com/submit?url=https%3a%2f%2fsrnetochan.github.io%2fmodelos3d%2fincendiocascais2020%2f&title=" target=_blank><i class="fab fa-reddit"></i>
+</a><a class="btn icon-button bg-linkedin" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fsrnetochan.github.io%2fmodelos3d%2fincendiocascais2020%2f&title=" target=_blank><i class="fab fa-linkedin"></i>
+</a><a class="btn icon-button bg-mastodon" href="https://mastodon.social/share?text= - https%3a%2f%2fsrnetochan.github.io%2fmodelos3d%2fincendiocascais2020%2f" target=_blank><i class="fab fa-mastodon"></i>
+</a><a class="btn icon-button bg-whatsapp" href="https://api.whatsapp.com/send?text= https%3a%2f%2fsrnetochan.github.io%2fmodelos3d%2fincendiocascais2020%2f" target=_blank><i class="fab fa-whatsapp"></i>
+</a><a class="btn icon-button" href="mailto:?subject=&body=https%3a%2f%2fsrnetochan.github.io%2fmodelos3d%2fincendiocascais2020%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/SrNetoChan/SrNetoChan.github.io/edit/site_source/content/modelos3d/incendiocascais2020/index.html title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr></div></div></div><a id=scroll-to-top class=btn data-toggle=tooltip data-placement=left title="Scroll to top"><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#skills>Services</a></li><li class=nav-item><a class=smooth-scroll href=https://srnetochan.github.io/#recent-posts>Recent Posts</a></li><li class=nav-item><a class=smooth-scroll href=/posts/plugins/>Plugins</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=https://github.com/srnetochan target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>srnetochan</span></a></li><li><a href=https://www.linkedin.com/in/alexandre-neto-geo target=_blank rel=noopener><span><i class="fab fa-linkedin"></i></span> <span>Alexandre Neto</span></a></li><li><a href=https://t.me/alexnetogeo target=_blank rel=noopener><span><i class="fab fa-telegram"></i></span> <span>@alexnetogeo</span></a></li><li><a href=https://twitter.com/AlexNetoGeo target=_blank rel=noopener><span><i class="fab fa-twitter"></i></span> <span>@alexnetogeo</span></a></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2022 Copyright. <a href=https://www.flaticon.com/free-icons/internet title="internet icons">Globe icon created by Freepik - Flaticon</a></div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script src=/application.6b5ff191755db9506c6ed049d76b969dd38421d64a632694714b0883b3477e38.js integrity="sha256-a1/xkXVduVBsbtBJ12uWndOEIdZKYyaUcUsIg7NHfjg=" defer></script><script src=https://storage.ko-fi.com/cdn/scripts/overlay-widget.js></script><script>kofiWidgetOverlay.draw("alexandreneto",{type:"floating-chat","floating-chat.donateButton.text":"Tip Me","floating-chat.donateButton.text-color":"#f9fafc","floating-chat.donateButton.background-color":"#248aaa"})</script></body></html>
