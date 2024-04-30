@@ -144,14 +144,14 @@ params:
       enabled: true
       services:
       # Google Analytics
-      google:
-        id: G-CEJYGRYN1L
+        google:
+          id: G-CEJYGRYN1L
       # # CounterDev
-      counterDev:
-        id: 3f1214e8-aef3-401e-9ac7-f2faab83b345
+        counterDev:
+          id: 3f1214e8-aef3-401e-9ac7-f2faab83b345
       # # GoatCounter
-      goatCounter:
-        code: alexnetogeo
+        goatCounter:
+          code: alexnetogeo
       # # Matomo / Piwik
       # matomo:
       #   instance: matomo.example.com
