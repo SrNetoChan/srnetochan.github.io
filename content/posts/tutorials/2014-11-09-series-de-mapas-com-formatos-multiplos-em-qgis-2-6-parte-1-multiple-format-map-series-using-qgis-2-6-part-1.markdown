@@ -83,4 +83,4 @@ From that point, printing/exporting all (25) maps was one click away.
 [![mosaico_regioes](/images/2014/11/mosaico_regioes.png)
 ](/images/2014/11/mosaico_regioes.png)
 
-In the [next post](https://gisunchained.wordpress.com/2014/11/18/multiple-format-map-series-using-qgis-2-6-part-2/) of the series, I will try to explain how to create map series where it's the size of the page that change to keep the scale's value of the scale constant.
+In the [next post](https://aneto.pt/posts/tutorials/2014-11-18-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-2-multiple-format-map-series-using-qgis-2-6-part-21/) of the series, I will try to explain how to create map series where it's the size of the page that change to keep the scale's value of the scale constant.
