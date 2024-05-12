@@ -9,7 +9,7 @@ tags:
 hero: /images/posts_hero/test_autocompletion.png
 ---
 
-As a self-though PyQGIS developer, one of my main hurdles has always been to
+As a self-taught PyQGIS developer, one of my main hurdles has always been to
 prepare the development environment for PyQGIS. An environment that allow me to run PyQGIS scripts,  helps me
 code faster by providing PyQGIS highlighting and autocompletion, enables me to
 debug my plugins and scripts as they run, etc...
