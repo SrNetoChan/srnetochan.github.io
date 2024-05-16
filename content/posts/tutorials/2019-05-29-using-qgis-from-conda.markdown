@@ -52,22 +52,17 @@ Notice that the Conda (or mamba) tools are used in a command line terminal. Besi
 
 ### Using environments
 
-
-Conda works with environments, which are similar to [Python virtual environments](https://virtualenv.pypa.io/en/latest/) but not limited only to python. Basically, it allows isolating different installations or setups without interfering with the rest of the system. I recommend that you always use environments. If, like me, you want to have more that one version of QGIS installed, then the use of environments is mandatory.
+Conda works with environments, which are similar to [Python virtual environments](https://virtualenv.pypa.io/en/latest/) but not limited only to Python. It allows isolating different installations or setups without interfering with the rest of the system. I recommend that you always use environments. If, like me, you want to have more that one version of QGIS installed, then the use of environments is mandatory.
 
 Creating an environment is as easy as entering the following command on the terminal:
 
-
     conda create --name <name_of_the_environment>
-
 
 For example,
 
-
     conda create --name qgis_stable
 
-
-You can choose the version of python to use in your environment by adding the option `python=<version>`. Currently versions of QGIS run on python 3.8, 3.9, 3.10 and 3.11.
+You can choose the version of python to use in your environment by adding the option `python=<version>`. Currently versions of QGIS run on python 3.9, 3.10, 3.11 and 3.12
 
 conda create --name qgis_stable python=3.10
 
@@ -89,9 +84,7 @@ To deactivate the current environment, you run
     conda deactivate
 
 
-
-
-### Installing packages
+### Installing QGIS packages
 
 
 Installing packages using Conda is as simples as:
@@ -100,44 +93,49 @@ Installing packages using Conda is as simples as:
     conda install <package_name>
 
 
-Because conda packages can be stored in different channels, and because the default channels (from the anaconda service) do not contain QGIS (and are actually free), we may need to specify the channel we want to get the package from. [conda-forge](https://conda-forge.org/) is a community-driven repository of conda recipes and includes updated QGIS packages. Make sure to activate the  environment first.
+Because conda packages can be stored in different channels, and because the default channels (from the anaconda service) do not contain QGIS, we may need to specify the channel we want to get the package from. [conda-forge](https://conda-forge.org/) is a community-driven repository of conda recipes and includes updated QGIS packages. Make sure to activate the environment first.
 
 
     conda install qgis --channel conda-forge
 
-If we use mambaforge, we can simply do:
+If we use mambaforge, conda-forge is the default channel, so we can simply do:
 
     mamba install qgis
 
-
 Conda will download the latest available version of QGIS and all its dependencies installing it on the active environment.
 
-Note: Because conda always try to install the latest version, if you want to use the QGIS LTR version, you must specify the QGIS version.
+### Installing older versions of QGIS
 
-    conda install qgis=3.28.8 --channel conda-forge
+Conda always tries to install the latest version of each package, if you want to install an older version of a package, you must specify the QGIS version.
+
+    conda install qgis=3.34.4 --channel conda-forge
 
 or
 
-    mamba install qgis=3.28.8
-    
+    mamba install qgis=3.34.4
 
+### Installing QGIS Long Term Release
 
-### Uninstalling packages
+From QGIS 3.34.6 onwards, the conda-forge team has moved the LTR versions to a `qgis_ltr` label. A label works like a sub-channel of conda-forge. So if we want to install the latest QGIS LTR version we need to add the label before the conda-forge channel.
 
+    conda install -c conda-forge/label/qgis_ltr -c conda-forge qgis
 
-Uninstalling QGIS is also easy. The quickest option is to delete the entire environment where QGIS was installed. Make sure you deactivate it first.
+or
 
-`conda deactivate
-conda env remove --name qgis_stable`
+    mamba install -c conda-forge/label/qgis_ltr qgis
 
-Another option is to remove QGIS package manually. This is useful if you have other packages installed that you want to keep.
+**Note:** If you are lazy (like me) and don't want to worry about the channels\labels you need to use all the time, you can set them as defaults for your environment. Activate your environment and then do:
 
+    conda config --env --add channels conda-forge
+    conda config --env --add channels conda-forge/label/qgis_ltr
 
-    conda activate qgis_stable
-    conda remove qgis -c conda-forge
+Then installing QGIS LTR becomes just:
 
+    conda install qgis
 
-This only removes the QGIS package and will leave all other packages that were installed with it. Note that you need to specify the conda-forge channel. Otherwise, Conda will try to update some packages from the default channels during the removal process, and things may get messy.
+or
+
+    mamba install qgis
 
 
 ## **Running QGIS**
@@ -158,19 +156,52 @@ To update QGIS to the most recent version, you need to run the following command
 
     conda update qgis -c conda-forge
 
-or 
+or
 
     mamba update qgis
 
 
-To update a patch release for the QGIS LTR version you run the install command again with the new version:
+To update a patch release for the QGIS LTR (< 3.34.6) version you run the install command again specifying the new version:
 
 
     conda install qgis=3.28.8 -c conda-forge
 
-or 
+or
 
     mamba install qgis=3.28.8
+
+From 3.34 onwards, we need to make use of the `qgis_ltr` label, to update the LTR version you can do:
+
+    conda update qgis -c conda-forge/label/qgis_ltr -c conda-forge
+
+or
+
+    mamba update qgis -c conda-forge/label/qgis_ltr
+
+If you have set both `conda-forge` and `conda-forge/label/qgis_ltr`  as defaults in your environment, then you can omit the channels:
+
+    conda update qgis
+
+or
+
+    mamba update qgis
+
+### Uninstalling packages
+
+
+Uninstalling QGIS is also easy. The quickest option is to delete the entire environment where QGIS was installed. Make sure you deactivate it first.
+
+    conda deactivate
+    conda env remove --name qgis_stable
+
+Another option is to remove the QGIS package manually and keeping the environment. This is useful if you have other packages installed that you want to keep.
+
+
+    conda activate qgis_stable
+    conda remove qgis -c conda-forge
+
+
+This only removes the QGIS package and will leave all other packages that were installed with it. Note that you need to specify the conda-forge channel. Otherwise, Conda will try to update some packages from the default channels during the removal process, and things may get messy.
 
 
 ## Some notes and caveats
