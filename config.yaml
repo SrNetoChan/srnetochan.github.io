@@ -159,7 +159,7 @@ params:
 
     # Enable Support
     support:
-      enable: true
+      enable: false
       services:
         kofi:
           user: alexandreneto
