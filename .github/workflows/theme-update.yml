@@ -1,11 +1,8 @@
 name: "Theme Update"
 
 on: 
-  push:
-    branches:
-    - site_source
-  # schedule:
-  #  - cron: "0 0 * * *"
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   update-theme:
