@@ -35,7 +35,8 @@ So, even at a low rate of 1 Euro per hour, the 600€ now worth 16.000 Euros eve
 
 **The moral of this tale?**
 
-Investing on Open Source projects development will have almost immediate returns and its impact go way beyond the original investor, reaching thousands of users worldwide who, for some reason, can’t make the same kind of investment, or simply decided to invest on other QGIS improvements or other Open Source software they use.
+1. Investing time and/or money on Open Source projects development can have almost immediate returns
+2.  The impact of the investment go way beyond the original investor, reaching thousands of users worldwide who, for some reason, can’t make the same kind of investment, or simply decided to invest time or money on other QGIS improvements or other Open Source software they use.
 
 If you have an idea for a QGIS feature or a bug fix that would make you and your collaborator's life better, check the list of [Core Contributors support companies](https://www.qgis.org/resources/support/commercial-support/#core-contributors) that can help you implement it.
 
