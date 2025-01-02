@@ -5,7 +5,7 @@ menu:
   sidebar:
     name: Algo Inquietava o Giovanni...
     identifier: giovanni-tinha_uma_comichao
-    parent: artigos-de-opiniao
+    parent: opinion-articles
     weight: 20
 tags:
 - QGIS
