@@ -1,35 +1,447 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alexandre Neto</title><link>https://srnetochan.github.io/</link><description>Recent content on Alexandre Neto</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 11 May 2024 01:32:25 +0000</lastBuildDate><atom:link href="https://srnetochan.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Create a PyQGIS Development Environment Using Conda and VScode</title><link>https://srnetochan.github.io/posts/tutorials/2024-05-11-create-easy-pyqgis-developement-environment-using-conda-and-vscode/</link><pubDate>Sat, 11 May 2024 01:32:25 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2024-05-11-create-easy-pyqgis-developement-environment-using-conda-and-vscode/</guid><description>As a self-taught PyQGIS developer, one of my main hurdles has always been to prepare the development environment for PyQGIS. An environment that allow me to run PyQGIS scripts, helps me code faster by providing PyQGIS highlighting and autocompletion, enables me to debug my plugins and scripts as they run, etc&amp;hellip;
-I have been a user (and even a&amp;hellip; &amp;ldquo;cof cof&amp;rdquo;&amp;hellip; maintainer) of the QGIS packages for conda provided by the conda-forge community.</description></item><item><title>Configure editing form widgets using PyQGIS</title><link>https://srnetochan.github.io/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/</link><pubDate>Mon, 30 Sep 2019 21:06:36 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/</guid><description>As I was preparing a QGIS Project to read a database structured according to the new rules and technical specifications for the Portuguese Cartography, I started to configure the editing forms for several layers, so that:
-Make some fields read-only, like for example an identifier field. Configure widgets better suited for each field, to help the user and avoid errors. For example, date-time files with a pop-up calendar, and value lists with dropdown selectors.</description></item><item><title>Using QGIS from conda-forge</title><link>https://srnetochan.github.io/posts/tutorials/2019-05-29-using-qgis-from-conda/</link><pubDate>Wed, 29 May 2019 22:46:23 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2019-05-29-using-qgis-from-conda/</guid><description>QGIS recipes have been available on Conda-forge for a while, but now, that they work for the three main operating systems, installing QGIS from Conda is s starting to become a very reliable alternative to other QGIS distributions. Anyway, let&amp;rsquo;s rewind a bit&amp;hellip;
-What is Conda?
-Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and all their dependencies.</description></item><item><title>QGIS Top Features 2016</title><link>https://srnetochan.github.io/posts/news/2017-01-05-qgis-top-features-2016/</link><pubDate>Thu, 05 Jan 2017 01:51:21 +0000</pubDate><guid>https://srnetochan.github.io/posts/news/2017-01-05-qgis-top-features-2016/</guid><description>A year ago I have asked QGIS&amp;rsquo;s community what were their favourite QGIS new features from 2015 and published this blog post. This year I decided to ask it again. In 2016, we add the release of the second long-term release (2.14 LTR), and two other stable versions (2.16 and 2.18).
-2016 was again very productive year for the QGIS community, with lots of improvements and new features landing on QGIS source code, not to speak of all the work already in place for QGIS 3.</description></item><item><title>QGIS Features I long for while using ArcGIS</title><link>https://srnetochan.github.io/posts/opinion/2016-01-28-saudades-do-qgis-enquanto-uso-arcgis/</link><pubDate>Thu, 28 Jan 2016 22:33:52 +0000</pubDate><guid>https://srnetochan.github.io/posts/opinion/2016-01-28-saudades-do-qgis-enquanto-uso-arcgis/</guid><description>(aka Features that ArcGIS Desktop users might not know that exists) From time to time, I read articles comparing ArcGIS vs QGIS. Since many of those articles are created from an ArcGIS user point of view, they invariably lead to biased observations on QGIS lack of features. It&amp;rsquo;s time for a QGIS user perspective, so bare with me on this (a bit) long, totally and openly biased post.
-"Hello, my name is Alexandre, and I have been using.</description></item><item><title>QGIS Top Features 2015</title><link>https://srnetochan.github.io/posts/news/2016-01-01-qgis-top-features-2015/</link><pubDate>Fri, 01 Jan 2016 16:16:24 +0000</pubDate><guid>https://srnetochan.github.io/posts/news/2016-01-01-qgis-top-features-2015/</guid><description>With the release of the first long term release (2.8 LTR), and two other stable versions (2.10 and 2.12), 2015 was a great (and busy) year for the QGIS community, with lots of improvements and new features landing on QGIS source code.
-As a balance, I have asked users to choose wich were their favorite new features during 2015 (from the visual changelogs list). As a result I got the following Top 5 features list.</description></item><item><title>Getting multipolygon vertexes using PostGIS</title><link>https://srnetochan.github.io/posts/tutorials/2015-11-06-obter-os-vertices-de-multipoligonos-em-postgis/</link><pubDate>Fri, 06 Nov 2015 00:49:01 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2015-11-06-obter-os-vertices-de-multipoligonos-em-postgis/</guid><description>Today I needed to create a view in PostGIS that returned the vertexes of a multi-polygon layer. Besides, I needed that they were numerically ordered starting in 1, and with the respective XY coordinates.
-It seemed to be a trivial task – all I would need was to use the ST_DumpPoints() function to get all vertexes – if it wasn&amp;rsquo;t for the fact that PostGIS polygons have a duplicate vertex (the last vertex must be equal to the first one) that I have no interess in showing.</description></item><item><title>Hack to adjust map symbols location in QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/</link><pubDate>Mon, 23 Feb 2015 23:44:33 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/</guid><description>Now and then I get too many map symbols (points) in the same place, and I thought how nice it would be if we could drag n&amp;rsquo; drop them around without messing with their geometries position, just like we do with labels. That thought gave me an idea for a cool hack.
-Choose your point layer and start by creating two new fields called symbX and symbY (Type: Decimal number; Size: 20; Precision: 5).</description></item><item><title>Calculate polygon centroid's coordinates</title><link>https://srnetochan.github.io/posts/tutorials/2015-02-10-calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/</link><pubDate>Tue, 10 Feb 2015 23:34:49 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2015-02-10-calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/</guid><description>I had the need to add columns with the coordinates of polygons centroids. I came up with the following expressions to calculate X e Y, respectively:
-[code] xmin(centroid($geometry)) ymin(centroid($geometry)) [/code]
-The expression seems quite simple, but it toke me some time before I realize that, not having a x(geometry) and y(geometry) functions, I could use the xmin() and ymin() to get the coordinates of the polygons centroids. Since this wasn&amp;rsquo;t the first time I had to use this expressions, this post will work as a reminder for the future.</description></item><item><title>Labels leading lines with QGIS and Postgis</title><link>https://srnetochan.github.io/posts/tutorials/2015-01-12-etiquetas-com-guias-em-qgis-e-postgis-labels-leading-lines-with-qgis-and-postgis/</link><pubDate>Mon, 12 Jan 2015 08:00:41 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2015-01-12-etiquetas-com-guias-em-qgis-e-postgis-labels-leading-lines-with-qgis-and-postgis/</guid><description>Recently I had the need to add labels to features with very close geometries, resulting in their collision.
-Using data-defined override for label&amp;rsquo;s position (I have used layer to labeled layer plugin to set this really fast) and the QGIS tool to move labels, it was quite easy to relocate them to better places. However, in same cases, it was difficult to understand to which geometry they belonged.
-I needed some kind of leading lines to connect, whenever necessary, label and feature.</description></item><item><title>Multiple format map series using QGIS 2.6 – Part 2</title><link>https://srnetochan.github.io/posts/tutorials/2014-11-18-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-2-multiple-format-map-series-using-qgis-2-6-part-21/</link><pubDate>Tue, 18 Nov 2014 23:38:00 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-11-18-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-2-multiple-format-map-series-using-qgis-2-6-part-21/</guid><description>In my last post, I have tried to show how I used QGIS 2.6 to create a map series where the page&amp;rsquo;s orientation adapted to the shape of the atlas features. This method is useful when the final scale of the maps is irrelevant, or when the size of the atlas elements is similar, allowing one to use a fixed scale. On the other hand, when using a fixed scale is mandatory and the features size are too different, it is needed to change the size of the paper.</description></item><item><title>Multiple format map series using QGIS 2.6 - Part 1</title><link>https://srnetochan.github.io/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/</link><pubDate>Sun, 09 Nov 2014 23:07:12 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/</guid><description>As always, the new QGIS version (QGIS 2.6 Brigthon) brings a vast new set of features that will allow the user to do more, better and faster than with the earlier version. One of this features is the ability to control some of the composer&amp;rsquo;s items properties with data (for instance, size and position). Something that will allow lots of new interesting usages. In the next posts, I propose to show how to create map series with multiple formats.</description></item><item><title>Map corner coordinates in QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/</link><pubDate>Tue, 09 Sep 2014 23:05:51 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/</guid><description>Some time ago in the qgis-pt mailing list, someone asked how to show the coordinates of a map corners using QGIS. Since this features wasn&amp;rsquo;t available (yet), I have tried to reach a automatic solution, but without success, After some thought about it and after reading a blog post by Nathan Woodrow, it came to me that the solution could be creating a user defined function for the expression builder to be used in labels in the map.</description></item><item><title>Please use the "IN" operador</title><link>https://srnetochan.github.io/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/</link><pubDate>Tue, 24 Jun 2014 16:21:00 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/</guid><description>It&amp;rsquo;s not the first time I see people that, to select feature by their fields values, use expressions like this:
-[code language=&amp;ldquo;SQL&amp;rdquo;]&amp;ldquo;field&amp;rdquo; = &amp;lsquo;value1&amp;rsquo; OR &amp;ldquo;field&amp;rdquo; = &amp;lsquo;value2&amp;rsquo; OR &amp;ldquo;field&amp;rdquo; = &amp;lsquo;value3&amp;rsquo; [OR &amp;hellip;][/code]
-A more practical and pretty way of doing this is by using the IN operator instead.
-[code language=&amp;ldquo;SQL&amp;rdquo;]&amp;ldquo;field&amp;rdquo; IN (&amp;lsquo;value1&amp;rsquo;,&amp;lsquo;value2&amp;rsquo;,&amp;lsquo;value3&amp;rsquo;[,&amp;hellip;])[/code]
-This operator is available in almost every GIS software I know. In QGIS, it can be used even if there isn&amp;rsquo;t a small little button to click.</description></item><item><title>Old map in QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/</link><pubDate>Mon, 14 Apr 2014 13:35:11 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/</guid><description>Inspired in a post by Anita Graser, I&amp;rsquo;ve tried to use QGIS to create a Cascais&amp;rsquo;s old looking map, as if it have been drawn by hand in a methodical way.
-Defining the styles I have started by defining the styles for each elements to represent.
-Buildings To fill the buildings, I have tried to use a color that reminds me the portuguese roofs, similar to the color commonly used in old maps of cities, with a slightly darker outline of the same color.</description></item><item><title>Multipart Split</title><link>https://srnetochan.github.io/posts/plugins/multipart-split/</link><pubDate>Tue, 25 Mar 2014 08:41:42 +0000</pubDate><guid>https://srnetochan.github.io/posts/plugins/multipart-split/</guid><description>This QGIS plugin Multipart Split allows the user to, during edition, split the active layer’s selected multipart features into single part features. Unlike the “Multipart to single part” from the Vector &amp;gt; Geometry Tools menu, the plugin only splits the selected elements, and does not need to create new files.
-Installation The plugin is available in the QGIS official repository, therefore the installation is done in the Manage and Install Plugins (Plugins &amp;gt; Manage and Install plugins…).</description></item><item><title>New QGIS plugin - "Walking time"</title><link>https://srnetochan.github.io/posts/news/2014-03-25-novo-plugin-qgis-new-qgis-plugin-walking-time/</link><pubDate>Tue, 25 Mar 2014 08:41:42 +0000</pubDate><guid>https://srnetochan.github.io/posts/news/2014-03-25-novo-plugin-qgis-new-qgis-plugin-walking-time/</guid><description>I have finally &amp;ldquo;finished&amp;rdquo; my new plugin. I uses some quotation marks, since I believe that there is still space for a few improvement. This plugin arised with the need to calculate the travel time for the Cascais oficial pedestrian routes, and started as a simple python script. I have then decided to create a graphic interface and publish it as a plugin in the hope that someone else finds it useful.</description></item><item><title>Walking time</title><link>https://srnetochan.github.io/posts/plugins/walking-time/</link><pubDate>Tue, 25 Mar 2014 08:41:42 +0000</pubDate><guid>https://srnetochan.github.io/posts/plugins/walking-time/</guid><description>The Walking time is a QGIS python plugin that uses Tobbler’s hiking function to estimate the travel time along a line depending on the slope.
-The input data required are a vector layer with lines and a raster layer with elevation values ​​(1). One can adjust the base velocity (on flat terrain) according to the type of walking or walker. By default, the value used is 5 km h (2). The plugin update or create fields with estimated time in minutes in forward and in reverse direction (3).</description></item><item><title>Substituir strings na tabela de atributos do QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/</link><pubDate>Wed, 29 May 2013 22:05:18 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/</guid><description>Hoje, ao rever uma camada vectorial de distribuição de fauna com interesse para a conservação com a nossa bióloga de serviço, Sara Saraiva, tive necessidade de corrigir (em todas as linhas de determinado atributo) o nome &amp;ldquo;Aquila fasciatus&amp;rdquo;, substituindo-o por &amp;ldquo;Aquila fasciata&amp;rdquo;.
-Devido à opção tomada na organização dos dados, cada polígono continha uma listagem de espécies que nele ocorrem, e o nome a corrigir encontrava-se no meio da mesma. A correcção teria de ser feita sem alterar os restantes nomes.</description></item><item><title>Visualizar dados dos Censos 2011 com o QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2013-05-07-visualizar-dados-dos-censos-2011-com-o-qgis/</link><pubDate>Tue, 07 May 2013 22:18:21 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2013-05-07-visualizar-dados-dos-censos-2011-com-o-qgis/</guid><description>Felizmente parece que algumas coisas vão mudando no nosso país no que toca ao acesso a dados. A Base Geográfica de Referenciação da Informação (BGRI), que outrora foi paga (e bem paga), está agora disponível a todos até ao nível da subsecção estatística e com um total de 122 variáveis dos censos 2011 (organizados por população residente, população presente, famílias, alojamento e edifícios). A página para download, permite descarregar os dados totais para Portugal, ou por regiões e concelhos.</description></item><item><title>Definir a representação de pixeis sem valor em mosaicos de imagens VRT</title><link>https://srnetochan.github.io/posts/tutorials/2013-04-24-definir-representacao-de-pixeis-sem-valor-em-mosaicos-de-imagem-vrt/</link><pubDate>Wed, 24 Apr 2013 15:47:11 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2013-04-24-definir-representacao-de-pixeis-sem-valor-em-mosaicos-de-imagem-vrt/</guid><description>Como está muito bem descrito neste artigo do Duarte Carreira, a criação de catálogos virtuais (vrt) e respectivas pirâmides (overviews) usando o GDAL, permite facilitar e melhorar a performance de visualização de mosaicos de imagens.
-Usando o comando gdalbuildvrt para criar o catálogo virtual, as áreas sem valor (NoData) são, por defeito, substituídas pelo valor 0. Em certos caso, o efeito pode não ser o mais desejável.
-gdalbuildvrt mosaico1.vrt --optfile listadeimagens.</description></item><item><title>Open Source, why?</title><link>https://srnetochan.github.io/posts/opinion/2013-03-31-porque-o-open-source/</link><pubDate>Sun, 31 Mar 2013 22:41:48 +0000</pubDate><guid>https://srnetochan.github.io/posts/opinion/2013-03-31-porque-o-open-source/</guid><description>During my professional and personal life, I have worked with much different software, with all kinds of licenses. Most of them would be proprietary, closed and / or commercial code. So why devote my time and learning &amp;ldquo;exclusively&amp;rdquo; to Open Source?
-Without going into detail about the differences between open source software and free software, there are several reasons why FOSS (Free and Open Source Software) interest me.
-The first is obviously freedom.</description></item><item><title>Welcome note</title><link>https://srnetochan.github.io/posts/opinion/2013-03-26-nota-de-abertura/</link><pubDate>Tue, 26 Mar 2013 23:21:25 +0000</pubDate><guid>https://srnetochan.github.io/posts/opinion/2013-03-26-nota-de-abertura/</guid><description>The blog &amp;ldquo;GIS Unchained&amp;rdquo; have borne devoid of any grandiose aspirations. The main objective will be to register my experiences with Open Source software while addressing challenges related to geographic information systems (GIS), spatial analysis, cartography and everything else that it might entail.
-Following the same principle of openness and sharing of the open source, I hope that these records can help others who, like me, &amp;ldquo;venture&amp;rdquo; into this world.</description></item><item><title>Go বেসিক</title><link>https://srnetochan.github.io/notes/go/basic/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/basic/_index.bn/</guid><description/></item><item><title>Introduction</title><link>https://srnetochan.github.io/notes/go/basic/introduction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/basic/introduction/</guid><description> Hello World A sample go program is show here.
-package main import &amp;#34;fmt&amp;#34; func main() { message := greetMe(&amp;#34;world&amp;#34;) fmt.Println(message) } func greetMe(name string) string { return &amp;#34;Hello, &amp;#34; + name + &amp;#34;!&amp;#34; } Run the program as below:
-$ go run hello.go Variables Normal Declaration:
-var msg string msg = &amp;#34;Hello&amp;#34; Shortcut:
-msg := &amp;#34;Hello&amp;#34; Constants const Phi = 1.618</description></item><item><title>Basic Types</title><link>https://srnetochan.github.io/notes/go/basic/types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/basic/types/</guid><description>Strings str := &amp;#34;Hello&amp;#34; Multiline string
-str := `Multiline string` Numbers Typical types
-num := 3 // int num := 3. // float64 num := 3 + 4i // complex128 num := byte(&amp;#39;a&amp;#39;) // byte (alias for uint8) Other Types
-var u uint = 7 // uint (unsigned) var p float32 = 22.7 // 32-bit float Arrays // var numbers [5]int numbers := [...]int{0, 0, 0, 0, 0} Pointers func main () { b := *getPointer() fmt.</description></item><item><title>অ্যাডভান্সড</title><link>https://srnetochan.github.io/notes/go/advanced/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/advanced/_index.bn/</guid><description/></item><item><title>Flow Control</title><link>https://srnetochan.github.io/notes/go/basic/flow-control/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/basic/flow-control/</guid><description>Condition if day == &amp;#34;sunday&amp;#34; || day == &amp;#34;saturday&amp;#34; { rest() } else if day == &amp;#34;monday&amp;#34; &amp;amp;&amp;amp; isTired() { groan() } else { work() } if _, err := doThing(); err != nil { fmt.Println(&amp;#34;Uh oh&amp;#34;) Switch switch day { case &amp;#34;sunday&amp;#34;: // cases don&amp;#39;t &amp;#34;fall through&amp;#34; by default! fallthrough case &amp;#34;saturday&amp;#34;: rest() default: work() } Loop for count := 0; count &amp;lt;= 10; count++ { fmt.Println(&amp;#34;My counter is at&amp;#34;, count) } entry := []string{&amp;#34;Jack&amp;#34;,&amp;#34;John&amp;#34;,&amp;#34;Jones&amp;#34;} for i, val := range entry { fmt.</description></item><item><title>File Manipulation</title><link>https://srnetochan.github.io/notes/go/advanced/files/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/advanced/files/</guid><description> Condition if day == &amp;#34;sunday&amp;#34; || day == &amp;#34;saturday&amp;#34; { rest() } else if day == &amp;#34;monday&amp;#34; &amp;amp;&amp;amp; isTired() { groan() } else { work() } if _, err := doThing(); err != nil { fmt.Println(&amp;#34;Uh oh&amp;#34;)</description></item><item><title>Bash Variables</title><link>https://srnetochan.github.io/notes/bash/basic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/bash/basic/</guid><description> Variable NAME=&amp;#34;John&amp;#34; echo $NAME echo &amp;#34;$NAME&amp;#34; echo &amp;#34;${NAME} Condition if [[ -z &amp;#34;$string&amp;#34; ]]; then echo &amp;#34;String is empty&amp;#34; elif [[ -n &amp;#34;$string&amp;#34; ]]; then echo &amp;#34;String is not empty&amp;#34; fi</description></item><item><title/><link>https://srnetochan.github.io/modelos3d/incendiocascais2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/modelos3d/incendiocascais2020/</guid><description>&lt;!DOCTYPE html> index &amp;times; Layer name Clicked coordinates Zoom in here Move here Orbit around here Attributes Current View URL Usage Mouse Left button + MoveOrbit Mouse WheelZoom Right button + MovePan Keys Arrow keysMove Horizontally Shift + Arrow keysOrbit Ctrl + Arrow keysRotate Shift + Ctrl + Up / DownZoom In / Out LToggle Label Visibility RStart / Stop Rotate Animation (Orbiting) WWireframe Mode Shift + RReset Camera Position Shift + SSave Image About This page was made with QGIS and Qgis2threejs plugin.</description></item><item><title/><link>https://srnetochan.github.io/modelos3d/serta2019/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/modelos3d/serta2019/</guid><description>&lt;!DOCTYPE html> index &amp;times; Layer name Clicked coordinates Zoom in here Move here Orbit around here Attributes Current View URL Usage Mouse Left button + MoveOrbit Mouse WheelZoom Right button + MovePan Keys Arrow keysMove Horizontally Shift + Arrow keysOrbit Ctrl + Arrow keysRotate Shift + Ctrl + Up / DownZoom In / Out LToggle Label Visibility RStart / Stop Rotate Animation (Orbiting) WWireframe Mode Shift + RReset Camera Position Shift + SSave Image About This page was made with QGIS and Qgis2threejs plugin.</description></item><item><title>Go এর নোট সমূহ</title><link>https://srnetochan.github.io/notes/go/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/_index.bn/</guid><description>Go Notes</description></item><item><title>নোট সমূহ</title><link>https://srnetochan.github.io/notes/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/_index.bn/</guid><description/></item><item><title>ব্যাশের নোট সমূহ</title><link>https://srnetochan.github.io/notes/bash/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/bash/_index.bn/</guid><description>Bash Notes</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alexandre Neto</title><link>https://srnetochan.github.io/</link><description>Recent content on Alexandre Neto</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://srnetochan.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Giovanni Had an Itch... an Open Source Development Tale</title><link>https://srnetochan.github.io/posts/opinion/2024-12-31-giovanni-had-an-itch/</link><pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/posts/opinion/2024-12-31-giovanni-had-an-itch/</guid><description>&lt;p>Once upon a time, there was a man called Giovanni (totally fictional name, by any means related to &lt;a href="http://naturalgis.pt" target="_blank" rel="noopener">NaturalGIS&lt;/a>&amp;rsquo;s CEO and Open Source advocate, &lt;a href="https://www.linkedin.com/in/giovannimanghi/" target="_blank" rel="noopener">Giovanni Manghi&lt;/a>). He was a daily QGIS power user and he loved the software, but he had an itch… Something was troubling him. As any other main character of the traditional tales, instead of looking away, he decided to accept the quest and solve it.&lt;/p>
+&lt;p>This itch of his was about the &lt;a href="www.qgis.org">QGIS&lt;/a> layout grids. It used to take Giovanni about 10 minutes to create a nice grid for a map layout, and then, another 20 minutes to replicate it a few times for different scales with small variations. If he had to do this operation one or two times every week, at the end of the year, he would have lost up to 34 hours of his precious and very limited time.&lt;/p></description></item><item><title>Create a PyQGIS Development Environment Using Conda and VScode</title><link>https://srnetochan.github.io/posts/tutorials/2024-05-11-create-easy-pyqgis-developement-environment-using-conda-and-vscode/</link><pubDate>Sat, 11 May 2024 01:32:25 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2024-05-11-create-easy-pyqgis-developement-environment-using-conda-and-vscode/</guid><description>&lt;p>As a self-taught PyQGIS developer, one of my main hurdles has always been to
+prepare the development environment for PyQGIS. An environment that allow me to run PyQGIS scripts, helps me
+code faster by providing PyQGIS highlighting and autocompletion, enables me to
+debug my plugins and scripts as they run, etc&amp;hellip;&lt;/p>
+&lt;p>I have been a user (and even a&amp;hellip; &amp;ldquo;cof cof&amp;rdquo;&amp;hellip; maintainer) of the QGIS packages
+for conda provided by the &lt;a href="https://conda-forge.org/" target="_blank" rel="noopener">conda-forge&lt;/a> community. In Linux, it has allowed me to
+easily install the LTR version of QGIS (or any other version) alongside the most recent QGIS version
+provided by qgis.org apt repositories. I ended up finding that this was quite convenient for development too.&lt;/p></description></item><item><title>Configure editing form widgets using PyQGIS</title><link>https://srnetochan.github.io/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/</link><pubDate>Mon, 30 Sep 2019 21:06:36 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2019-09-30-norma-cartografica-no-qgis-alterar-formularios-de-edicao-com-pyqgis/</guid><description>&lt;p>As I was preparing a QGIS Project to read a database structured according to the new &lt;a href="http://www.dgterritorio.pt/cartografia_e_geodesia/cartografia/normas_e_especificacoes_tecnicas_de_cartografia/" target="_blank" rel="noopener">rules and technical specifications for the Portuguese Cartography&lt;/a>, I started to configure the editing forms for several layers, so that:&lt;/p>
+&lt;ol>
+&lt;li>Make some fields read-only, like for example an identifier field.&lt;/li>
+&lt;li>Configure widgets better suited for each field, to help the user and avoid errors. For example, date-time files with a pop-up calendar, and value lists with dropdown selectors.&lt;/li>
+&lt;/ol>
+&lt;p>Basically, I wanted something like this:&lt;/p></description></item><item><title>Using QGIS from conda-forge</title><link>https://srnetochan.github.io/posts/tutorials/2019-05-29-using-qgis-from-conda/</link><pubDate>Wed, 29 May 2019 22:46:23 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2019-05-29-using-qgis-from-conda/</guid><description>&lt;p>QGIS recipes have been available on Conda-forge for a while, but now, that they work for the three main operating systems, installing QGIS from Conda is s starting to become a very reliable alternative to other QGIS distributions. Anyway, let&amp;rsquo;s rewind a bit&amp;hellip;&lt;/p>
+&lt;p>What is Conda?&lt;/p>
+&lt;blockquote>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and all their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python packages, but it can package and distribute software for any language.&lt;/blockquote>
+&lt;p>What is Conda-forge?&lt;/p></description></item><item><title>QGIS Top Features 2016</title><link>https://srnetochan.github.io/posts/news/2017-01-05-qgis-top-features-2016/</link><pubDate>Thu, 05 Jan 2017 01:51:21 +0000</pubDate><guid>https://srnetochan.github.io/posts/news/2017-01-05-qgis-top-features-2016/</guid><description>&lt;p>A year ago I have asked QGIS&amp;rsquo;s community what were their favourite QGIS new features from 2015 and published &lt;a href="https://gisunchained.wordpress.com/2016/01/01/qgis-top-features-2015/" target="_blank" rel="noopener">this blog post&lt;/a>. This year I decided to ask it again. In 2016, we add the release of the second long-term release (2.14 LTR), and two other stable versions (2.16 and 2.18).&lt;/p>
+&lt;p>&lt;strong>2016 was again very productive year for the QGIS community&lt;/strong>, with lots of improvements and new features landing on QGIS source code, not to speak of all the work already in place for QGIS 3. This is a great assurance of the project&amp;rsquo;s vitality.&lt;/p></description></item><item><title>QGIS Features I long for while using ArcGIS</title><link>https://srnetochan.github.io/posts/opinion/2016-01-28-saudades-do-qgis-enquanto-uso-arcgis/</link><pubDate>Thu, 28 Jan 2016 22:33:52 +0000</pubDate><guid>https://srnetochan.github.io/posts/opinion/2016-01-28-saudades-do-qgis-enquanto-uso-arcgis/</guid><description>&lt;h2 id="aka-features-that-arcgis-desktop-users-might-not-know-that-exists">(aka Features that ArcGIS Desktop users might not know that exists)&lt;/h2>
+&lt;p>From time to time, I read articles comparing ArcGIS vs QGIS. Since many of those articles are created from an ArcGIS user point of view, they invariably lead to biased observations on QGIS lack of features. It&amp;rsquo;s time for a QGIS user perspective, so bare with me on this (a bit) long, &lt;strong>totally and openly biased post&lt;/strong>.&lt;/p>
+&lt;blockquote>"Hello, my name is Alexandre, and I have been using... [QGIS](http://www.qgis.org)"&lt;/blockquote>
+&lt;p>This is something I would say at an anonymous QGIS user therapy group. I&amp;rsquo;m willing to attend one of those because being recently and temporally forced to use ArcGIS Desktop again (don&amp;rsquo;t ask!), I really really really miss QGIS in many ways.&lt;/p></description></item><item><title>QGIS Top Features 2015</title><link>https://srnetochan.github.io/posts/news/2016-01-01-qgis-top-features-2015/</link><pubDate>Fri, 01 Jan 2016 16:16:24 +0000</pubDate><guid>https://srnetochan.github.io/posts/news/2016-01-01-qgis-top-features-2015/</guid><description>&lt;p>With the release of the first long term release (2.8 LTR), and two other stable versions (2.10 and 2.12), &lt;strong>2015 was a great (and busy) year for the QGIS community&lt;/strong>, with lots of improvements and new features landing on QGIS source code.&lt;/p>
+&lt;p>As a balance, I have &lt;a href="https://senhorneto.typeform.com/to/ibwVQz" target="_blank" rel="noopener">asked&lt;/a> users to choose wich were their favorite new features during 2015 (from the &lt;a href="https://www.qgis.org/en/site/forusers/visualchangelogs.html" target="_blank" rel="noopener">visual changelogs&lt;/a> list). As a result I got the following &lt;strong>Top 5 features list&lt;/strong>.&lt;/p></description></item><item><title>Getting multipolygon vertexes using PostGIS</title><link>https://srnetochan.github.io/posts/tutorials/2015-11-06-obter-os-vertices-de-multipoligonos-em-postgis/</link><pubDate>Fri, 06 Nov 2015 00:49:01 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2015-11-06-obter-os-vertices-de-multipoligonos-em-postgis/</guid><description>&lt;p>Today I needed to create a view in &lt;a href="http://postgis.net/" target="_blank" rel="noopener">PostGIS&lt;/a> that returned the vertexes of a multi-polygon layer. Besides, I needed that they were numerically ordered starting in 1, and with the respective XY coordinates.&lt;/p>
+&lt;p>&lt;img src="https://srnetochan.github.io/images/2015/11/screenshot-from-2015-11-05-235819.png" alt="Screenshot from 2015-11-05 23:58:19">&lt;/p>
+&lt;p>It seemed to be a trivial task – all I would need was to use the &lt;a href="http://postgis.net/docs/ST_DumpPoints.html" target="_blank" rel="noopener">ST_DumpPoints()&lt;/a> function to get all vertexes – if it wasn&amp;rsquo;t for the fact that PostGIS polygons have a duplicate vertex (the last vertex must be equal to the first one) that I have no interess in showing.&lt;/p></description></item><item><title>Hack to adjust map symbols location in QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/</link><pubDate>Mon, 23 Feb 2015 23:44:33 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2015-02-23-dica-para-ajustar-posicao-de-simbolos-em-qgis-hack-to-adjust-map-symbols-location-in-qgis/</guid><description>&lt;p>Now and then I get too many map symbols (points) in the same place, and I thought how nice it would be if we could drag n&amp;rsquo; drop them around without messing with their geometries position, just like we do with labels. That thought gave me an idea for a cool hack.&lt;/p>
+&lt;p>Choose your point layer and start by creating two new fields called symbX and symbY (Type: Decimal number; Size: 20; Precision: 5). Now go the layer properties and in the Style tab edit your symbol. &lt;strong>For each level of your symbol&lt;/strong> select &amp;ldquo;map units&amp;rdquo; as the offset units, and set the following expression in the offset data define properties option:&lt;/p></description></item><item><title>Calculate polygon centroid's coordinates</title><link>https://srnetochan.github.io/posts/tutorials/2015-02-10-calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/</link><pubDate>Tue, 10 Feb 2015 23:34:49 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2015-02-10-calcular-coordenadas-do-centroide-de-poligonos-calculate-polygon-centroids-coordinates/</guid><description>&lt;p>I had the need to add columns with the coordinates of polygons centroids. I came up with the following expressions to calculate X e Y, respectively:&lt;/p>
+&lt;p>[code]
+xmin(centroid($geometry))
+ymin(centroid($geometry))
+[/code]&lt;/p>
+&lt;p>The expression seems quite simple, but it toke me some time before I realize that, not having a x(geometry) and y(geometry) functions, I could use the xmin() and ymin() to get the coordinates of the polygons centroids. Since this wasn&amp;rsquo;t the first time I had to use this expressions, this post will work as a reminder for the future.&lt;/p></description></item><item><title>Labels leading lines with QGIS and Postgis</title><link>https://srnetochan.github.io/posts/tutorials/2015-01-12-etiquetas-com-guias-em-qgis-e-postgis-labels-leading-lines-with-qgis-and-postgis/</link><pubDate>Mon, 12 Jan 2015 08:00:41 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2015-01-12-etiquetas-com-guias-em-qgis-e-postgis-labels-leading-lines-with-qgis-and-postgis/</guid><description>&lt;p>Recently I had the need to add labels to features with very close geometries, resulting in their collision.&lt;/p>
+&lt;p>&lt;img src="https://srnetochan.github.io/images/2015/01/capturar_3-e1420735767497.png?w=584" alt="Capturar_3">&lt;/p>
+&lt;p>Using data-defined override for label&amp;rsquo;s position (I have used&lt;a href="https://plugins.qgis.org/plugins/toLabeledLayer/" target="_blank" rel="noopener"> layer to labeled layer&lt;/a> plugin to set this really fast) and the QGIS tool to move labels, it was quite easy to relocate them to better places. However, in same cases, it was difficult to understand to which geometry they belonged.&lt;/p>
+&lt;p>&lt;img src="https://srnetochan.github.io/images/2015/01/capturar_2-e1420735797114.png?w=584" alt="Capturar_2">&lt;/p></description></item><item><title>Multiple format map series using QGIS 2.6 – Part 2</title><link>https://srnetochan.github.io/posts/tutorials/2014-11-18-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-2-multiple-format-map-series-using-qgis-2-6-part-21/</link><pubDate>Tue, 18 Nov 2014 23:38:00 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-11-18-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-2-multiple-format-map-series-using-qgis-2-6-part-21/</guid><description>&lt;p>In my &lt;a href="https://gisunchained.wordpress.com/2014/11/09/series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/" target="_blank" rel="noopener">last post&lt;/a>, I have tried to show how I used &lt;a href="http://www.qgis.org/" target="_blank" rel="noopener">QGIS 2.6&lt;/a> to create a map series where the page&amp;rsquo;s orientation adapted to the shape of the atlas features. This method is useful when the final scale of the maps is irrelevant, or when the size of the atlas elements is  similar, allowing one to use a fixed scale. On the other hand, when using a fixed scale is mandatory and the features size are too different, it is needed to change the size of the paper. In this second part ot the post, I will try to show how I came to a solution for that.&lt;/p></description></item><item><title>Multiple format map series using QGIS 2.6 - Part 1</title><link>https://srnetochan.github.io/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/</link><pubDate>Sun, 09 Nov 2014 23:07:12 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-11-09-series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1/</guid><description>&lt;p>As always, the new &lt;a href="http://qgis.org" target="_blank" rel="noopener">QGIS&lt;/a> version (QGIS 2.6 Brigthon) brings a vast new &lt;a href="http://changelog.linfiniti.com/qgis/version/2.6.0/#170" target="_blank" rel="noopener">set of features&lt;/a> that will allow the user to do more, better and faster than with the earlier version. One of this features is the ability to control some of the composer&amp;rsquo;s items properties with data (for instance, size and position). Something that will allow lots of new interesting usages. In the next posts, I propose to show how to create map series with multiple formats.&lt;/p></description></item><item><title>Map corner coordinates in QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/</link><pubDate>Tue, 09 Sep 2014 23:05:51 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-09-09-coordenadas-dos-cantos-do-mapa-em-qgis-map-corner-coordinates-in-qgis/</guid><description>&lt;p>Some time ago in the &lt;a href="http://osgeo-org.1560.x6.nabble.com/QGIS-pt-f5128248.html" target="_blank" rel="noopener">qgis-pt mailing list&lt;/a>, someone asked &lt;a href="http://osgeo-org.1560.x6.nabble.com/QGIS-Layout-coordenadas-nos-4-cantos-do-mapa-tt5140019.html" target="_blank" rel="noopener">how to show the coordinates of a map corners using QGIS&lt;/a>. Since this features wasn&amp;rsquo;t available (yet), I have tried to reach a automatic solution, but without success,  After some thought about it and after reading a &lt;a href="http://nathanw.net/2012/11/10/user-defined-expression-functions-for-qgis/" target="_blank" rel="noopener">blog post&lt;/a> by &lt;a href="http://nathanw.net/aboutme.html" target="_blank" rel="noopener">Nathan Woodrow&lt;/a>, it came to me that the solution could be creating a user defined function for the expression builder to be used in labels in the map.&lt;/p></description></item><item><title>Please use the "IN" operador</title><link>https://srnetochan.github.io/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/</link><pubDate>Tue, 24 Jun 2014 16:21:00 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-06-24-use-o-operador-in-sff-please-use-the-in-operator/</guid><description>&lt;p>It&amp;rsquo;s not the &lt;a href="https://gis.stackexchange.com/questions/103019/using-the-rule-based-styling-case-condition-to-get-results-for-each-grid-cell-fr" target="_blank" rel="noopener">first time&lt;/a> I see people that, to select feature by their fields values, use expressions like this:&lt;/p>
+&lt;p>[code language=&amp;ldquo;SQL&amp;rdquo;]&amp;ldquo;field&amp;rdquo; = &amp;lsquo;value1&amp;rsquo; OR &amp;ldquo;field&amp;rdquo; = &amp;lsquo;value2&amp;rsquo; OR &amp;ldquo;field&amp;rdquo; = &amp;lsquo;value3&amp;rsquo; [OR &amp;hellip;][/code]&lt;/p>
+&lt;p>A more practical and pretty way of doing this is by using the &lt;strong>IN&lt;/strong> operator instead.&lt;/p>
+&lt;p>[code language=&amp;ldquo;SQL&amp;rdquo;]&amp;ldquo;field&amp;rdquo; IN (&amp;lsquo;value1&amp;rsquo;,&amp;lsquo;value2&amp;rsquo;,&amp;lsquo;value3&amp;rsquo;[,&amp;hellip;])[/code]&lt;/p>
+&lt;p>This operator is available in almost every GIS software I know. In &lt;a href="http://www.qgis.org/en/site/" target="_blank" rel="noopener">QGIS&lt;/a>, it can be used even if there isn&amp;rsquo;t a small little button to click.
+&lt;img src="https://srnetochan.github.io/images/2014/04/captura-de-tela-2014-04-23-16-50-40.png" alt="Captura de tela 2014-04-23 16.50.40">&lt;/p></description></item><item><title>Old map in QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/</link><pubDate>Mon, 14 Apr 2014 13:35:11 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2014-04-14-mapa-envelhecido-aged-map/</guid><description>&lt;p>Inspired in a &lt;a href="http://anitagraser.com/2013/07/29/vintage-map-design-using-qgis/" target="_blank" rel="noopener">post&lt;/a> by Anita Graser, I&amp;rsquo;ve tried to use QGIS to create a &lt;a href="http://www.openstreetmap.org/#map=16/38.6967/-9.4156" target="_blank" rel="noopener">Cascais&lt;/a>&amp;rsquo;s old looking map, as if it have been drawn by hand in a methodical way.&lt;/p>
+&lt;h2 id="defining-the-styles">Defining the styles&lt;/h2>
+&lt;p>I have started by defining the styles for each elements to represent.&lt;/p>
+&lt;h3 id="buildings">Buildings&lt;/h3>
+&lt;p>To fill the buildings, I have tried to use a color that reminds me the &lt;a href="http://olhares.sapo.pt/client/files/foto/big/517/5174082.jpg" target="_blank" rel="noopener">portuguese roofs&lt;/a>, similar to the color commonly used in old maps of cities, with a slightly darker outline of the same color.&lt;/p></description></item><item><title>Multipart Split</title><link>https://srnetochan.github.io/posts/plugins/multipart-split/</link><pubDate>Tue, 25 Mar 2014 08:41:42 +0000</pubDate><guid>https://srnetochan.github.io/posts/plugins/multipart-split/</guid><description>&lt;p>This QGIS plugin Multipart Split allows the user to, during edition, split the active layer’s selected multipart features into single part features. Unlike the “Multipart to single part” from the Vector &amp;gt; Geometry Tools menu, the plugin only splits the selected elements, and does not need to create new files.&lt;/p>
+&lt;h3 id="installation">Installation&lt;/h3>
+&lt;p>The plugin is available in the QGIS official repository, therefore the installation is done in the Manage and Install Plugins (Plugins &amp;gt; Manage and Install plugins…).&lt;/p></description></item><item><title>New QGIS plugin - "Walking time"</title><link>https://srnetochan.github.io/posts/news/2014-03-25-novo-plugin-qgis-new-qgis-plugin-walking-time/</link><pubDate>Tue, 25 Mar 2014 08:41:42 +0000</pubDate><guid>https://srnetochan.github.io/posts/news/2014-03-25-novo-plugin-qgis-new-qgis-plugin-walking-time/</guid><description>&lt;p>I have finally &amp;ldquo;finished&amp;rdquo; my new plugin. I uses some quotation marks, since I believe that there is still space for a few improvement. This plugin arised with the need to calculate the travel time for the Cascais oficial pedestrian routes, and started as a simple python script. I have then decided to create a graphic interface and publish it as a plugin in the hope that someone else finds it useful.&lt;/p></description></item><item><title>Walking time</title><link>https://srnetochan.github.io/posts/plugins/walking-time/</link><pubDate>Tue, 25 Mar 2014 08:41:42 +0000</pubDate><guid>https://srnetochan.github.io/posts/plugins/walking-time/</guid><description>&lt;p>The &lt;strong>Walking time&lt;/strong> is a QGIS python plugin that uses Tobbler’s hiking function to estimate the travel time along a line depending on the slope.&lt;/p>
+&lt;p>The input data required are a vector layer with lines and a raster layer with elevation values ​​(1). One can adjust the base velocity (on flat terrain) according to the type of walking or walker. By default, the value used is 5 km h (2). The plugin update or create fields with estimated time in minutes in forward and in reverse direction (3). One can run the plugin for all elements of the vector layer, or only on selected routes (4).&lt;/p></description></item><item><title>Substituir strings na tabela de atributos do QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/</link><pubDate>Wed, 29 May 2013 22:05:18 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2013-05-29-substituir-strings-na-tabela-de-atributos-do-qgis/</guid><description>&lt;p>Hoje, ao rever uma camada vectorial de distribuição de fauna com interesse para a conservação com a nossa bióloga de serviço, Sara Saraiva, tive necessidade de corrigir (em todas as linhas de determinado atributo) o nome &amp;ldquo;Aquila fasciatus&amp;rdquo;, substituindo-o por &amp;ldquo;Aquila fasciata&amp;rdquo;.&lt;/p>
+&lt;p>Devido à opção tomada na organização dos dados, cada polígono continha uma listagem de espécies que nele ocorrem, e o nome a corrigir encontrava-se no meio da mesma. A correcção teria de ser feita sem alterar os restantes nomes.&lt;/p></description></item><item><title>Visualizar dados dos Censos 2011 com o QGIS</title><link>https://srnetochan.github.io/posts/tutorials/2013-05-07-visualizar-dados-dos-censos-2011-com-o-qgis/</link><pubDate>Tue, 07 May 2013 22:18:21 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2013-05-07-visualizar-dados-dos-censos-2011-com-o-qgis/</guid><description>&lt;p>Felizmente parece que algumas coisas vão mudando no nosso país no que toca ao acesso a dados. A Base Geográfica de Referenciação da Informação (BGRI), que outrora foi paga (e bem paga), está agora disponível a todos até ao nível da subsecção estatística e com um total de 122 variáveis dos censos 2011 (organizados por população residente, população presente, famílias, alojamento e edifícios). A &lt;a href="http://mapas.ine.pt/download/index2011.phtml" target="_blank" rel="noopener">página&lt;/a> para download, permite descarregar os dados totais para Portugal, ou por regiões e concelhos.&lt;/p></description></item><item><title>Definir a representação de pixeis sem valor em mosaicos de imagens VRT</title><link>https://srnetochan.github.io/posts/tutorials/2013-04-24-definir-representacao-de-pixeis-sem-valor-em-mosaicos-de-imagem-vrt/</link><pubDate>Wed, 24 Apr 2013 15:47:11 +0000</pubDate><guid>https://srnetochan.github.io/posts/tutorials/2013-04-24-definir-representacao-de-pixeis-sem-valor-em-mosaicos-de-imagem-vrt/</guid><description>&lt;p>Como está muito bem descrito neste &lt;a href="http://blog.viasig.com/2010/01/mosaicos-de-imagens-em-mapserver-com-gdal/" target="_blank" rel="noopener">artigo&lt;/a> do Duarte Carreira, a criação de catálogos virtuais (vrt) e respectivas pirâmides (overviews) usando o &lt;a href="http://www.gdal.org/" target="_blank" rel="noopener">GDAL&lt;/a>, permite facilitar e melhorar a performance de visualização de mosaicos de imagens.&lt;/p>
+&lt;p>Usando o comando &lt;a href="http://www.gdal.org/gdalbuildvrt.html" target="_blank" rel="noopener">gdalbuildvrt&lt;/a> para criar o catálogo virtual, as áreas sem valor (NoData) são, por defeito, substituídas pelo valor 0. Em certos caso, o efeito pode não ser o mais desejável.&lt;/p>
+&lt;pre>&lt;code>gdalbuildvrt mosaico1.vrt --optfile listadeimagens.txt
+&lt;/code>&lt;/pre>
+&lt;p>&lt;a href="https://srnetochan.github.io/images/2013/04/mosaico1_fundo.jpg">&lt;img src="https://srnetochan.github.io/images/2013/04/mosaico1_fundo.jpg?w=584" alt="mosaico1_fundo">
+&lt;/a>&lt;/p></description></item><item><title>Open Source, why?</title><link>https://srnetochan.github.io/posts/opinion/2013-03-31-porque-o-open-source/</link><pubDate>Sun, 31 Mar 2013 22:41:48 +0000</pubDate><guid>https://srnetochan.github.io/posts/opinion/2013-03-31-porque-o-open-source/</guid><description>&lt;p>During my professional and personal life, I have worked with much different software, with all kinds of licenses. Most of them would be proprietary, closed and / or commercial code. So why devote my time and learning &amp;ldquo;exclusively&amp;rdquo; to Open Source?&lt;/p>
+&lt;p>Without going into detail about the &lt;a href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="_blank" rel="noopener">differences&lt;/a> between open source software and free software, there are several reasons why FOSS (Free and Open Source Software) interest me.&lt;/p>
+&lt;p>The first is obviously &lt;strong>freedom&lt;/strong>. Be free to use the software in any context and for any purpose, without being limited by the costs of software acquisition and / or the rules and conditions imposed by the manufacturer (as many said free (as beer) software do). That allows me to, for example, familiarize myself with its features without having to use piracy, or, as a freelancer worker, develop my work based on my technical capacities rather than my financial ones.&lt;/p></description></item><item><title>Welcome note</title><link>https://srnetochan.github.io/posts/opinion/2013-03-26-nota-de-abertura/</link><pubDate>Tue, 26 Mar 2013 23:21:25 +0000</pubDate><guid>https://srnetochan.github.io/posts/opinion/2013-03-26-nota-de-abertura/</guid><description>&lt;p>The blog &amp;ldquo;GIS Unchained&amp;rdquo; have borne devoid of any grandiose aspirations. The main objective will be to register my experiences with Open Source software while addressing challenges related to geographic information systems (GIS), spatial analysis, cartography and everything else that it might entail.&lt;/p>
+&lt;p>Following the same principle of openness and sharing of the open source, I hope that these records can help others who, like me, &amp;ldquo;venture&amp;rdquo; into this world.&lt;/p></description></item><item><title>Go বেসিক</title><link>https://srnetochan.github.io/notes/go/basic/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/basic/_index.bn/</guid><description/></item><item><title>Introduction</title><link>https://srnetochan.github.io/notes/go/basic/introduction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/basic/introduction/</guid><description>&lt;!-- A Sample Program -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Hello World&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;p>A sample go program is show here.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">package&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> &lt;span style="color:#e6db74">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">func&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">message&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#a6e22e">greetMe&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;world&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fmt&lt;/span>.&lt;span style="color:#a6e22e">Println&lt;/span>(&lt;span style="color:#a6e22e">message&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">func&lt;/span> &lt;span style="color:#a6e22e">greetMe&lt;/span>(&lt;span style="color:#a6e22e">name&lt;/span> &lt;span style="color:#66d9ef">string&lt;/span>) &lt;span style="color:#66d9ef">string&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Hello, &amp;#34;&lt;/span> &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#a6e22e">name&lt;/span> &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#e6db74">&amp;#34;!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run the program as below:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ go run hello.go
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- Declaring Variables -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Variables&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;p>&lt;strong>Normal Declaration:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">msg&lt;/span> &lt;span style="color:#66d9ef">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">msg&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;Hello&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;div class="card">
+&lt;div class="card-body">&lt;p>&lt;strong>Shortcut:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">msg&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Hello&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- Declaring Constants -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Constants&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">const&lt;/span> &lt;span style="color:#a6e22e">Phi&lt;/span> = &lt;span style="color:#ae81ff">1.618&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Basic Types</title><link>https://srnetochan.github.io/notes/go/basic/types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/basic/types/</guid><description>&lt;!-- String Type -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Strings&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">str&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Hello&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Multiline string&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">str&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#e6db74">`Multiline
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">string`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- Number Types -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Numbers&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;p>Typical types&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">num&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#ae81ff">3&lt;/span> &lt;span style="color:#75715e">// int
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">num&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#ae81ff">3.&lt;/span> &lt;span style="color:#75715e">// float64
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">num&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#ae81ff">3&lt;/span> &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#ae81ff">4i&lt;/span> &lt;span style="color:#75715e">// complex128
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">num&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> byte(&lt;span style="color:#e6db74">&amp;#39;a&amp;#39;&lt;/span>) &lt;span style="color:#75715e">// byte (alias for uint8)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Other Types&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">u&lt;/span> &lt;span style="color:#66d9ef">uint&lt;/span> = &lt;span style="color:#ae81ff">7&lt;/span> &lt;span style="color:#75715e">// uint (unsigned)
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">var&lt;/span> &lt;span style="color:#a6e22e">p&lt;/span> &lt;span style="color:#66d9ef">float32&lt;/span> = &lt;span style="color:#ae81ff">22.7&lt;/span> &lt;span style="color:#75715e">// 32-bit float
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!----------- Arrays ------>
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Arrays&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// var numbers [5]int
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#a6e22e">numbers&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> [&lt;span style="color:#f92672">...&lt;/span>]&lt;span style="color:#66d9ef">int&lt;/span>{&lt;span style="color:#ae81ff">0&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- Pointers -->
+&lt;div class="note-card medium-note">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Pointers&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">func&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span> () {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">b&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#f92672">*&lt;/span>&lt;span style="color:#a6e22e">getPointer&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fmt&lt;/span>.&lt;span style="color:#a6e22e">Println&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Value is&amp;#34;&lt;/span>, &lt;span style="color:#a6e22e">b&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">func&lt;/span> &lt;span style="color:#a6e22e">getPointer&lt;/span> () (&lt;span style="color:#a6e22e">myPointer&lt;/span> &lt;span style="color:#f92672">*&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">a&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#ae81ff">234&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#f92672">&amp;amp;&lt;/span>&lt;span style="color:#a6e22e">a&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">a&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> new(&lt;span style="color:#66d9ef">int&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">*&lt;/span>&lt;span style="color:#a6e22e">a&lt;/span> = &lt;span style="color:#ae81ff">234&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Pointers point to a memory location of a variable. Go is fully garbage-collected.&lt;/p></description></item><item><title>অ্যাডভান্সড</title><link>https://srnetochan.github.io/notes/go/advanced/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/advanced/_index.bn/</guid><description/></item><item><title>Flow Control</title><link>https://srnetochan.github.io/notes/go/basic/flow-control/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/basic/flow-control/</guid><description>&lt;!-- Condition -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Condition&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#a6e22e">day&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;sunday&amp;#34;&lt;/span> &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">day&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;saturday&amp;#34;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">rest&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} &lt;span style="color:#66d9ef">else&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#a6e22e">day&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;monday&amp;#34;&lt;/span> &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#a6e22e">isTired&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">groan&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} &lt;span style="color:#66d9ef">else&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">work&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#a6e22e">_&lt;/span>, &lt;span style="color:#a6e22e">err&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#a6e22e">doThing&lt;/span>(); &lt;span style="color:#a6e22e">err&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#66d9ef">nil&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fmt&lt;/span>.&lt;span style="color:#a6e22e">Println&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Uh oh&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- Switch -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Switch&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#a6e22e">day&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#34;sunday&amp;#34;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// cases don&amp;#39;t &amp;#34;fall through&amp;#34; by default!
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">fallthrough&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#34;saturday&amp;#34;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">rest&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">work&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- Loop -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Loop&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> &lt;span style="color:#a6e22e">count&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>; &lt;span style="color:#a6e22e">count&lt;/span> &lt;span style="color:#f92672">&amp;lt;=&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>; &lt;span style="color:#a6e22e">count&lt;/span>&lt;span style="color:#f92672">++&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fmt&lt;/span>.&lt;span style="color:#a6e22e">Println&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;My counter is at&amp;#34;&lt;/span>, &lt;span style="color:#a6e22e">count&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">entry&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> []&lt;span style="color:#66d9ef">string&lt;/span>{&lt;span style="color:#e6db74">&amp;#34;Jack&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;John&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Jones&amp;#34;&lt;/span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> &lt;span style="color:#a6e22e">i&lt;/span>, &lt;span style="color:#a6e22e">val&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#66d9ef">range&lt;/span> &lt;span style="color:#a6e22e">entry&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fmt&lt;/span>.&lt;span style="color:#a6e22e">Printf&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;At position %d, the character %s is present\n&amp;#34;&lt;/span>, &lt;span style="color:#a6e22e">i&lt;/span>, &lt;span style="color:#a6e22e">val&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">n&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">x&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#ae81ff">42&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> &lt;span style="color:#a6e22e">n&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#a6e22e">x&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">n&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#a6e22e">guess&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>File Manipulation</title><link>https://srnetochan.github.io/notes/go/advanced/files/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/advanced/files/</guid><description>&lt;!-- Condition -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Condition&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#a6e22e">day&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;sunday&amp;#34;&lt;/span> &lt;span style="color:#f92672">||&lt;/span> &lt;span style="color:#a6e22e">day&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;saturday&amp;#34;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">rest&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} &lt;span style="color:#66d9ef">else&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#a6e22e">day&lt;/span> &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;monday&amp;#34;&lt;/span> &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#a6e22e">isTired&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">groan&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} &lt;span style="color:#66d9ef">else&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">work&lt;/span>()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#a6e22e">_&lt;/span>, &lt;span style="color:#a6e22e">err&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#a6e22e">doThing&lt;/span>(); &lt;span style="color:#a6e22e">err&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#66d9ef">nil&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fmt&lt;/span>.&lt;span style="color:#a6e22e">Println&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Uh oh&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Bash Variables</title><link>https://srnetochan.github.io/notes/bash/basic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/bash/basic/</guid><description>&lt;!-- Variable -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Variable&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>NAME&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;John&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo $NAME
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$NAME&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>NAME&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- Condition -->
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Condition&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">[[&lt;/span> -z &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$string&lt;span style="color:#e6db74">&amp;#34;&lt;/span> &lt;span style="color:#f92672">]]&lt;/span>; &lt;span style="color:#66d9ef">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#e6db74">&amp;#34;String is empty&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elif&lt;/span> &lt;span style="color:#f92672">[[&lt;/span> -n &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$string&lt;span style="color:#e6db74">&amp;#34;&lt;/span> &lt;span style="color:#f92672">]]&lt;/span>; &lt;span style="color:#66d9ef">then&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> echo &lt;span style="color:#e6db74">&amp;#34;String is not empty&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fi&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title/><link>https://srnetochan.github.io/modelos3d/incendiocascais2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/modelos3d/incendiocascais2020/</guid><description>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;meta charset="UTF-8">
+&lt;title>index&lt;/title>
+&lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+&lt;link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
+&lt;script src="./threejs/three.min.js">&lt;/script>
+&lt;script src="./threejs/OrbitControls.js">&lt;/script>
+&lt;script src="./Qgis2threejs.js">&lt;/script>
+&lt;/head>
+&lt;body>
+&lt;div id="view">
+&lt;div id="labels">&lt;/div>
+&lt;div id="northarrow">&lt;/div>
+&lt;/div>
+&lt;!-- popup -->
+&lt;div id="popup">
+&lt;div id="closebtn">&amp;times;&lt;/div>
+&lt;div id="popupbar">&lt;/div>
+&lt;div id="popupbody">
+&lt;div id="popupcontent">&lt;/div>
+&lt;!-- query result -->
+&lt;div id="queryresult">
+&lt;table id="qr_layername_table">
+&lt;caption>Layer name&lt;/caption>
+&lt;tr>&lt;td id="qr_layername">&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;table id="qr_coords_table">
+&lt;caption>Clicked coordinates&lt;/caption>
+&lt;tr>&lt;td id="qr_coords">&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;!-- camera actions -->
+&lt;div class="action-btn action-zoom" onclick="app.cameraAction.zoomIn(); app.closePopup();">Zoom in here&lt;/div>
+&lt;div class="action-btn action-move" onclick="app.cameraAction.move(); app.closePopup();">Move here&lt;/div>
+&lt;div class="action-btn action-orbit" onclick="app.cameraAction.orbit(); app.closePopup();">Orbit around here&lt;/div>
+&lt;!-- attributes -->
+&lt;table id="qr_attrs_table">
+&lt;caption>Attributes&lt;/caption>
+&lt;/table>
+&lt;/div>
+&lt;!-- page info -->
+&lt;div id="pageinfo">
+&lt;h1>Current View URL&lt;/h1>
+&lt;div>&lt;input id="urlbox" type="text">&lt;/div>
+&lt;h1>Usage&lt;/h1>
+&lt;table id="usage">
+&lt;tr>&lt;td colspan="2" class="star">Mouse&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Left button + Move&lt;/td>&lt;td>Orbit&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Mouse Wheel&lt;/td>&lt;td>Zoom&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Right button + Move&lt;/td>&lt;td>Pan&lt;/td>&lt;/tr>
+&lt;tr>&lt;td colspan="2" class="star">Keys&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Arrow keys&lt;/td>&lt;td>Move Horizontally&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + Arrow keys&lt;/td>&lt;td>Orbit&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Ctrl + Arrow keys&lt;/td>&lt;td>Rotate&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + Ctrl + Up / Down&lt;/td>&lt;td>Zoom In / Out&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>L&lt;/td>&lt;td>Toggle Label Visibility&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>R&lt;/td>&lt;td>Start / Stop Rotate Animation (Orbiting)&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>W&lt;/td>&lt;td>Wireframe Mode&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + R&lt;/td>&lt;td>Reset Camera Position&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + S&lt;/td>&lt;td>Save Image&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;h1>About&lt;/h1>
+&lt;div id="about">
+This page was made with &lt;a href="https://www.qgis.org/" target="_blank">QGIS&lt;/a> and &lt;a href="https://github.com/minorua/Qgis2threejs" target="_blank">Qgis2threejs&lt;/a> plugin.
+Dependent JavaScript libraries are
+&lt;a href="https://threejs.org/" target="_blank">three.js&lt;/a>
+&lt;span id="lib_proj4js"> and &lt;a href="https://trac.osgeo.org/proj4js/" target="_blank">Proj4js&lt;/a>&lt;/span>
+.
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- progress bar -->
+&lt;div id="progress">&lt;div id="bar">&lt;/div>&lt;/div>
+&lt;!-- header and footer -->
+&lt;div id="header">&lt;/div>
+&lt;div id="footer">&lt;span id="infobtn">&lt;img src="./Qgis2threejs.png">&lt;/span> &lt;/div>
+&lt;script>
+Q3D.Config.allVisible = true;
+Q3D.Config.viewpoint = {lookAt:{x:4.956939208228188,y:-5.242094990174781,z:2.8888949165808538e-34},pos:{x:18.649675352056015,y:-56.73422249567844,z:43.79049539516069}};
+if (typeof proj4 === "undefined") document.getElementById("lib_proj4js").style.display = "none";
+var app = Q3D.application,
+container = document.getElementById("view");
+app.init(container); // initialize application
+// load the scene
+app.loadSceneFile("./data/index/scene.json", function () {
+app.start();
+// North arrow inset
+if (Q3D.Config.northArrow.visible) app.buildNorthArrow(document.getElementById("northarrow"), app.scene.userData.rotation);
+});
+document.getElementById("infobtn").onclick = app.showInfo.bind(app);
+&lt;/script>
+&lt;/body>
+&lt;/html></description></item><item><title/><link>https://srnetochan.github.io/modelos3d/serta2019/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/modelos3d/serta2019/</guid><description>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;meta charset="UTF-8">
+&lt;title>index&lt;/title>
+&lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+&lt;link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
+&lt;script src="./threejs/three.min.js">&lt;/script>
+&lt;script src="./threejs/OrbitControls.js">&lt;/script>
+&lt;script src="./Qgis2threejs.js">&lt;/script>
+&lt;/head>
+&lt;body>
+&lt;div id="view">
+&lt;div id="labels">&lt;/div>
+&lt;div id="northarrow">&lt;/div>
+&lt;/div>
+&lt;!-- popup -->
+&lt;div id="popup">
+&lt;div id="closebtn">&amp;times;&lt;/div>
+&lt;div id="popupbar">&lt;/div>
+&lt;div id="popupbody">
+&lt;div id="popupcontent">&lt;/div>
+&lt;!-- query result -->
+&lt;div id="queryresult">
+&lt;table id="qr_layername_table">
+&lt;caption>Layer name&lt;/caption>
+&lt;tr>&lt;td id="qr_layername">&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;table id="qr_coords_table">
+&lt;caption>Clicked coordinates&lt;/caption>
+&lt;tr>&lt;td id="qr_coords">&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;!-- camera actions -->
+&lt;div class="action-btn action-zoom" onclick="app.cameraAction.zoomIn(); app.closePopup();">Zoom in here&lt;/div>
+&lt;div class="action-btn action-move" onclick="app.cameraAction.move(); app.closePopup();">Move here&lt;/div>
+&lt;div class="action-btn action-orbit" onclick="app.cameraAction.orbit(); app.closePopup();">Orbit around here&lt;/div>
+&lt;!-- attributes -->
+&lt;table id="qr_attrs_table">
+&lt;caption>Attributes&lt;/caption>
+&lt;/table>
+&lt;/div>
+&lt;!-- page info -->
+&lt;div id="pageinfo">
+&lt;h1>Current View URL&lt;/h1>
+&lt;div>&lt;input id="urlbox" type="text">&lt;/div>
+&lt;h1>Usage&lt;/h1>
+&lt;table id="usage">
+&lt;tr>&lt;td colspan="2" class="star">Mouse&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Left button + Move&lt;/td>&lt;td>Orbit&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Mouse Wheel&lt;/td>&lt;td>Zoom&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Right button + Move&lt;/td>&lt;td>Pan&lt;/td>&lt;/tr>
+&lt;tr>&lt;td colspan="2" class="star">Keys&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Arrow keys&lt;/td>&lt;td>Move Horizontally&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + Arrow keys&lt;/td>&lt;td>Orbit&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Ctrl + Arrow keys&lt;/td>&lt;td>Rotate&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + Ctrl + Up / Down&lt;/td>&lt;td>Zoom In / Out&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>L&lt;/td>&lt;td>Toggle Label Visibility&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>R&lt;/td>&lt;td>Start / Stop Rotate Animation (Orbiting)&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>W&lt;/td>&lt;td>Wireframe Mode&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + R&lt;/td>&lt;td>Reset Camera Position&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + S&lt;/td>&lt;td>Save Image&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;h1>About&lt;/h1>
+&lt;div id="about">
+This page was made with &lt;a href="https://www.qgis.org/" target="_blank">QGIS&lt;/a> and &lt;a href="https://github.com/minorua/Qgis2threejs" target="_blank">Qgis2threejs&lt;/a> plugin.
+Dependent JavaScript libraries are
+&lt;a href="https://threejs.org/" target="_blank">three.js&lt;/a>
+&lt;span id="lib_proj4js"> and &lt;a href="https://trac.osgeo.org/proj4js/" target="_blank">Proj4js&lt;/a>&lt;/span>
+.
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- progress bar -->
+&lt;div id="progress">&lt;div id="bar">&lt;/div>&lt;/div>
+&lt;!-- header and footer -->
+&lt;div id="header">Incêndio Sertã&lt;/div>
+&lt;div id="footer">&lt;span id="infobtn">&lt;img src="./Qgis2threejs.png">&lt;/span> Made in QGIS 3.4, with qgis3threejs plugin. Data from Copernicus. Basemap by OpenStreetMap&lt;/div>
+&lt;script>
+Q3D.Config.allVisible = true;
+Q3D.Config.northArrow.visible = true;
+Q3D.Config.northArrow.color = 0x666666;
+if (typeof proj4 === "undefined") document.getElementById("lib_proj4js").style.display = "none";
+var app = Q3D.application,
+container = document.getElementById("view");
+app.init(container); // initialize application
+// load the scene
+app.loadJSONFile("./data/index/scene.json", function () {
+app.start();
+// North arrow inset
+if (Q3D.Config.northArrow.visible) app.buildNorthArrow(document.getElementById("northarrow"), app.scene.userData.rotation);
+});
+document.getElementById("infobtn").onclick = app.showInfo.bind(app);
+&lt;/script>
+&lt;/body>
+&lt;/html></description></item><item><title>Go এর নোট সমূহ</title><link>https://srnetochan.github.io/notes/go/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/go/_index.bn/</guid><description>&lt;h1 id="go-notes">Go Notes&lt;/h1></description></item><item><title>নোট সমূহ</title><link>https://srnetochan.github.io/notes/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/_index.bn/</guid><description/></item><item><title>ব্যাশের নোট সমূহ</title><link>https://srnetochan.github.io/notes/bash/_index.bn/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/notes/bash/_index.bn/</guid><description>&lt;h1 id="bash-notes">Bash Notes&lt;/h1></description></item></channel></rss>

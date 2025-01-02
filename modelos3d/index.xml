@@ -1,1 +1,190 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Modelos3ds on Alexandre Neto</title><link>https://srnetochan.github.io/modelos3d/</link><description>Recent content in Modelos3ds on Alexandre Neto</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://srnetochan.github.io/modelos3d/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://srnetochan.github.io/modelos3d/incendiocascais2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/modelos3d/incendiocascais2020/</guid><description>&lt;!DOCTYPE html> index &amp;times; Layer name Clicked coordinates Zoom in here Move here Orbit around here Attributes Current View URL Usage Mouse Left button + MoveOrbit Mouse WheelZoom Right button + MovePan Keys Arrow keysMove Horizontally Shift + Arrow keysOrbit Ctrl + Arrow keysRotate Shift + Ctrl + Up / DownZoom In / Out LToggle Label Visibility RStart / Stop Rotate Animation (Orbiting) WWireframe Mode Shift + RReset Camera Position Shift + SSave Image About This page was made with QGIS and Qgis2threejs plugin.</description></item><item><title/><link>https://srnetochan.github.io/modelos3d/serta2019/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/modelos3d/serta2019/</guid><description>&lt;!DOCTYPE html> index &amp;times; Layer name Clicked coordinates Zoom in here Move here Orbit around here Attributes Current View URL Usage Mouse Left button + MoveOrbit Mouse WheelZoom Right button + MovePan Keys Arrow keysMove Horizontally Shift + Arrow keysOrbit Ctrl + Arrow keysRotate Shift + Ctrl + Up / DownZoom In / Out LToggle Label Visibility RStart / Stop Rotate Animation (Orbiting) WWireframe Mode Shift + RReset Camera Position Shift + SSave Image About This page was made with QGIS and Qgis2threejs plugin.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Modelos3ds on Alexandre Neto</title><link>https://srnetochan.github.io/modelos3d/</link><description>Recent content in Modelos3ds on Alexandre Neto</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://srnetochan.github.io/modelos3d/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://srnetochan.github.io/modelos3d/incendiocascais2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/modelos3d/incendiocascais2020/</guid><description>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;meta charset="UTF-8">
+&lt;title>index&lt;/title>
+&lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+&lt;link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
+&lt;script src="./threejs/three.min.js">&lt;/script>
+&lt;script src="./threejs/OrbitControls.js">&lt;/script>
+&lt;script src="./Qgis2threejs.js">&lt;/script>
+&lt;/head>
+&lt;body>
+&lt;div id="view">
+&lt;div id="labels">&lt;/div>
+&lt;div id="northarrow">&lt;/div>
+&lt;/div>
+&lt;!-- popup -->
+&lt;div id="popup">
+&lt;div id="closebtn">&amp;times;&lt;/div>
+&lt;div id="popupbar">&lt;/div>
+&lt;div id="popupbody">
+&lt;div id="popupcontent">&lt;/div>
+&lt;!-- query result -->
+&lt;div id="queryresult">
+&lt;table id="qr_layername_table">
+&lt;caption>Layer name&lt;/caption>
+&lt;tr>&lt;td id="qr_layername">&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;table id="qr_coords_table">
+&lt;caption>Clicked coordinates&lt;/caption>
+&lt;tr>&lt;td id="qr_coords">&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;!-- camera actions -->
+&lt;div class="action-btn action-zoom" onclick="app.cameraAction.zoomIn(); app.closePopup();">Zoom in here&lt;/div>
+&lt;div class="action-btn action-move" onclick="app.cameraAction.move(); app.closePopup();">Move here&lt;/div>
+&lt;div class="action-btn action-orbit" onclick="app.cameraAction.orbit(); app.closePopup();">Orbit around here&lt;/div>
+&lt;!-- attributes -->
+&lt;table id="qr_attrs_table">
+&lt;caption>Attributes&lt;/caption>
+&lt;/table>
+&lt;/div>
+&lt;!-- page info -->
+&lt;div id="pageinfo">
+&lt;h1>Current View URL&lt;/h1>
+&lt;div>&lt;input id="urlbox" type="text">&lt;/div>
+&lt;h1>Usage&lt;/h1>
+&lt;table id="usage">
+&lt;tr>&lt;td colspan="2" class="star">Mouse&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Left button + Move&lt;/td>&lt;td>Orbit&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Mouse Wheel&lt;/td>&lt;td>Zoom&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Right button + Move&lt;/td>&lt;td>Pan&lt;/td>&lt;/tr>
+&lt;tr>&lt;td colspan="2" class="star">Keys&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Arrow keys&lt;/td>&lt;td>Move Horizontally&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + Arrow keys&lt;/td>&lt;td>Orbit&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Ctrl + Arrow keys&lt;/td>&lt;td>Rotate&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + Ctrl + Up / Down&lt;/td>&lt;td>Zoom In / Out&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>L&lt;/td>&lt;td>Toggle Label Visibility&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>R&lt;/td>&lt;td>Start / Stop Rotate Animation (Orbiting)&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>W&lt;/td>&lt;td>Wireframe Mode&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + R&lt;/td>&lt;td>Reset Camera Position&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + S&lt;/td>&lt;td>Save Image&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;h1>About&lt;/h1>
+&lt;div id="about">
+This page was made with &lt;a href="https://www.qgis.org/" target="_blank">QGIS&lt;/a> and &lt;a href="https://github.com/minorua/Qgis2threejs" target="_blank">Qgis2threejs&lt;/a> plugin.
+Dependent JavaScript libraries are
+&lt;a href="https://threejs.org/" target="_blank">three.js&lt;/a>
+&lt;span id="lib_proj4js"> and &lt;a href="https://trac.osgeo.org/proj4js/" target="_blank">Proj4js&lt;/a>&lt;/span>
+.
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- progress bar -->
+&lt;div id="progress">&lt;div id="bar">&lt;/div>&lt;/div>
+&lt;!-- header and footer -->
+&lt;div id="header">&lt;/div>
+&lt;div id="footer">&lt;span id="infobtn">&lt;img src="./Qgis2threejs.png">&lt;/span> &lt;/div>
+&lt;script>
+Q3D.Config.allVisible = true;
+Q3D.Config.viewpoint = {lookAt:{x:4.956939208228188,y:-5.242094990174781,z:2.8888949165808538e-34},pos:{x:18.649675352056015,y:-56.73422249567844,z:43.79049539516069}};
+if (typeof proj4 === "undefined") document.getElementById("lib_proj4js").style.display = "none";
+var app = Q3D.application,
+container = document.getElementById("view");
+app.init(container); // initialize application
+// load the scene
+app.loadSceneFile("./data/index/scene.json", function () {
+app.start();
+// North arrow inset
+if (Q3D.Config.northArrow.visible) app.buildNorthArrow(document.getElementById("northarrow"), app.scene.userData.rotation);
+});
+document.getElementById("infobtn").onclick = app.showInfo.bind(app);
+&lt;/script>
+&lt;/body>
+&lt;/html></description></item><item><title/><link>https://srnetochan.github.io/modelos3d/serta2019/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://srnetochan.github.io/modelos3d/serta2019/</guid><description>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;meta charset="UTF-8">
+&lt;title>index&lt;/title>
+&lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+&lt;link rel="stylesheet" type="text/css" href="./Qgis2threejs.css">
+&lt;script src="./threejs/three.min.js">&lt;/script>
+&lt;script src="./threejs/OrbitControls.js">&lt;/script>
+&lt;script src="./Qgis2threejs.js">&lt;/script>
+&lt;/head>
+&lt;body>
+&lt;div id="view">
+&lt;div id="labels">&lt;/div>
+&lt;div id="northarrow">&lt;/div>
+&lt;/div>
+&lt;!-- popup -->
+&lt;div id="popup">
+&lt;div id="closebtn">&amp;times;&lt;/div>
+&lt;div id="popupbar">&lt;/div>
+&lt;div id="popupbody">
+&lt;div id="popupcontent">&lt;/div>
+&lt;!-- query result -->
+&lt;div id="queryresult">
+&lt;table id="qr_layername_table">
+&lt;caption>Layer name&lt;/caption>
+&lt;tr>&lt;td id="qr_layername">&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;table id="qr_coords_table">
+&lt;caption>Clicked coordinates&lt;/caption>
+&lt;tr>&lt;td id="qr_coords">&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;!-- camera actions -->
+&lt;div class="action-btn action-zoom" onclick="app.cameraAction.zoomIn(); app.closePopup();">Zoom in here&lt;/div>
+&lt;div class="action-btn action-move" onclick="app.cameraAction.move(); app.closePopup();">Move here&lt;/div>
+&lt;div class="action-btn action-orbit" onclick="app.cameraAction.orbit(); app.closePopup();">Orbit around here&lt;/div>
+&lt;!-- attributes -->
+&lt;table id="qr_attrs_table">
+&lt;caption>Attributes&lt;/caption>
+&lt;/table>
+&lt;/div>
+&lt;!-- page info -->
+&lt;div id="pageinfo">
+&lt;h1>Current View URL&lt;/h1>
+&lt;div>&lt;input id="urlbox" type="text">&lt;/div>
+&lt;h1>Usage&lt;/h1>
+&lt;table id="usage">
+&lt;tr>&lt;td colspan="2" class="star">Mouse&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Left button + Move&lt;/td>&lt;td>Orbit&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Mouse Wheel&lt;/td>&lt;td>Zoom&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Right button + Move&lt;/td>&lt;td>Pan&lt;/td>&lt;/tr>
+&lt;tr>&lt;td colspan="2" class="star">Keys&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Arrow keys&lt;/td>&lt;td>Move Horizontally&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + Arrow keys&lt;/td>&lt;td>Orbit&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Ctrl + Arrow keys&lt;/td>&lt;td>Rotate&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + Ctrl + Up / Down&lt;/td>&lt;td>Zoom In / Out&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>L&lt;/td>&lt;td>Toggle Label Visibility&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>R&lt;/td>&lt;td>Start / Stop Rotate Animation (Orbiting)&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>W&lt;/td>&lt;td>Wireframe Mode&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + R&lt;/td>&lt;td>Reset Camera Position&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Shift + S&lt;/td>&lt;td>Save Image&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;h1>About&lt;/h1>
+&lt;div id="about">
+This page was made with &lt;a href="https://www.qgis.org/" target="_blank">QGIS&lt;/a> and &lt;a href="https://github.com/minorua/Qgis2threejs" target="_blank">Qgis2threejs&lt;/a> plugin.
+Dependent JavaScript libraries are
+&lt;a href="https://threejs.org/" target="_blank">three.js&lt;/a>
+&lt;span id="lib_proj4js"> and &lt;a href="https://trac.osgeo.org/proj4js/" target="_blank">Proj4js&lt;/a>&lt;/span>
+.
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;!-- progress bar -->
+&lt;div id="progress">&lt;div id="bar">&lt;/div>&lt;/div>
+&lt;!-- header and footer -->
+&lt;div id="header">Incêndio Sertã&lt;/div>
+&lt;div id="footer">&lt;span id="infobtn">&lt;img src="./Qgis2threejs.png">&lt;/span> Made in QGIS 3.4, with qgis3threejs plugin. Data from Copernicus. Basemap by OpenStreetMap&lt;/div>
+&lt;script>
+Q3D.Config.allVisible = true;
+Q3D.Config.northArrow.visible = true;
+Q3D.Config.northArrow.color = 0x666666;
+if (typeof proj4 === "undefined") document.getElementById("lib_proj4js").style.display = "none";
+var app = Q3D.application,
+container = document.getElementById("view");
+app.init(container); // initialize application
+// load the scene
+app.loadJSONFile("./data/index/scene.json", function () {
+app.start();
+// North arrow inset
+if (Q3D.Config.northArrow.visible) app.buildNorthArrow(document.getElementById("northarrow"), app.scene.userData.rotation);
+});
+document.getElementById("infobtn").onclick = app.showInfo.bind(app);
+&lt;/script>
+&lt;/body>
+&lt;/html></description></item></channel></rss>
