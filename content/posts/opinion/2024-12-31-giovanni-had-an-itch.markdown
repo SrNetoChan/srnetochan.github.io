@@ -31,7 +31,7 @@ So, imagine that [QGIS is used daily by over 500.000 people](https://analytics.q
 
 **50.000 people x 20 min x 22 working days = 16.000 hour per Month!!**
 
-So, even at a low rate of 1 Euro per hour, the 600€ now worth 16.000 Euros every month!! (Obviously, the hourly rates vary much depending on each country's salaries. In the US, for example, the [GIS Analyst role salary ranges from around 19 to 35 Euros](https://www.payscale.com/research/US/Skill=Geographic_Information_Systems_(GIS)/Hourly_Rate).)
+So, even at a very low rate of 1 Euro per hour, the 600€ is now worth 16.000 Euros every month!! (Obviously, the hourly rates vary much depending on each country's salaries. In the US, for example, the [GIS Analyst role salary ranges from around 19 to 35 Euros](https://www.payscale.com/research/US/Skill=Geographic_Information_Systems_(GIS)/Hourly_Rate).)
 
 **The moral of this tale?**
 
