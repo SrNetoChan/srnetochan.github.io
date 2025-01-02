@@ -1,6 +1,9 @@
 name: "Theme Update"
 
-on: [pull_request]
+on: 
+  push:
+    branches:
+    - site_source
   # schedule:
   #  - cron: "0 0 * * *"
 
